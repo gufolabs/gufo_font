@@ -3,4 +3,4 @@ hide:
     - navigation
     - toc
 ---
-Foobar
+Select icon...
