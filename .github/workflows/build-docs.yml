@@ -45,7 +45,7 @@ jobs:
       # Install dependencies
       - name: Install Dependencies
         run: |
-          uv pip install --system -r requirements.txt'
+          uv pip install --system -r requirements.txt
 
       - name: Install NodeJS
         uses: actions/setup-node@v6
