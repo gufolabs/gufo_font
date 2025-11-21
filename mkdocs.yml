@@ -48,12 +48,6 @@ plugins:
   - gen-files:
       scripts:
         - scripts/docs/copy_assets.py
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          options:
-            show_source: false
 markdown_extensions:
   - toc:
       permalink: True
