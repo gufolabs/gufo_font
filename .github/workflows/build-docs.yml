@@ -1,0 +1,65 @@
+name: Build Docs
+env:
+  PIP_CACHE_DIR: .pip
+  PYTHONPATH: src
+on:
+  push:
+    paths:
+      - ".github/workflows/build-docs.yml"
+      - "docs/**"
+      - "**.md"
+      - "**.py"
+      - "mkdocs.yml"
+      - "pyproject.toml"
+      - "scripts/**"
+      - "webfonts/**"
+    branches:
+      - master
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  build-push:
+    name: "Build & Push Docs"
+    runs-on: ubuntu-24.04
+    steps:
+      # Checkout source code
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Up Python 3.14
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      # Cache dependencies
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ./.pip
+          key: ${{ runner.os }}-docs-${{ hashFiles('requirements.txt') }}
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v1
+
+      # Install dependencies
+      - name: Install Dependencies
+        run: |
+          uv pip install --system -r requirements.txt'
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install SASS
+        run: npm install -g sass
+
+      - name: Build
+        run: ./scripts/build
+
+      # Build documentationn
+      - name: Build & Deploy Docs
+        run: |
+          mkdocs gh-deploy --strict --force
