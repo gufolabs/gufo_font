@@ -1,0 +1,8 @@
+version: "0.1"
+icons:
+  Cisco Stencils:
+    - name: cisco-router
+      code: 0xF02C
+      description: Classic Cisco-style router icon.
+      labels: ["router"]
+      added-in: "upcoming"

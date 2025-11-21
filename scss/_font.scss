@@ -1,0 +1,14 @@
+// ---------------------------------------------------------------------
+// Gufo Font: font-face definition.
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+
+@use "vars" as *;
+
+@font-face {
+    font-family: $family;
+    src: url($url-woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,19 @@
+// ---------------------------------------------------------------------
+// Gufo Font: Core classes.
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+@use "vars" as *;
+
+// Base class gufo font
+.#{$css-prefix} {
+    font-family: $family;
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    --#{$css-prefix}-stencil-size: 64px;
+    font-size: var(--#{$css-prefix}-stencil-size);
+    width: var(--#{$css-prefix}-stencil-size);
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,21 @@
+// ---------------------------------------------------------------------
+// Gufo Font: Gufo Font base variables.
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+
+$css-prefix: gf;
+
+// Font settings
+$family: "GufoFont" !default;
+// .XXXXXXXX. will be replaced with file hash by post-process.
+$url-woff2: "GufoFont-Regular.XXXXXXXX.woff2" !default;
+
+// Stencil sizes
+$stencil-size: 64;
+
+// Color Scheme
+$state-unknown: #7f8c8d !default;
+$state-ok: #16a085 !default;
+$state-warn: #f1c40f !default;
+$state-fail: #c0392b !default;

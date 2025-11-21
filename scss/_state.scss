@@ -1,0 +1,28 @@
+// ---------------------------------------------------------------------
+// Gufo Font: State classes and palette.
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+@use "vars" as *;
+
+$states: (
+    unknown: $state-unknown,
+    ok: $state-ok,
+    warn: $state-warn,
+    fail: $state-fail
+);
+
+// Font palletes
+// Color 0 - white outline
+// Color 1 - state-dependent filling
+@each $state, $color in $states {
+    @font-palette-values --#{$css-prefix}-#{$state} {
+        font-family: $family;
+        override-colors:
+            1 $color;
+    }
+
+    .#{$css-prefix}.#{$css-prefix}-#{$state} {
+        font-palette: --#{$css-prefix}-#{$state};
+    }
+}

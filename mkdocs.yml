@@ -1,0 +1,77 @@
+site_name: Gufo Font
+site_description: Gufo Font Documentation
+site_author: Gufo Labs
+site_url: "https://docs.gufolabs.com/gufo_font/"
+copyright: "&copy; 2025, Gufo Labs"
+site_dir: dist/docs/
+repo_url: https://github.com/gufolabs/gufo_font/
+repo_name: gufolabs/gufo_font
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Icons: icons.md
+  - Changelog: CHANGELOG.md
+  - License:
+      - Overview: license/index.md
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  custom_dir: docs/overrides
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: deep purple
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - content.action.edit
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+watch:
+  - docs/
+  - mkdocs.yml
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - scripts/docs/copy_assets.py
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: false
+markdown_extensions:
+  - toc:
+      permalink: True
+  - admonition
+  - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: True
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra:
+  analytics:
+    provider: google
+    property: G-GW3X378HNJ
+extra_css:
+  - assets/gufo-font.css

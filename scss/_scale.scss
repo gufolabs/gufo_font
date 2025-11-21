@@ -1,0 +1,27 @@
+// ---------------------------------------------------------------------
+// Gufo Font: Scale classes.
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+@use "vars" as *;
+
+// Zoomed levels
+// gf-2x, gf-3x ...
+$zoom-levels: 2, 3;
+
+@each $zoom in $zoom-levels {
+    .#{$css-prefix}.#{$css-prefix}-#{$zoom}x {
+        --#{$css-prefix}-stencil-size: #{$stencil-size * $zoom}px;
+    }
+}
+
+// Exact levels
+// gf-16px, ...
+
+$exact-sizes: 16, 24, 32, 48;
+
+@each $px in $exact-sizes {
+    .#{$css-prefix}.#{$css-prefix}-#{$px}px {
+        --#{$css-prefix}-stencil-size: #{$px}px;
+    }
+}
