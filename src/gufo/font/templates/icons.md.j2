@@ -1,0 +1,18 @@
+---
+hide:
+    - navigation
+    - toc
+---
+<link rel="stylesheet" href="../assets/icons.css">
+
+{% for group in manifest.icons %}
+## {{group}}
+  <div class="icons-list">
+  {% for icon in manifest.iter_enabled_icons(group) %}
+  <div class="icon">
+    <i class="gf {{icon.name}}"></i>
+    <div class="title">{{icon.name}}</div>
+  </div>
+  {% endfor %}
+  </div>
+{% endfor %}

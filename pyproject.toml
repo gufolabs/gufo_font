@@ -1,3 +1,72 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=61.2",
+  "wheel",
+]
+
+[project]
+authors = [{name = "Gufo Labs"}]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+description = "Telecom and IT-oriented icon font"
+keywords = ["font"]
+license = "BSD-3-Clause"
+name = "gufo_font"
+requires-python = ">=3.13"
+version = "0.1"
+
+[project.optional-dependencies]
+docs = [
+  "mkdocs-gen-files==0.5.0",
+  "mkdocs-literate-nav==0.6.2",
+  "mkdocs-material==9.6.11",
+  "mkdocs-section-index==0.3.10",
+  "mkdocstrings[python]==0.29.1",
+]
+ipython = [
+  "ipython==9.6.0",
+]
+lint = [
+  "mypy==1.18.2",
+  "ruff==0.14.0",
+  "types-PyYAML==6.0.12.3",
+]
+test = [
+  "PyYAML>=6.0",
+  "pytest-benchmark==5.1.0",
+  "pytest-cov==7.0.0",
+  "pytest==8.4.2",
+]
+
+[project.readme]
+content-type = "text/markdown"
+file = "README.md"
+
+[project.urls]
+"Bug Tracker" = "https://github.com/gufolabs/gufo_font/issues"
+Changelog = "https://github.com/gufolabs/gufo_font/blob/master/CHANGELOG.md"
+Documentation = "https://docs.gufolabs.com/gufo_font/"
+Homepage = "https://github.com/gufolabs/gufo_font/"
+"Source Code" = "https://github.com/gufolabs/gufo_font/"
+
+[tool.setuptools]
+include-package-data = false
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
 [tool.ruff.lint]
 ignore = ["D203", "D212", "D107"]
 # Enable

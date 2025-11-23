@@ -1,5 +1,6 @@
 FROM python:3.14-slim-trixie AS dev
-COPY requirements.txt /tmp/
+COPY . /workspaces/gufo_font
+WORKDIR /workspaces/gufo_font
 RUN\
     set -ex\
     && apt-get update \
@@ -14,4 +15,4 @@ RUN\
     nodejs \    
     && npm install -g sass\
     && (curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR=/usr/local/bin sh)\
-    && uv pip install --system -r /tmp/requirements.txt
+    && uv pip install --system -e .[docs,ipython,lint,test]

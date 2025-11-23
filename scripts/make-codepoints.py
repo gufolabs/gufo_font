@@ -9,7 +9,7 @@
 from pathlib import Path
 
 # Gufo Font modules
-from lib.manifest import Manifest
+from gufo.font.manifest import Manifest
 
 CODEPOINTS = Path("build", "_codepoints.scss")
 
