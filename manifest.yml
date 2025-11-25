@@ -1,8 +1,32 @@
 version: "0.1"
 icons:
+  UI:
+    - name: circle
+      code: 0xE280
+      added-in: "upcoming"
+    - name: circle-s
+      code: 0xE281
+      added-in: "upcoming"
+    - name: circle-o
+      code: 0xE282
+      added-in: "upcoming"
+    - name: rectangle
+      code: 0xE283
+      added-in: "upcoming"
+    - name: rectangle-s
+      code: 0xE284
+      added-in: "upcoming"
+    - name: rectangle-o
+      code: 0xE285
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-router
       code: 0xF02C
       description: Classic Cisco-style router icon.
       labels: ["router"]
+      added-in: "upcoming"
+    - name: cisco-workgroup-switch
+      code: 0xF03F
+      description: Classic Cisco-style switch icon.
+      labels: ["switch"]
       added-in: "upcoming"
