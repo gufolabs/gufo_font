@@ -36,5 +36,5 @@ Specifies the relative size of the glyph:
 Specifies the visual style of the glyph:
 
 * Not specified – Default bi-color outline style. Allows the colors to change depending on the element’s state.
-* `solid` – Fully filled glyph.
-* `border` – Hollow glyph with only the border/stroke visible, transparent inside.
+* `s` – Solid. Fully filled glyph.
+* `o` – Outline. Hollow glyph with only the border/stroke visible, transparent inside.

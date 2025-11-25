@@ -68,7 +68,7 @@ where = ["src"]
 "*" = ["py.typed"]
 
 [tool.ruff.lint]
-ignore = ["D203", "D212", "D107"]
+ignore = ["D203", "D212", "D107", "S314"]
 # Enable
 select = [
   "E", # Pycodestyle Error
@@ -112,14 +112,6 @@ max-complexity = 10
 [tool.ruff.lint.per-file-ignores]
 # Ignore `E402` (import violations) in all `__init__.py` files
 "__init__.py" = ["E402", "D104"]
-"examples/*.py" = [
-  "D100", # Missing docstring in public module
-  "D101", # Missing docstring in public class
-  "D102", # Missing docstring in public method
-  "D103", # Missing docstring in public function
-  "D104", # Missing docstring in public package
-  "ANN101", # Missing type annotation for `self` in method
-]
 "tests/*.py" = [
   "D100", # Missing docstring in public module
   "D101", # Missing docstring in public class
