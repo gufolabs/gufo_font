@@ -1,11 +1,16 @@
 // ---------------------------------------------------------------------
-// Gufo Font: Gufo Font stylesheet.
+// Gufo Font: Rotation classes;
 // ---------------------------------------------------------------------
 // Copyright (C) 2025, Gufo Labs
 // ---------------------------------------------------------------------
-@use "font";
-@use "core";
-@use "state";
-@use "scale";
-@use "rotate";
-@use "glyphs";
+@use "vars" as *;
+
+// Rotation angles.
+// gf-r90, ..
+$rotation-angles: 90, 180, 270;
+
+@each $angle in $rotation-angles {
+    .#{$css-prefix}.#{$css-prefix}-r#{$angle} {
+        transform: rotate(#{$angle}deg);
+    }
+}

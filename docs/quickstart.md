@@ -126,3 +126,11 @@ You can also set an exact icon size using pixel-based classes:
 | `gf-16px`                               | `gf-24px`                               | `gf-32px`                               | `gf-48px`                               | Default                         |
 | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | ------------------------------- |
 | <i class="gf gf-16px cisco-router"></i> | <i class="gf gf-24px cisco-router"></i> | <i class="gf gf-32px cisco-router"></i> | <i class="gf gf-48px cisco-router"></i> | <i class="gf cisco-router"></i> |
+
+## Glyph Rotation
+
+You can rotate glyph using "rotation classes". Rotation angles are measured clockwise:
+
+| Default                         | `gf-r90`                               | `gf-r180`                               | `gf-270`                                |
+| ------------------------------- | -------------------------------------- | --------------------------------------- | --------------------------------------- |
+| <i class="gf cisco-router"></i> | <i class="gf gf-r90 cisco-router"></i> | <i class="gf gf-r180 cisco-router"></i> | <i class="gf gf-r270 cisco-router"></i> |
