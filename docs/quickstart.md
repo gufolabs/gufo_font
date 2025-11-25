@@ -134,3 +134,21 @@ You can rotate glyph using "rotation classes". Rotation angles are measured cloc
 | Default                         | `gf-r90`                               | `gf-r180`                               | `gf-270`                                |
 | ------------------------------- | -------------------------------------- | --------------------------------------- | --------------------------------------- |
 | <i class="gf cisco-router"></i> | <i class="gf gf-r90 cisco-router"></i> | <i class="gf gf-r180 cisco-router"></i> | <i class="gf gf-r270 cisco-router"></i> |
+
+## Glyph Stacking
+
+Glyphs can be stacked together using `gf-stack` class:
+
+``` html
+<span class="gf-stack">
+    <i class="gf rectangle-o"></i>
+    <i class="gf circle-s"></i>
+</span>
+```
+
+Rendered result:
+
+<span class="gf-stack">
+    <i class="gf rectangle-o"></i>
+    <i class="gf circle-s"></i>
+</span>
