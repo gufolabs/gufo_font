@@ -24,5 +24,6 @@ $states: (
 
     .#{$css-prefix}.#{$css-prefix}-#{$state} {
         font-palette: --#{$css-prefix}-#{$state};
+        color: $color;
     }
 }

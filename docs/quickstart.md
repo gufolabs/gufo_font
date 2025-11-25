@@ -142,7 +142,7 @@ Glyphs can be stacked together using `gf-stack` class:
 ``` html
 <span class="gf-stack">
     <i class="gf rectangle-o"></i>
-    <i class="gf circle-s"></i>
+    <i class="gf gf-ok circle-s"></i>
 </span>
 ```
 
@@ -150,5 +150,5 @@ Rendered result:
 
 <span class="gf-stack">
     <i class="gf rectangle-o"></i>
-    <i class="gf circle-s"></i>
+    <i class="gf gf-ok circle-s"></i>
 </span>
