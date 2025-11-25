@@ -16,6 +16,9 @@ SODIPODI_NS = "http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
 
 CLEAN_NS = (INKSCAPE_NS, SODIPODI_NS)
 
+UPM = 4096
+VALID_VIEWBOX = f"0 0 {UPM} {UPM}"
+
 
 class LayerName(Enum):
     """
@@ -153,6 +156,26 @@ def write_layer(tree: ET.ElementTree, children: list[ET.Element], path: Path) ->
     print(f"Written {path}")
 
 
+def check_svg(tree: ET.ElementTree) -> None:
+    """
+    Check if SVG is well-formated.
+
+    Raises:
+        ValueError: On violations.
+    """
+    root = tree.getroot()
+    # Check viewBox
+    viewbox = root.attrib.get("viewBox")
+    if viewbox is None:
+        msg = "SVG missing required viewBox attribute"
+        raise ValueError(msg)
+    # Normalize whitespace
+    viewbox = " ".join(viewbox.split())
+    if viewbox != VALID_VIEWBOX:
+        msg = f"Invald viewbox: {viewbox}"
+        raise ValueError(msg)
+
+
 def main(path: Path) -> None:
     """Extract layers."""
     # Prepare file names
@@ -160,6 +183,7 @@ def main(path: Path) -> None:
     base = path.stem
     # Parse source
     tree = ET.parse(path)
+    check_svg(tree)
     # Process layers
     match get_layer_layout(tree):
         case LayerLayout.SOLID:
