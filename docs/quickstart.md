@@ -15,7 +15,7 @@ To add a network node use `<i>` tag with the required classes:
 Where:
 
 * `gf` - Enables Gufo Font.
-* `cisco-router` - The icon name (see the icon list for details).
+* `cisco-router` - The icon name (see the [icons list](icons.md) for details).
 
 Rendered result:
 
