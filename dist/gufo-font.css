@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "GufoFont";
+  src: url("GufoFont-Regular.b832c1ea.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.gf {
+  font-family: "GufoFont";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  --gf-stencil-size: 64px;
+  font-size: var(--gf-stencil-size);
+  width: var(--gf-stencil-size);
+  margin: 0;
+  padding: 0;
+  transform-origin: center center;
+}
+
+@font-palette-values --gf-unknown {
+  font-family: "GufoFont";
+  override-colors: 1 #7f8c8d;
+}
+.gf.gf-unknown {
+  font-palette: --gf-unknown;
+  color: #7f8c8d;
+}
+
+@font-palette-values --gf-ok {
+  font-family: "GufoFont";
+  override-colors: 1 #16a085;
+}
+.gf.gf-ok {
+  font-palette: --gf-ok;
+  color: #16a085;
+}
+
+@font-palette-values --gf-warn {
+  font-family: "GufoFont";
+  override-colors: 1 #f1c40f;
+}
+.gf.gf-warn {
+  font-palette: --gf-warn;
+  color: #f1c40f;
+}
+
+@font-palette-values --gf-fail {
+  font-family: "GufoFont";
+  override-colors: 1 #c0392b;
+}
+.gf.gf-fail {
+  font-palette: --gf-fail;
+  color: #c0392b;
+}
+
+.gf.gf-2x {
+  --gf-stencil-size: 128px;
+}
+
+.gf.gf-3x {
+  --gf-stencil-size: 192px;
+}
+
+.gf.gf-16px {
+  --gf-stencil-size: 16px;
+}
+
+.gf.gf-24px {
+  --gf-stencil-size: 24px;
+}
+
+.gf.gf-32px {
+  --gf-stencil-size: 32px;
+}
+
+.gf.gf-48px {
+  --gf-stencil-size: 48px;
+}
+
+.gf.gf-r90 {
+  transform: rotate(90deg);
+}
+
+.gf.gf-r180 {
+  transform: rotate(180deg);
+}
+
+.gf.gf-r270 {
+  transform: rotate(270deg);
+}
+
+.gf-stack {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.gf-stack > .gf {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1em;
+}
+
+.gf.circle::before {
+  content: "\e280";
+}
+.gf.circle-s::before {
+  content: "\e281";
+}
+.gf.circle-o::before {
+  content: "\e282";
+}
+.gf.rectangle::before {
+  content: "\e283";
+}
+.gf.rectangle-s::before {
+  content: "\e284";
+}
+.gf.rectangle-o::before {
+  content: "\e285";
+}
+.gf.cisco-router::before {
+  content: "\f02c";
+}
+.gf.cisco-workgroup-switch::before {
+  content: "\f03f";
+}
+
+/*# sourceMappingURL=gufo-font.css.map */
