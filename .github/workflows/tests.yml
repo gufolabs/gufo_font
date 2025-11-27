@@ -22,7 +22,7 @@ on:
     types: ["published"]
 jobs:
   build-push:
-    name: "Build & Push Docs"
+    name: "Run tests"
     runs-on: ubuntu-24.04
     steps:
       # Checkout source code
