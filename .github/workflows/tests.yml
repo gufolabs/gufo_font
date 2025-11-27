@@ -1,11 +1,11 @@
-name: Build Docs
+name: Run Tests
 env:
   PIP_CACHE_DIR: .pip
   PYTHONPATH: src
 on:
   push:
     paths:
-      - ".github/workflows/build-docs.yml"
+      - ".github/workflows/tests.yml"
       - "docs/**"
       - "**.md"
       - "**.py"
@@ -15,12 +15,14 @@ on:
       - "webfonts/**"
     branches:
       - master
-permissions:
-  contents: write
-  pull-requests: write
+  pull_request:
+    branches:
+      - master
+  release:
+    types: ["published"]
 jobs:
   build-push:
-    name: "Build & Push Docs"
+    name: "Run tests"
     runs-on: ubuntu-24.04
     steps:
       # Checkout source code
@@ -45,7 +47,7 @@ jobs:
       # Install dependencies
       - name: Install Dependencies
         run: |
-          uv pip install --system -e .[docs]
+          uv pip install --system -e .[lint,test]
 
       - name: Install NodeJS
         uses: actions/setup-node@v6
@@ -54,9 +56,7 @@ jobs:
         run: npm install -g sass
 
       - name: Build
-        run: ./scripts/build --target=docs
+        run: ./scripts/build --target=test
 
-      # Build documentationn
-      - name: Build & Deploy Docs
-        run: |
-          mkdocs gh-deploy --strict --force
+      - name: Test
+        run: pytest tests/

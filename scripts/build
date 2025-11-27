@@ -1,18 +1,50 @@
 #!/bin/sh
 set -e
-TARGET="dist/gufo-font"
+
+TARGET=test # default
+# Parse options
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --target=*)
+            TARGET="${1#*=}"
+            ;;
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+    shift
+done
+# Preparations
+DIST="dist/gufo-font"
+echo "Post-processing target '$TARGET'"
 echo "Preparing build directory"
-mkdir -p build/ $TARGET
-rm -rf build/* $TARGET/*
+mkdir -p build/ $DIST
+rm -rf build/* $DIST/*
 echo "Generating codepoints"
 python3 ./scripts/make-codepoints.py
+# Build css
 echo "Build CSS"
-STYLE=""
-if [ -z "$DEBUG" ]; then
-    STYLE="--style=compressed"
-fi
-sass $STYLE scss/main.scss $TARGET/gufo-font.css
+MAIN_SCSS=scss/main.scss
+case "$TARGET" in
+    test)
+        sass --no-source-map $MAIN_SCSS $DIST/gufo-font.css
+        ;;
+    docs)
+        sass --style=compressed $MAIN_SCSS $DIST/gufo-font.css
+        ;;
+    package)
+        sass --no-source-map scss/main.scss $DIST/gufo-font.css
+        sass --style=compressed $MAIN_SCSS $DIST/gufo-font.min.css
+        ;;
+    *)
+        echo "Unknown target: $TARGET"
+        exit 1
+        ;;
+esac
+# Copy font
 echo "Copy Font"
-cp webfonts/GufoFont-Regular.woff2 $TARGET/
+cp webfonts/GufoFont-Regular.woff2 $DIST/
+# Insert hashes
 echo "Post Processing"
 python ./scripts/post-process.py
