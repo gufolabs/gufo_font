@@ -81,6 +81,35 @@ Rendered result:
 
 <i class="gf gf-fail cisco-router"></i>
 
+## Glyph Colors
+
+Gufo Font goes with predefined sets of colors styles:
+
+| Style              | Color                                                                                                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `gf-black`         | <i class="gf gf-32px gf-black rectangle"></i> <i class="gf gf-32px gf-black rectangle-s"></i>  <i class="gf gf-32px gf-black rectangle-o"></i>                          |
+| `gf-write`         | <i class="gf gf-32px gf-write rectangle"></i>  <i class="gf gf-32px gf-write rectangle-s"></i>  <i class="gf gf-32px gf-write rectangle-o"></i>                         |
+| `gf-turquoise`     | <i class="gf gf-32px gf-turquoise rectangle"></i>  <i class="gf gf-32px gf-turquoise rectangle-s"></i>  <i class="gf gf-32px gf-turquoise rectangle-o"></i>             |
+| `gf-emerald`       | <i class="gf gf-32px gf-emerald rectangle"></i>  <i class="gf gf-32px gf-emerald rectangle-s"></i>  <i class="gf gf-32px gf-emerald rectangle-o"></i>                   |
+| `gf-green-sea`     | <i class="gf gf-32px gf-green-sea rectangle"></i>  <i class="gf gf-32px gf-green-sea rectangle-s"></i>  <i class="gf gf-32px gf-green-sea rectangle-o"></i>             |
+| `gf-nephritis`     | <i class="gf gf-32px gf-nephritis rectangle"></i>  <i class="gf gf-32px gf-nephritis rectangle-s"></i>  <i class="gf gf-32px gf-nephritis rectangle-o"></i>             |
+| `gf-sunflower`     | <i class="gf gf-32px gf-sunflower rectangle"></i>  <i class="gf gf-32px gf-sunflower rectangle-s"></i>  <i class="gf gf-32px gf-sunflower rectangle-o"></i>             |
+| `gf-orange`        | <i class="gf gf-32px gf-orange rectangle"></i>  <i class="gf gf-32px gf-orange rectangle-s"></i>  <i class="gf gf-32px gf-orange rectangle-o"></i>                      |
+| `gf-carrot`        | <i class="gf gf-32px gf-carrot rectangle"></i>  <i class="gf gf-32px gf-carrot rectangle-s"></i>  <i class="gf gf-32px gf-carrot rectangle-o"></i>                      |
+| `gf-pumpkin`       | <i class="gf gf-32px gf-pumpkin rectangle"></i>  <i class="gf gf-32px gf-pumpkin rectangle-s"></i>  <i class="gf gf-32px gf-pumpkin rectangle-o"></i>                   |
+| `gf-peter-river`   | <i class="gf gf-32px gf-peter-river rectangle"></i>  <i class="gf gf-32px gf-peter-river rectangle-s"></i>  <i class="gf gf-32px gf-peter-river rectangle-o"></i>       |
+| `gf-belize-hole`   | <i class="gf gf-32px gf-belize-hole rectangle"></i>  <i class="gf gf-32px gf-belize-hole rectangle-s"></i>  <i class="gf gf-32px gf-belize-hole rectangle-o"></i>       |
+| `gf-amethyst`      | <i class="gf gf-32px gf-amethyst rectangle"></i>  <i class="gf gf-32px gf-amethyst rectangle-s"></i>  <i class="gf gf-32px gf-amethyst rectangle-o"></i>                |
+| `gf-wisteria`      | <i class="gf gf-32px gf-wisteria rectangle"></i>  <i class="gf gf-32px gf-wisteria rectangle-s"></i>  <i class="gf gf-32px gf-wisteria rectangle-o"></i>                |
+| `gf-alizarin`      | <i class="gf gf-32px gf-alizarin rectangle"></i>  <i class="gf gf-32px gf-alizarin rectangle-s"></i>  <i class="gf gf-32px gf-alizarin rectangle-o"></i>                |
+| `gf-pomegranade`   | <i class="gf gf-32px gf-pomegranade rectangle"></i>  <i class="gf gf-32px gf-pomegranade rectangle-s"></i>  <i class="gf gf-32px gf-pomegranade rectangle-o"></i>       |
+| `gf-clouds`        | <i class="gf gf-32px gf-clouds rectangle"></i>  <i class="gf gf-32px gf-clouds rectangle-s"></i>  <i class="gf gf-32px gf-clouds rectangle-o"></i>                      |
+| `gf-silver`        | <i class="gf gf-32px gf-silver rectangle"></i>  <i class="gf gf-32px gf-silver rectangle-s"></i>  <i class="gf gf-32px gf-silver rectangle-o"></i>                      |
+| `gf-wet-asphalt`   | <i class="gf gf-32px gf-wet-asphalt rectangle"></i>  <i class="gf gf-32px gf-wet-asphalt rectangle-s"></i>  <i class="gf gf-32px gf-wet-asphalt rectangle-o"></i>       |
+| `gf-midnight-blue` | <i class="gf gf-32px gf-midnight-blue rectangle"></i>  <i class="gf gf-32px gf-midnight-blue rectangle-s"></i>  <i class="gf gf-32px gf-midnight-blue rectangle-o"></i> |
+| `gf-concrete`      | <i class="gf gf-32px gf-concrete rectangle"></i>  <i class="gf gf-32px gf-concrete rectangle-s"></i>  <i class="gf gf-32px gf-concrete rectangle-o"></i>                |
+| `gf-asbestos`      | <i class="gf gf-32px gf-asbestos rectangle"></i>  <i class="gf gf-32px gf-asbestos rectangle-s"></i>  <i class="gf gf-32px gf-asbestos rectangle-o"></i>                |
+
 ## Glyph Size
 
 Default network node size is 64x64px. You can adjust it using "scale classes".
