@@ -1,5 +1,15 @@
 version: "0.1"
 icons:
+  Brands:
+    - name: brand-noc-s
+      code: 0xE001
+      added-in: "upcoming"
+    - name: brand-gufolabs-s
+      code: 0xE003
+      added-in: "upcoming"
+    - name: brand-sova-s
+      code: 0xE005
+      added-in: "upcoming"
   UI:
     - name: circle
       code: 0xE280
@@ -18,6 +28,45 @@ icons:
       added-in: "upcoming"
     - name: rectangle-o
       code: 0xE285
+      added-in: "upcoming"
+    - name: circle-small
+      code: 0xE286
+      added-in: "upcoming"
+    - name: circle-small-s
+      code: 0xE287
+      added-in: "upcoming"
+    - name: circle-small-o
+      code: 0xE288
+      added-in: "upcoming"
+    - name: rectangle-small
+      code: 0xE289
+      added-in: "upcoming"
+    - name: rectangle-small-s
+      code: 0xE28A
+      added-in: "upcoming"
+    - name: rectangle-small-o
+      code: 0xE28B
+      added-in: "upcoming"
+    - name: star
+      code: 0xE28C
+      added-in: "upcoming"
+    - name: star-s
+      code: 0xE28D
+      added-in: "upcoming"
+    - name: star-o
+      code: 0xE28E
+      added-in: "upcoming"
+    - name: star-small
+      code: 0xE28F
+      added-in: "upcoming"
+    - name: star-small-s
+      code: 0xE290
+      added-in: "upcoming"
+    - name: star-small-o
+      code: 0xE291
+      added-in: "upcoming"
+    - name: ban-o
+      code: 0xE292
       added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-router

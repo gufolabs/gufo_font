@@ -46,8 +46,10 @@ theme:
     - navigation.tabs.sticky
     - navigation.footer
 watch:
+  - dist/gufo-font/
   - docs/
   - mkdocs.yml
+  - scripts/docs/
 plugins:
   - search
   - gen-files:
