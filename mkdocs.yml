@@ -77,3 +77,4 @@ extra:
     property: G-GW3X378HNJ
 extra_css:
   - assets/gufo-font.css
+  - assets/extra.css
