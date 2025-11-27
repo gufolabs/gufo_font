@@ -4,6 +4,23 @@ hide:
     - toc
 ---
 <link rel="stylesheet" href="../assets/icons.css">
+<script src="../assets/icons.js"></script>
+
+
+<div class="icons-search">
+  <label for="icons-search-input">Search icons:</label>
+  <input
+    type="search"
+    id="icons-search-input"
+    name="icons-search"
+    placeholder="Type to filter icons"
+    autocomplete="off"
+    autofocus
+    style="border: 1px solid #ccc; border-radius: 4px;width: 80%; padding: 4px;"
+  >
+</div>
+
+<div class="icons-empty" hidden>Not found</div>
 
 {% for group in manifest.icons %}
 ## {{group}}

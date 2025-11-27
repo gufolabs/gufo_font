@@ -19,3 +19,11 @@
     background: var(--md-accent-muted);
     box-shadow: var(--md-shadow-z3);
 }
+
+.icon--hidden {
+    display: none !important;
+}
+
+h2:not(:has(+ .icons-list .icon:not(.icon--hidden))) {
+    display: none !important;
+}
