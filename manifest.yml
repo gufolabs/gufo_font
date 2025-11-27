@@ -68,6 +68,24 @@ icons:
     - name: ban-o
       code: 0xE292
       added-in: "upcoming"
+    - name: triangle
+      code: 0xE293
+      added-in: "upcoming"
+    - name: triangle-s
+      code: 0xE294
+      added-in: "upcoming"
+    - name: triangle-o
+      code: 0xE295
+      added-in: "upcoming"
+    - name: triangle-small
+      code: 0xE296
+      added-in: "upcoming"
+    - name: triangle-small-s
+      code: 0xE297
+      added-in: "upcoming"
+    - name: triangle-small-o
+      code: 0xE298
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-router
       code: 0xF02C
