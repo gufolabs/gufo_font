@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-TARGET="dist/gufo-font"
+TARGET="dist"
 echo "Preparing build directory"
 mkdir -p build/ $TARGET
 rm -rf build/* $TARGET/*
@@ -11,7 +11,8 @@ STYLE=""
 if [ -z "$DEBUG" ]; then
     STYLE="--style=compressed"
 fi
-sass $STYLE scss/main.scss $TARGET/gufo-font.css
+sass $STYLE scss/main.scss $TARGET/gufo-font.min.css
+sass scss/main.scss $TARGET/gufo-font.css
 echo "Copy Font"
 cp webfonts/GufoFont-Regular.woff2 $TARGET/
 echo "Post Processing"

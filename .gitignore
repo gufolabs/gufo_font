@@ -4,7 +4,6 @@ syntax: glob
 !.devcontainer
 !.github
 !.gitattributes
-/dist/
 /build/
 __pycache__
 *.pyc

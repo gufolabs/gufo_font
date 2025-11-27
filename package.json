@@ -1,0 +1,35 @@
+{
+  "name": "@gufolabs/gufo-font",
+  "version": "0.1.0",
+  "description": "Telecom and IT-oriented icon font.",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gufolabs/gufo_font.git"
+  },
+  "author": "Gufo Labs",
+  "files": [
+    "dist/gufo-font.css",
+    "dist/gufo-font.css.map",
+    "dist/gufo-font.min.css",
+    "dist/gufo-font.min.css.map",
+    "dist/GufoFont-Regular.*.woff2",
+    "LICENSE.md",
+    "webfonts/LICENSE.md"
+  ],
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "build": "python scripts/build.py"
+  },
+  "keywords": [
+    "icon-font",
+    "gufo"
+  ],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gufolabs/gufo_font/issues"
+  },
+  "homepage": "https://github.com/gufolabs/gufo_font#readme"
+}
