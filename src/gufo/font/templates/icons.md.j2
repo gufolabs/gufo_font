@@ -16,15 +16,15 @@ hide:
     placeholder="Type to filter icons"
     autocomplete="off"
     autofocus
-    style="border: 1px solid #ccc; border-radius: 4px;width: 80%; padding: 4px;"
+    style="border-bottom: 1px solid var(--md-typeset-color);width: 80%; padding: 4px;"
   >
 </div>
 
-<div class="icons-empty" hidden>Not found</div>
+<div class="icons-empty icons-wrapper" hidden>Not found</div>
 
 {% for group in manifest.icons %}
 ## {{group}}
-  <div class="icons-list">
+  <div class="icons-list icons-wrapper">
   {% for icon in manifest.iter_enabled_icons(group) %}
   <div class="icon">
     <i class="gf {{icon.name}}"></i>

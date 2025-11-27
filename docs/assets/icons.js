@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const iconClass = Array.from(item.querySelector('.gf').classList)
           .find((cls) => cls !== 'gf') || '';
         const matches = needle && iconClass.toLowerCase().includes(needle);
-        const show = needle.length < 3 ? true : !!matches;
+        const show = needle.length < 1 ? true : !!matches;
         item.classList.toggle('icon--hidden', !show);
       });
     });
