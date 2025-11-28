@@ -7,17 +7,32 @@ hide:
 <script src="../assets/icons.js"></script>
 
 
-<div class="icons-search">
-  <label for="icons-search-input">Search icons:</label>
-  <input
-    type="search"
-    id="icons-search-input"
-    name="icons-search"
-    placeholder="Type to filter icons"
-    autocomplete="off"
-    autofocus
-    style="border-bottom: 1px solid var(--md-typeset-color);width: 80%; padding: 4px;"
-  >
+<div class="gufo-search" id="gufo-search-form">
+  <div class="gufo-search-row">
+    <label for="gufo-search-input" class="gufo-search-label">Search icons:</label>
+    <input
+      type="search"
+      id="gufo-search-input"
+      name="icons-search"
+      class="gufo-search-input"
+      placeholder="Type to filter icons"
+      autocomplete="off"
+      autofocus
+    >
+  </div>
+
+  <div class="gufo-search-row">
+    <label for="gufo-search-style" class="gufo-search-label">Choose Status:</label>
+    <select
+      id="gufo-search-style"
+      name="style"
+      class="gufo-select"
+    >
+      <option value="">All</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+    </select>
+  </div>
 </div>
 
 <div class="icons-empty icons-wrapper" hidden>Not found</div>

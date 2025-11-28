@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const input = document.querySelector('#icons-search-input');
+  const input = document.querySelector('#gufo-search-input');
   const lists = document.querySelectorAll('.icons-list');
   const filterIcons = (needle) => {
     lists.forEach((list) => {
