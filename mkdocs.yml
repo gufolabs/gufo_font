@@ -50,6 +50,7 @@ watch:
   - docs/
   - mkdocs.yml
   - scripts/docs/
+  - src/gufo/font/
 plugins:
   - search
   - gen-files:
