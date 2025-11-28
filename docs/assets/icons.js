@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.querySelector('#gufo-search-input');
   const lists = document.querySelectorAll('.icons-list');
-  const status = document.querySelector('#gufo-search-status');
+  const style = document.querySelector('#gufo-search-style');
   const filterIcons = (needle) => {
     lists.forEach((list) => {
       list.querySelectorAll('.icon').forEach((item) => {
@@ -19,16 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
     filterIcons(value);
   });
 
-  let prevStatus = status.value;
-  status.addEventListener('change', (event) => {
-    const nextStatus = event.target.value;
+  let prevStyle = style.value;
+  style.addEventListener('change', (event) => {
+    const nextStyle = event.target.value;
     document.querySelectorAll('i.gf').forEach((icon) => {
-      if(prevStatus) {
-        icon.classList.remove(`${prevStatus}`);
+      if(prevStyle) {
+        icon.classList.remove(`${prevStyle}`);
       }
-      icon.classList.add(`${nextStatus}`);
+      if (nextStyle) {
+        icon.classList.add(`${nextStyle}`);
+      } else {
+        icon.classList.remove(`${prevStyle}`);
+      }
     });
-    prevStatus = nextStatus;
+    prevStyle = nextStyle;
   });
   filterIcons('');
 });
