@@ -7,17 +7,37 @@ hide:
 <script src="../assets/icons.js"></script>
 
 
-<div class="icons-search">
-  <label for="icons-search-input">Search icons:</label>
-  <input
-    type="search"
-    id="icons-search-input"
-    name="icons-search"
-    placeholder="Type to filter icons"
-    autocomplete="off"
-    autofocus
-    style="border-bottom: 1px solid var(--md-typeset-color);width: 80%; padding: 4px;"
-  >
+<div class="gufo-search" id="gufo-search-form">
+  <div class="gufo-search-row">
+    <label for="gufo-search-input" class="gufo-search-label">Search icons:</label>
+    <input
+      type="search"
+      id="gufo-search-input"
+      class="gufo-search-input"
+      placeholder="Type to filter icons"
+      autocomplete="off"
+      autofocus
+    >
+  </div>
+
+  <div class="gufo-search-row">
+    <select
+      id="gufo-search-style"
+      class="gufo-select"
+    >
+      <option value=""> Default </option>
+      <optgroup label="States">
+        {% for choice in state_choices %}
+          <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+        {% endfor %}
+      </optgroup>
+      <optgroup label="Colors">
+        {% for choice in color_choices %}
+          <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+        {% endfor %}
+      </optgroup>
+    </select>
+  </div>
 </div>
 
 <div class="icons-empty icons-wrapper" hidden>Not found</div>
