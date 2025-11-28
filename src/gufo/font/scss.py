@@ -41,7 +41,7 @@ class ScssParser(object):
             raise ValueError(msg)
         for line in match.group(1).splitlines():
             line = line.strip().rstrip(",")
-            parts = line.strip().rstrip(",").split(":", 1)
+            parts = line.split(":", 1)
             if len(parts) == 2:
                 r[parts[0].strip()] = parts[1].strip()
         return r
