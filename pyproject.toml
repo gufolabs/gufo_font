@@ -24,6 +24,7 @@ version = "0.1"
 
 [project.optional-dependencies]
 docs = [
+  "click==8.2.1", # click 8.3.0 brokes mkdocs live reload
   "mkdocs-gen-files==0.5.0",
   "mkdocs-literate-nav==0.6.2",
   "mkdocs-material==9.6.11",
