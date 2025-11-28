@@ -19,4 +19,6 @@ def get_icons_md() -> str:
     env = Environment(loader=PackageLoader("gufo.font", "templates"), autoescape=True)
     tpl = env.get_template(TEMPLATE)
     manifest = Manifest.read()
-    return tpl.render(manifest=manifest)
+    return tpl.render(
+        manifest=manifest, color_choices=[("gf-ok", "ok"), ("gf-fail", "fail")]
+    )

@@ -130,3 +130,10 @@ explicit_package_bases = true
 mypy_path = ["src"]
 strict = true
 warn_unused_ignores = false
+
+[dependency-groups]
+dev = [
+    "click<8.2.2",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.11",
+]
