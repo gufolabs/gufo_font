@@ -13,7 +13,6 @@ hide:
     <input
       type="search"
       id="gufo-search-input"
-      name="icons-search"
       class="gufo-search-input"
       placeholder="Type to filter icons"
       autocomplete="off"
@@ -24,13 +23,13 @@ hide:
   <div class="gufo-search-row">
     <label for="gufo-search-style" class="gufo-search-label">Choose Status:</label>
     <select
-      id="gufo-search-style"
-      name="style"
+      id="gufo-search-status"
       class="gufo-select"
     >
-      <option value="">All</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
+      <option disabled selected value> -- select status -- </option>
+    {% for choice in color_choices %}
+      <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+    {% endfor %}
     </select>
   </div>
 </div>
