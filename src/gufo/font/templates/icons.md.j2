@@ -26,10 +26,17 @@ hide:
       id="gufo-search-status"
       class="gufo-select"
     >
-      <option disabled selected value> -- select status -- </option>
-    {% for choice in color_choices %}
-      <option value="{{ choice[0] }}">{{ choice[1] }}</option>
-    {% endfor %}
+      <option value=""> Default </option>
+      <optgroup label="States">
+        {% for choice in state_choices %}
+          <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+        {% endfor %}
+      </optgroup>
+      <optgroup label="Colors">
+        {% for choice in color_choices %}
+          <option value="{{ choice[0] }}">{{ choice[1] }}</option>
+        {% endfor %}
+      </optgroup>
     </select>
   </div>
 </div>

@@ -28,13 +28,18 @@ def get_icons_md() -> str:
     env = Environment(loader=PackageLoader("gufo.font", "templates"), autoescape=True)
     tpl = env.get_template(TEMPLATE)
     manifest = Manifest.read()
-    # Build colors and states
-    color_choices = []
+    # Build states
     states_parser = ScssParser(Path("scss", "_state.scss"))
-    for k in states_parser.extract_dict("states"):
-        color_choices.append((f"gf-{k}", q_color(k)))
+    state_choices = [
+        (f"gf-{k}", q_color(k)) for k in states_parser.extract_dict("states")
+    ]
+    # Build colors
     colors_parser = ScssParser(Path("scss", "_colors.scss"))
-    for k in colors_parser.extract_dict("colors"):
-        color_choices.append((f"gf-{k}", q_color(k)))
+    color_choices = [
+        (f"gf-{k}", q_color(k)) for k in colors_parser.extract_dict("colors")
+    ]
     # Render
-    return tpl.render(manifest=manifest, color_choices=color_choices)
+    print(state_choices, color_choices)
+    return tpl.render(
+        manifest=manifest, state_choices=state_choices, color_choices=color_choices
+    )
