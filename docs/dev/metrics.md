@@ -54,3 +54,13 @@ To maintain visual consistency across all Gufo Font glyphs, the following elemen
 
 These values align with the 16×16 design grid and provide a balanced,
 uniform appearance when icons are rendered at various sizes.
+
+## Element Proportions
+
+Recognizable elements must have consistent proportions:
+
+| Element                      | W:H |
+| ---------------------------- | --- |
+| Paper page (portrait)        | 3:4 |
+| Paper page (landscape)       | 4:3 |
+| Perspective (cylinder's top) | 5:2 |

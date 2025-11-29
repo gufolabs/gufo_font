@@ -7,4 +7,5 @@ internal structure explanations, and best practices that will help you work effe
 
 * [Font Metrics](metrics.md)
 * [Glyph Naming Scheme](naming.md)
+* [Palette](palette.md)
 * [Copdepoings Ranges](codepoints.md)
