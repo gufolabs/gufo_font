@@ -14,6 +14,7 @@ nav:
       - Overview: dev/index.md
       - Font Metrics: dev/metrics.md
       - Glyph Naming: dev/naming.md
+      - Palette: dev/palette.md
       - Codepoings Ranges: dev/codepoints.md
   - Changelog: CHANGELOG.md
   - License:

@@ -31,13 +31,13 @@ $colors: (
 );
 
 // Font palletes
-// Color 0 - white outline
-// Color 1 - state-dependent filling
+// Color 0 - state-dependent filling
+// Color 1 - white outline
 @each $name, $color in $colors {
     @font-palette-values --#{$css-prefix}-#{"" + $name} {
         font-family: $family;
         override-colors:
-            1 $color;
+            0 $color;
     }
 
     .#{$css-prefix}.#{$css-prefix}-#{"" + $name} {
