@@ -86,14 +86,51 @@ icons:
     - name: triangle-small-o
       code: 0xE298
       added-in: "upcoming"
+    - name: copy-s
+      code: 0xE299
+      added-in: "upcoming"
+    - name: copy-o
+      code: 0xE29A
+      added-in: "upcoming"
+    - name: play
+      code: 0xE29B
+      added-in: "upcoming"
+    - name: play-s
+      code: 0xE29C
+      added-in: "upcoming"
+    - name: play-o
+      code: 0xE29D
+      added-in: "upcoming"
+    - name: pause
+      code: 0xE29E
+      added-in: "upcoming"
+    - name: pause-s
+      code: 0xE29F
+      added-in: "upcoming"
+    - name: pause-o
+      code: 0xE2A0
+      added-in: "upcoming"
+  IT:
+    - name: database
+      code: 0xF000
+      added-in: "upcoming"
+      labels: ["storage"]
+    - name: database-s
+      code: 0xF001
+      added-in: "upcoming"
+      labels: ["storage"]
+    - name: internet
+      code: 0xF002
+      added-in: "upcoming"
+      labels: ["storage"]
   Cisco Stencils:
     - name: cisco-router
-      code: 0xF02C
+      code: 0xF22C
       description: Classic Cisco-style router icon.
       labels: ["router"]
       added-in: "upcoming"
     - name: cisco-workgroup-switch
-      code: 0xF03F
+      code: 0xF23F
       description: Classic Cisco-style switch icon.
       labels: ["switch"]
       added-in: "upcoming"

@@ -8,7 +8,8 @@ The allocated ranges for different sections are as follows:
 | BRANDS | `brand`        | U+E000 | U+E07F | 128  | NOC authorided derived products and parther's logo |
 | APPS   | `app`          | U+E080 | U+E27F | 512  | NOC Application's icons, including plugins         |
 | UI     |                | U+E280 | U+E67F | 1024 | Application UI elements                            |
-| CISCO  | `cisco`        | U+F000 | U+F1FF | 512  | Cisco-style UI stencils                            |
+| IT     | `it`           | U+F000 | U+F1FF | 512  | IT Stencils                                        |
+| CISCO  | `cisco`        | U+F200 | U+F3FF | 512  | Cisco-style UI stencils                            |
 
 !!! note
 
