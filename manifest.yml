@@ -110,6 +110,24 @@ icons:
     - name: pause-o
       code: 0xE2A0
       added-in: "upcoming"
+    - name: minus
+      code: 0xE2A1
+      added-in: "upcoming"
+    - name: minus-s
+      code: 0xE2A2
+      added-in: "upcoming"
+    - name: minus-o
+      code: 0xE2A3
+      added-in: "upcoming"
+    - name: minus-small
+      code: 0xE2A4
+      added-in: "upcoming"
+    - name: minus-small-s
+      code: 0xE2A5
+      added-in: "upcoming"
+    - name: power-off-s
+      code: 0xE2B6
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -122,7 +140,18 @@ icons:
     - name: internet
       code: 0xF002
       added-in: "upcoming"
-      labels: ["storage"]
+    - name: fiber-optics-o
+      code: 0xF003
+      added-in: "upcoming"
+    - name: cloud
+      code: 0xF004
+      added-in: "upcoming"
+    - name: cloud-s
+      code: 0xF005
+      added-in: "upcoming"
+    - name: cloud-o
+      code: 0xF006
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-router
       code: 0xF22C
