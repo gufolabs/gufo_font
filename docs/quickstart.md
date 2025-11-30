@@ -81,7 +81,7 @@ Rendered result:
 
 <i class="gf gf-fail cisco-router"></i>
 
-## Glyph Colors
+## Colors
 
 Gufo Font goes with predefined sets of colors styles:
 
@@ -110,7 +110,7 @@ Gufo Font goes with predefined sets of colors styles:
 | `gf-concrete`      | <i class="gf gf-32px gf-concrete rectangle"></i>  <i class="gf gf-32px gf-concrete rectangle-s"></i>  <i class="gf gf-32px gf-concrete rectangle-o"></i>                |
 | `gf-asbestos`      | <i class="gf gf-32px gf-asbestos rectangle"></i>  <i class="gf gf-32px gf-asbestos rectangle-s"></i>  <i class="gf gf-32px gf-asbestos rectangle-o"></i>                |
 
-## Glyph Size
+## Size
 
 Default network node size is 64x64px. You can adjust it using "scale classes".
 
@@ -156,7 +156,7 @@ You can also set an exact icon size using pixel-based classes:
 | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | ------------------------------- |
 | <i class="gf gf-16px cisco-router"></i> | <i class="gf gf-24px cisco-router"></i> | <i class="gf gf-32px cisco-router"></i> | <i class="gf gf-48px cisco-router"></i> | <i class="gf cisco-router"></i> |
 
-## Glyph Rotation
+## Rotation
 
 You can rotate glyph using "rotation classes". Rotation angles are measured clockwise:
 
@@ -164,7 +164,15 @@ You can rotate glyph using "rotation classes". Rotation angles are measured cloc
 | ------------------------------- | -------------------------------------- | --------------------------------------- | --------------------------------------- |
 | <i class="gf cisco-router"></i> | <i class="gf gf-r90 cisco-router"></i> | <i class="gf gf-r180 cisco-router"></i> | <i class="gf gf-r270 cisco-router"></i> |
 
-## Glyph Stacking
+## Flipping
+
+In addition to rotation, you can flip (mirror) a glyph across the vertical axis (gf-flip-v), the horizontal axis (gf-flip-h), or both axes (gf-flip).
+
+| Default                | `gf-flip-v`                      | `gf-flip-h`                      | `gf-flip`                      |
+| ---------------------- | -------------------------------- | -------------------------------- | ------------------------------ |
+| <i class="gf cloud-o"> | <i class="gf gf-flip-v cloud-o"> | <i class="gf gf-flip-h cloud-o"> | <i class="gf gf-flip cloud-o"> |
+
+## Stacking
 
 Glyphs can be stacked together using `gf-stack` class:
 
