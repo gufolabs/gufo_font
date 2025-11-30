@@ -128,6 +128,30 @@ icons:
     - name: power-off-s
       code: 0xE2B6
       added-in: "upcoming"
+    - name: chevron-right
+      code: 0xE2B7
+      added-in: "upcoming"
+    - name: chevron-right-s
+      code: 0xE2B8
+      added-in: "upcoming"
+    - name: chevron-up
+      code: 0xE2B9
+      added-in: "upcoming"
+    - name: chevron-up-s
+      code: 0xE2BA
+      added-in: "upcoming"
+    - name: chevron-left
+      code: 0xE2BB
+      added-in: "upcoming"
+    - name: chevron-left-s
+      code: 0xE2BC
+      added-in: "upcoming"
+    - name: chevron-down
+      code: 0xE2BD
+      added-in: "upcoming"
+    - name: chevron-down-s
+      code: 0xE2BE
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
