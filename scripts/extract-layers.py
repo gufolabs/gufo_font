@@ -5,7 +5,7 @@
 # ---------------------------------------------------------------------
 
 # Python modules
-import sys
+import io
 import xml.etree.ElementTree as ET
 from enum import Enum, IntEnum
 from pathlib import Path
@@ -152,38 +152,66 @@ def get_svg(original_root: ET.Element, children: list[ET.Element]) -> ET.Element
 def write_layer(tree: ET.ElementTree, children: list[ET.Element], path: Path) -> None:
     """Build and write SVG for layer."""
     out_tree = get_svg(tree.getroot(), children)
-    out_tree.write(str(path), encoding="utf-8", xml_declaration=True)
-    print(f"Written {path}")
+    f = io.BytesIO()
+    out_tree.write(f, encoding="utf-8", xml_declaration=True)
+    data = f.getvalue()
+    if path.exists():
+        old_data = path.read_bytes()
+        if old_data == data:
+            print(f"Skipping {path}: unchanged")
+            return
+    print(f"Writing {path}: {len(data)} bytes")
+    path.write_bytes(data)
 
 
-def check_svg(tree: ET.ElementTree) -> None:
+def check_svg(path: Path, tree: ET.ElementTree) -> None:
     """
     Check if SVG is well-formated.
 
     Raises:
         ValueError: On violations.
     """
+
+    def fix_viewbox(viewbox: str) -> bool:
+        """Try to fix viewbox."""
+
+        def near_4k(v: str) -> bool:
+            try:
+                return abs(float(v) - 4096.0) < 0.01
+            except ValueError:
+                return False
+
+        items = viewbox.split()
+        if len(items) != 4:
+            return False
+        if items[0] != "0" or items[1] != "0":
+            return False
+        if near_4k(items[2]) and near_4k(items[3]):
+            root.set("viewBox", VALID_VIEWBOX)
+            return True
+        return False
+
     root = tree.getroot()
     # Check viewBox
     viewbox = root.attrib.get("viewBox")
     if viewbox is None:
-        msg = "SVG missing required viewBox attribute"
+        msg = f"{path}: SVG missing required viewBox attribute"
         raise ValueError(msg)
     # Normalize whitespace
     viewbox = " ".join(viewbox.split())
-    if viewbox != VALID_VIEWBOX:
-        msg = f"Invald viewbox: {viewbox}"
+    if viewbox != VALID_VIEWBOX and not fix_viewbox(viewbox):
+        msg = f"{path}: Invald viewbox: {viewbox}"
         raise ValueError(msg)
 
 
-def main(path: Path) -> None:
+def extract_layers(path: Path) -> None:
     """Extract layers."""
     # Prepare file names
     out_dir = (path.parent / ".." / "layers").resolve()
     base = path.stem
     # Parse source
     tree = ET.parse(path)
-    check_svg(tree)
+    check_svg(path, tree)
     # Process layers
     match get_layer_layout(tree):
         case LayerLayout.SOLID:
@@ -204,9 +232,24 @@ def main(path: Path) -> None:
                 (out_dir / f"{base}-b").with_suffix(".svg"),
             )
         case _:
-            msg = "Unknown layout"
+            msg = f"{path}: Unknown layout"
             raise ValueError(msg)
 
 
+def main(paths: list[str]) -> None:
+    """Extract layers from all files."""
+    tasks: set[Path] = set()
+    for p in paths:
+        path = Path(p)
+        if path.is_dir():
+            tasks.update(pp for pp in path.rglob("*.svg"))
+        else:
+            tasks.add(path)
+    for p in tasks:
+        extract_layers(Path(p))
+
+
 if __name__ == "__main__":
-    main(Path(sys.argv[1]))
+    import sys
+
+    main(sys.argv[1:])
