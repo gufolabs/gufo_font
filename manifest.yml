@@ -125,6 +125,51 @@ icons:
     - name: minus-small-s
       code: 0xE2A5
       added-in: "upcoming"
+    - name: plus
+      code: 0xE2A6
+      added-in: "upcoming"
+    - name: plus-s
+      code: 0xE2A7
+      added-in: "upcoming"
+    - name: plus-o
+      code: 0xE2A8
+      added-in: "upcoming"
+    - name: plus-small
+      code: 0xE2A9
+      added-in: "upcoming"
+    - name: plus-small-s
+      code: 0xE2AA
+      added-in: "upcoming"
+    - name: arrow-right
+      code: 0xE2AB
+      added-in: "upcoming"
+    - name: arrow-right-s
+      code: 0xE2AC
+      added-in: "upcoming"
+    - name: arrow-left
+      code: 0xE2AD
+      added-in: "upcoming"
+    - name: arrow-left-s
+      code: 0xE2AE
+      added-in: "upcoming"
+    - name: arrow-up
+      code: 0xE2AF
+      added-in: "upcoming"
+    - name: arrow-up-s
+      code: 0xE2B0
+      added-in: "upcoming"
+    - name: arrow-down
+      code: 0xE2B1
+      added-in: "upcoming"
+    - name: arrow-down-s
+      code: 0xE2B2
+      added-in: "upcoming"
+    - name: check
+      code: 0xE2B3
+      added-in: "upcoming"
+    - name: check-s
+      code: 0xE2B4
+      added-in: "upcoming"
     - name: power-off-s
       code: 0xE2B6
       added-in: "upcoming"
@@ -151,6 +196,18 @@ icons:
       added-in: "upcoming"
     - name: chevron-down-s
       code: 0xE2BE
+      added-in: "upcoming"
+    - name: xmark
+      code: 0xE2C7
+      added-in: "upcoming"
+    - name: xmark-s
+      code: 0xE2C8
+      added-in: "upcoming"
+    - name: xmark-small
+      code: 0xE2C9
+      added-in: "upcoming"
+    - name: xmark-small-s
+      code: 0xE2CA
       added-in: "upcoming"
   IT:
     - name: database
