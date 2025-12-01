@@ -3,9 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const lists = document.querySelectorAll('[data-component="icons-list"]');
   const styleSelect = document.querySelector('[data-component="style-select"]');
   const dialog = document.getElementById('gufo-icon-dialog');
+  const hash = window.location.hash.slice(1);
   let prevStyle = styleSelect.value;
 
   if (!input || !styleSelect) return;
+
+  if (hash) {
+    showIconDialog();
+  }
 
   const filterIcons = (needle) => {
     lists.forEach((list) => {
@@ -56,8 +61,21 @@ function showIconDialog(el) {
   const iconEl = dialog.querySelector('.dialog-content-icon i');
   const descriptionEl = dialog.querySelector('.dialog-content-description');
   const versionEl = dialog.querySelector('.dialog-content-version');
-  const name = el.dataset.iconName;
-  const code = parseInt(el.dataset.iconCode).toString(16).toUpperCase();
+  let name, code;
+  if (el) {
+    const url = new URL(window.location.href);
+    name = el.dataset.iconName;
+    code = parseInt(el.dataset.iconCode).toString(16).toUpperCase();
+    url.hash = name;
+    window.location.href = url.toString();
+  } else {
+    const hash = window.location.hash.slice(1);
+    const iconEl = document.querySelector(`[data-icon-name="${hash}"]`);
+    if (!iconEl) return;
+    name = iconEl.dataset.iconName;
+    code = parseInt(iconEl.dataset.iconCode).toString(16).toUpperCase();
+    el = iconEl;
+  }
   iconEl.className = `gf ${name}`;
   titleEl.textContent = `Icon: ${name}`;
   codeEl.textContent = code;
