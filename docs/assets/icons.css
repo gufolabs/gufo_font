@@ -14,9 +14,7 @@
     transition: background 0.15s, box-shadow 0.15s;
     cursor: pointer;
 }
-.icon i {
-    height: 128px;
-}
+
 .icons-list>.icon:hover {
     background: var(--md-accent-muted);
     box-shadow: var(--md-shadow-z3);
@@ -31,7 +29,6 @@ h2:not(:has(+ .icons-list .icon:not(.icon--hidden))) {
 }
 
 .icon-title-label {
-    width: 100px;
     height: 56px;
     text-align: center;
 }
