@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.clientY < rect.top ||
         e.clientY > rect.bottom
       ) {
-        dialog.close();
+        closeDialog();
       }
   });
   
