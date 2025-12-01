@@ -1,38 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const input = document.querySelector('#gufo-search-input');
-  const lists = document.querySelectorAll('.icons-list');
-  const style = document.querySelector('#gufo-search-style');
+  const input = document.querySelector('[data-component="search-input"]');
+  const lists = document.querySelectorAll('[data-component="icons-list"]');
+  const styleSelect = document.querySelector('[data-component="style-select"]');
+  
+  if (!input || !styleSelect) return;
+
   const filterIcons = (needle) => {
     lists.forEach((list) => {
-      list.querySelectorAll('.icon').forEach((item) => {
-        const iconClass = Array.from(item.querySelector('.gf').classList)
-          .find((cls) => cls !== 'gf') || '';
-        const matches = needle && iconClass.toLowerCase().includes(needle);
-        const show = needle.length < 1 ? true : !!matches;
-        item.classList.toggle('icon--hidden', !show);
+      list.querySelectorAll('[data-type="icon"]').forEach((item) => {
+        const iconName = item.dataset.iconName || '';
+        const matches = iconName.toLowerCase().includes(needle);
+        item.classList.toggle('icon--hidden', needle.length > 0 && !matches);
       });
     });
   };
 
   input.addEventListener('input', () => {
-    const value = input.value.trim().toLowerCase();
-    filterIcons(value);
+    filterIcons(input.value.trim().toLowerCase());
   });
 
-  let prevStyle = style.value;
-  style.addEventListener('change', (event) => {
+  let prevStyle = styleSelect.value;
+  
+  styleSelect.addEventListener('change', (event) => {
     const nextStyle = event.target.value;
-    document.querySelectorAll('i.gf').forEach((icon) => {
-      if(prevStyle) {
-        icon.classList.remove(`${prevStyle}`);
-      }
-      if (nextStyle) {
-        icon.classList.add(`${nextStyle}`);
-      } else {
-        icon.classList.remove(`${prevStyle}`);
-      }
+    const icons = document.querySelectorAll('[data-type="icon-element"]');
+    
+    icons.forEach((icon) => {
+      if (prevStyle) icon.classList.remove(prevStyle);
+      if (nextStyle) icon.classList.add(nextStyle);
     });
+    
     prevStyle = nextStyle;
   });
-  filterIcons('');
+
+  filterIcons('')
 });

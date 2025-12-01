@@ -17,12 +17,13 @@ hide:
       placeholder="Type to filter icons"
       autocomplete="off"
       autofocus
+      data-component="search-input"
     >
   </div>
 
   <div class="gufo-search-row">
     <select
-      id="gufo-search-style"
+      data-component="style-select"
       class="gufo-select"
     >
       <option value=""> Default </option>
@@ -44,10 +45,10 @@ hide:
 
 {% for group in manifest.icons %}
 ## {{group}}
-  <div class="icons-list icons-wrapper">
+  <div class="icons-list icons-wrapper" data-component="icons-list">
   {% for icon in manifest.iter_enabled_icons(group) %}
-  <div class="icon">
-    <i class="gf {{icon.name}}"></i>
+  <div class="icon" data-type="icon" data-icon-name="{{icon.name}}">
+    <i class="gf {{icon.name}}" data-type="icon-element"></i>
     <div class="title">{{icon.name}}</div>
   </div>
   {% endfor %}
