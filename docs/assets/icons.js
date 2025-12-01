@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const input = document.querySelector('[data-component="search-input"]');
   const lists = document.querySelectorAll('[data-component="icons-list"]');
   const styleSelect = document.querySelector('[data-component="style-select"]');
-  
+  const dialog = document.getElementById('gufo-icon-dialog');
+  let prevStyle = styleSelect.value;
+
   if (!input || !styleSelect) return;
 
   const filterIcons = (needle) => {
@@ -19,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     filterIcons(input.value.trim().toLowerCase());
   });
 
-  let prevStyle = styleSelect.value;
   
   styleSelect.addEventListener('change', (event) => {
     const nextStyle = event.target.value;
@@ -33,5 +34,61 @@ document.addEventListener('DOMContentLoaded', () => {
     prevStyle = nextStyle;
   });
 
-  filterIcons('')
+  dialog.addEventListener('click', (e) => {
+      const rect = dialog.getBoundingClientRect();
+      if (
+        e.clientX < rect.left ||
+        e.clientX > rect.right ||
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom
+      ) {
+        dialog.close();
+      }
+  });
+  
+  filterIcons('');
 });
+
+function showIconDialog(el) {
+  const dialog = document.getElementById('gufo-icon-dialog');
+  const titleEl = dialog.querySelector('.dialog-header .dialog-title-text');
+  const codeEl = dialog.querySelector('.dialog-content-code');
+  const iconEl = dialog.querySelector('.dialog-content-icon i');
+  const descriptionEl = dialog.querySelector('.dialog-content-description');
+  const versionEl = dialog.querySelector('.dialog-content-version');
+  const name = el.dataset.iconName;
+  const code = parseInt(el.dataset.iconCode).toString(16).toUpperCase();
+  iconEl.className = `gf ${name}`;
+  titleEl.textContent = `Icon: ${name}`;
+  codeEl.textContent = code;
+  descriptionEl.textContent = el.dataset.iconDescription || '-';
+  versionEl.textContent = el.dataset.iconVersion || '-';
+  titleEl.nextElementSibling.dataset.value = name; // for copy IconName to clipboard
+  codeEl.nextElementSibling.dataset.value = code; // for copy IconCode to clipboard
+  dialog.showModal()
+};
+
+function closeDialog() {
+  const dialog = document.getElementById('gufo-icon-dialog');
+  dialog.close();
+};
+
+function copyToClipboard(el) {
+
+  navigator.clipboard.writeText(el.dataset.value || '')
+    .then(() => animateCopyIcon(el))
+    .catch(console.error);
+}
+
+function animateCopyIcon(el) {
+  el.classList.remove('copy-s');
+  el.classList.add('copy-o');
+
+  el.classList.remove('copy-o');
+  el.classList.add('copy-s');
+
+  setTimeout(() => {
+    el.classList.remove('copy-s');
+    el.classList.add('copy-o');
+  }, 2000);
+}

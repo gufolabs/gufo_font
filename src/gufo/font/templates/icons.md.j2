@@ -6,7 +6,6 @@ hide:
 <link rel="stylesheet" href="../assets/icons.css">
 <script src="../assets/icons.js"></script>
 
-
 <div class="gufo-search" id="gufo-search-form">
   <div class="gufo-search-row">
     <label for="gufo-search-input" class="gufo-search-label">Search icons:</label>
@@ -47,10 +46,48 @@ hide:
 ## {{group}}
   <div class="icons-list icons-wrapper" data-component="icons-list">
   {% for icon in manifest.iter_enabled_icons(group) %}
-  <div class="icon" data-type="icon" data-icon-name="{{icon.name}}">
+  <div class="icon" 
+      data-type="icon"
+      data-icon-name="{{icon.name}}"
+      data-icon-code="{{icon.code}}"
+      data-icon-description="{{icon.description}}"
+      data-icon-version="{{icon.added_in}}"
+      onclick="showIconDialog(this)">
     <i class="gf {{icon.name}}" data-type="icon-element"></i>
     <div class="title">{{icon.name}}</div>
   </div>
   {% endfor %}
   </div>
 {% endfor %}
+
+<dialog id="gufo-icon-dialog" data-theme="light">
+    <div class="dialog-header">
+      <div class="dialog-header-text">
+        <span class="dialog-title-text"></span>
+        <i class="gf copy-o dialog-icons" onclick="copyToClipboard(this)"></i>
+      </div>
+      <button class="dialog-close-button">
+        <i class="gf star-small-o dialog-icons" onclick="closeDialog()"></i>
+      </button>
+    </div>
+    <div class="dialog-content"  tabindex="0" autofocus>
+        <div class="dialog-content-icon">
+          <i></i>
+        </div>
+    <div class="dialog-content-info">
+      <div class="dialog-content-code-wrapper">
+        <span class="dialog-content-code-label">Code:</span>
+        <span class="dialog-content-code"></span>
+        <i class="gf copy-o dialog-icons" onclick="copyToClipboard(this)"></i>
+      </div>
+      <div class="dialog-content-description-wrapper">
+        <div class="dialog-content-description-label">Description:</div>
+        <div class="dialog-content-description"></div>
+      </div>
+      <div class="dialog-content-version-wrapper">
+        <div class="dialog-content-version-label">Version:</div>
+        <div class="dialog-content-version"></div>
+      </div>
+    </div>
+    </div>
+</dialog>
