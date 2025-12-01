@@ -88,6 +88,9 @@ function showIconDialog(el) {
 
 function closeDialog() {
   const dialog = document.getElementById('gufo-icon-dialog');
+  const url = new URL(window.location.href);
+  url.hash = '';
+  window.history.replaceState(null, '', url.toString());
   dialog.close();
 };
 
