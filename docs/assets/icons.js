@@ -102,7 +102,7 @@ function copyToClipboard(el) {
 }
 
 function animateCopyIcon(el) {
-  const copiedIcon = ['copy-s'];
+  const copiedIcon = ['check-s'];
   const originalIcon = 'copy-o';
 
   el.classList.remove(...copiedIcon);
