@@ -81,3 +81,4 @@ extra:
 extra_css:
   - assets/gufo-font.css
   - assets/extra.css
+  - assets/dialog.css

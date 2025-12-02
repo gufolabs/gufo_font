@@ -39,7 +39,6 @@ def get_icons_md() -> str:
         (f"gf-{k}", q_color(k)) for k in colors_parser.extract_dict("colors")
     ]
     # Render
-    print(state_choices, color_choices)
     return tpl.render(
         manifest=manifest, state_choices=state_choices, color_choices=color_choices
     )

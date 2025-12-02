@@ -1,0 +1,84 @@
+dialog {
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  max-width: 590px;
+  width: calc(100% - 2rem);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: var(--md-shadow-z2);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dialog-header {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialog-content:focus {
+  outline: none;
+}
+
+.dialog-header i:hover {
+  color: var(--md-primary-fg-color);
+}
+
+.dialog-icons {
+  cursor: pointer;
+  --gf-stencil-size: 16px;
+  transform: translateY(-2px);
+}
+
+.dialog-content-code-wrapper {
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.dialog-content-code-label {
+  font-weight: 600;
+}
+
+.gufo-superscript {
+  --gf-stencil-size: 16px;
+  transform: translate(3px, -5px);
+}
+
+.dialog-content-info,
+.dialog-content-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+
+.dialog-content-chips {
+ text-align: right;
+ margin: 10px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 2px 12px;
+  margin: 0 4px 4px 0;
+  border-radius: 999px;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-size: 14px;
+}
+
+.dialog-content-description {
+  font-style: italic;
+}
