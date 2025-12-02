@@ -81,6 +81,7 @@ function showIconDialog(el) {
   codeEl.textContent = code;
   descriptionEl.textContent = el.dataset.iconDescription;
   const chips = `${el.dataset.iconVersion},${el.dataset.iconLabels}`.split(',');
+  chipsContainerEl.innerHTML = '';
   chips
   .map((chip) => chip.trim())
   .filter(Boolean)

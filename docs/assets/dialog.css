@@ -65,7 +65,7 @@ dialog::backdrop {
 }
 
 .dialog-content-chips {
- text-align: center;
+ text-align: right;
  margin: 10px;
 }
 
