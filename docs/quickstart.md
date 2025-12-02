@@ -172,6 +172,36 @@ In addition to rotation, you can flip (mirror) a glyph across the vertical axis 
 | ---------------------- | -------------------------------- | -------------------------------- | ------------------------------ |
 | <i class="gf cloud-o"> | <i class="gf gf-flip-v cloud-o"> | <i class="gf gf-flip-h cloud-o"> | <i class="gf gf-flip cloud-o"> |
 
+## Subscript and Superscript
+
+Subscript and superscript glyphs are smaller variants used to annotate or modify other icons.
+They are positioned relative to a base symbol using predefined CSS classes.
+
+### Subscript
+
+Subscript glyphs are rendered below the baseline:
+
+```
+O<i class="gf gf-sub check-s"></a>
+```
+
+Rendered result:
+
+O<i class="gf gf-sub check-s"></i>
+
+### Superscript
+
+Superscript glyphs are rendered above the baseline:
+
+```
+O<i class="gf gf-sup check-s"></a>
+```
+
+Rendered result:
+
+O<i class="gf gf-sup check-s"></i>
+
+
 ## Stacking
 
 Glyphs can be stacked together using `gf-stack` class:
@@ -179,7 +209,7 @@ Glyphs can be stacked together using `gf-stack` class:
 ``` html
 <span class="gf-stack">
     <i class="gf rectangle-o"></i>
-    <i class="gf gf-ok circle-s"></i>
+    <i class="gf gf-ok star-small-s"></i>
 </span>
 ```
 
@@ -187,5 +217,5 @@ Rendered result:
 
 <span class="gf-stack">
     <i class="gf rectangle-o"></i>
-    <i class="gf gf-ok circle-s"></i>
+    <i class="gf gf-ok star-small-s"></i>
 </span>
