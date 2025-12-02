@@ -102,14 +102,16 @@ function copyToClipboard(el) {
 }
 
 function animateCopyIcon(el) {
-  el.classList.remove('copy-s');
-  el.classList.add('copy-o');
+  const copiedIcon = ['copy-s'];
+  const originalIcon = 'copy-o';
 
-  el.classList.remove('copy-o');
-  el.classList.add('copy-s');
+  el.classList.remove(...copiedIcon);
+  el.classList.add(originalIcon);
 
+  el.classList.remove(originalIcon);
+  el.classList.add(...copiedIcon);
   setTimeout(() => {
-    el.classList.remove('copy-s');
-    el.classList.add('copy-o');
+    el.classList.remove(...copiedIcon);
+    el.classList.add(originalIcon);
   }, 2000);
 }

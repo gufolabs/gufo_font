@@ -20,13 +20,13 @@ dialog::backdrop {
 }
 
 .dialog-header {
-  padding: 0.5rem 0.1rem 0.5rem 0.5rem;
+  height: 3.25rem;
+  padding: 0 0.5rem;
   font-size: 1.25rem;
   font-weight: 500;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  box-sizing: border-box;
+  line-height: 3.25rem;
 }
 
 .dialog-content {
@@ -71,4 +71,27 @@ dialog::backdrop {
 .dialog-content-description-label,
 .dialog-content-version-label {
   font-weight: 600;
+}
+.dialog-header-text {
+  display: inline-block;
+}
+
+.dialog-close-button {
+  float: right;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dialog-close-button i {
+  line-height: 3.25rem;
+}
+
+.gufo-superscript {
+  font-size: 0.75em;
+  display: inline-block;
+  transform: translateY(-0.15em);
+  margin-left: 0.25em;
 }
