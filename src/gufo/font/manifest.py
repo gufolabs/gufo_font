@@ -13,6 +13,9 @@ from typing import Any, Iterable
 import yaml
 
 MANIFEST = "manifest.yml"
+PJ_NAME = "gufo-font"
+PJ_DESCRIPTION = "Telecom and IT-oriented icon font"
+PJ_LICENSE = "BSD + CC-BY-ND-4.0"
 
 
 @dataclass
@@ -128,3 +131,16 @@ class Manifest(object):
         for icon in sorted(self.icons.get(group, []), key=operator.attrgetter("code")):
             if icon.is_enabled:
                 yield icon
+
+    @property
+    def package_json(self) -> dict[str, Any]:
+        """Generate packages.json data."""
+        return {
+            "name": PJ_NAME,
+            "version": self.version,
+            "description": PJ_DESCRIPTION,
+            "license": PJ_LICENSE,
+            "type": "module",
+            "files": "**/*",
+            "publishConfig": {"access": "public"},
+        }
