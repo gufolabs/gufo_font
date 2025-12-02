@@ -158,7 +158,6 @@ def write_layer(tree: ET.ElementTree, children: list[ET.Element], path: Path) ->
     if path.exists():
         old_data = path.read_bytes()
         if old_data == data:
-            print(f"Skipping {path}: unchanged")
             return
     print(f"Writing {path}: {len(data)} bytes")
     path.write_bytes(data)
@@ -245,7 +244,7 @@ def main(paths: list[str]) -> None:
             tasks.update(pp for pp in path.rglob("*.svg"))
         else:
             tasks.add(path)
-    for p in tasks:
+    for p in sorted(tasks):
         extract_layers(Path(p))
 
 
