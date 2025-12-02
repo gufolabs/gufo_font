@@ -34,6 +34,7 @@ case "$TARGET" in
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.css
         ;;
     package)
+        python3 ./scripts/make-package.py
         sass --no-source-map scss/main.scss $DIST/gufo-font.css
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.min.css
         ;;
