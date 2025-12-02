@@ -239,6 +239,18 @@ icons:
     - name: user-s
       code: 0xE2CC
       added-in: "upcoming"
+    - name: rotate-s
+      code: 0xE2CD
+      added-in: "upcoming"
+    - name: rotate-left-s
+      code: 0xE2CE
+      added-in: "upcoming"
+    - name: rotate-right-s
+      code: 0xE2CF
+      added-in: "upcoming"
+    - name: bars-s
+      code: 0xE2D5
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -263,6 +275,15 @@ icons:
     - name: cloud-o
       code: 0xF006
       added-in: "upcoming"
+    - name: radiation
+      code: 0xF007
+      added-in: "upcoming"
+    - name: radiation-s
+      code: 0xF008
+      added-in: "upcoming"
+    - name: biohazard-s
+      code: 0xF00A
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-router
       code: 0xF22C
@@ -272,5 +293,5 @@ icons:
     - name: cisco-workgroup-switch
       code: 0xF23F
       description: Classic Cisco-style switch icon.
-      labels: ["switch"]
+      labels: ["switch", "l2"]
       added-in: "upcoming"
