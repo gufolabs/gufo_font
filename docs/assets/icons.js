@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const matches = iconName.toLowerCase().includes(needle);
         item.classList.toggle('icon--hidden', needle.length > 0 && !matches);
       });
+      const visibleItems = list.querySelectorAll('[data-type="icon"]:not(.icon--hidden)');
+      document.querySelector(`span[data-group=${list.dataset.group}]`).textContent = visibleItems.length;
     });
   };
 
