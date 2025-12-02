@@ -1,0 +1,19 @@
+// ---------------------------------------------------------------------
+// Gufo Font: Subscript and superscript
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+
+/* Superscript — shifts glyph upward and scales it down */
+.gf-sup {
+    display: inline-block;
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+/* Subscript — shifts glyph downward and scales it down */
+.gf-sub {
+    display: inline-block;
+    font-size: 0.5em;
+    vertical-align: sub;
+}
