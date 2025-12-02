@@ -43,7 +43,7 @@ hide:
 <div class="icons-empty icons-wrapper" hidden>Not found</div>
 
 {% for group in manifest.icons %}
-## {{ group }} - <span data-group={{ group | lower }}>{{ manifest.iter_enabled_icons(group) | list | length }}</span>
+##{{ group }}<span class="gufo-group-badge" data-group={{ group | lower }}>{{ manifest.iter_enabled_icons(group) | list | length }}</span>
 <div class="icons-list icons-wrapper" data-component="icons-list" data-group={{ group | lower }}>
 {% for icon in manifest.iter_enabled_icons(group) %}
 <div class="icon" 

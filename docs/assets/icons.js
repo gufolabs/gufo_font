@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.slice(1);
   let prevStyle = styleSelect.value;
 
+  document.querySelectorAll('.gufo-group-badge').forEach(el => {
+    el.parentElement.classList.add('gufo-group-badge-wrapper');
+  });
+
   if (!input || !styleSelect) return;
 
   if (hash) {

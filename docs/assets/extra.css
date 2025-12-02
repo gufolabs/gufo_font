@@ -85,3 +85,20 @@ html {
     width: auto;
   }
 }
+
+.gufo-group-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  color: var(--md-default-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.gufo-group-badge-wrapper {
+  display: inline-flex;
+  gap: 15px;
+}
