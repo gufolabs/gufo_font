@@ -11,6 +11,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-24.04
+    environment: npm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,4 +33,5 @@ jobs:
         run: ./scripts/build --target=package
 
       - name: Publish package
-        run: npm publish dist/gufo-font/ --access public
+        working-directory: dist/gufo-font
+        run: npm publish
