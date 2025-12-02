@@ -197,6 +197,30 @@ icons:
     - name: chevron-down-s
       code: 0xE2BE
       added-in: "upcoming"
+    - name: chevrons-right
+      code: 0xE2BF
+      added-in: "upcoming"
+    - name: chevrons-right-s
+      code: 0xE2C0
+      added-in: "upcoming"
+    - name: chevrons-up
+      code: 0xE2C1
+      added-in: "upcoming"
+    - name: chevrons-up-s
+      code: 0xE2C2
+      added-in: "upcoming"
+    - name: chevrons-left
+      code: 0xE2C3
+      added-in: "upcoming"
+    - name: chevrons-left-s
+      code: 0xE2C4
+      added-in: "upcoming"
+    - name: chevrons-down
+      code: 0xE2C5
+      added-in: "upcoming"
+    - name: chevrons-down-s
+      code: 0xE2C6
+      added-in: "upcoming"
     - name: xmark
       code: 0xE2C7
       added-in: "upcoming"
@@ -208,6 +232,12 @@ icons:
       added-in: "upcoming"
     - name: xmark-small-s
       code: 0xE2CA
+      added-in: "upcoming"
+    - name: user
+      code: 0xE2CB
+      added-in: "upcoming"
+    - name: user-s
+      code: 0xE2CC
       added-in: "upcoming"
   IT:
     - name: database
