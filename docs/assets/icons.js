@@ -76,8 +76,8 @@ function showIconDialog(el) {
     code = parseInt(iconEl.dataset.iconCode).toString(16).toUpperCase();
     el = iconEl;
   }
-  iconEl.className = `gf ${name}`;
-  titleEl.textContent = `Icon: ${name}`;
+  iconEl.className = `gf gf-3x ${name}`;
+  titleEl.textContent = `${name}`;
   codeEl.textContent = code;
   descriptionEl.textContent = el.dataset.iconDescription || '-';
   versionEl.textContent = el.dataset.iconVersion || '-';

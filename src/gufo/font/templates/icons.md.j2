@@ -52,6 +52,7 @@ hide:
       data-icon-code="{{icon.code}}"
       data-icon-description="{{icon.description}}"
       data-icon-version="{{icon.added_in}}"
+      data-icon-labels="{{ ','.join(icon.labels or '') }}"
       onclick="showIconDialog(this)">
     <i class="gf {{icon.name}}" data-type="icon-element"></i>
     <div class="icon-title-label">{{icon.name}}</div>
