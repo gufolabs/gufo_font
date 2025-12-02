@@ -60,7 +60,7 @@ function showIconDialog(el) {
   const codeEl = dialog.querySelector('.dialog-content-code');
   const iconEl = dialog.querySelector('.dialog-content-icon i');
   const descriptionEl = dialog.querySelector('.dialog-content-description');
-  const versionEl = dialog.querySelector('.dialog-content-version');
+  const chipsContainerEl = dialog.querySelector('.dialog-content-chips');
   let name, code;
   if (el) {
     const url = new URL(window.location.href);
@@ -79,8 +79,17 @@ function showIconDialog(el) {
   iconEl.className = `gf gf-3x ${name}`;
   titleEl.textContent = `${name}`;
   codeEl.textContent = code;
-  descriptionEl.textContent = el.dataset.iconDescription || '-';
-  versionEl.textContent = el.dataset.iconVersion || '-';
+  descriptionEl.textContent = el.dataset.iconDescription;
+  const chips = `${el.dataset.iconVersion},${el.dataset.iconLabels}`.split(',');
+  chips
+  .map((chip) => chip.trim())
+  .filter(Boolean)
+  .forEach((chip) => {
+    const span = document.createElement('span');
+    span.className = 'chip';
+    span.textContent = chip;
+    chipsContainerEl.appendChild(span);
+  });
   titleEl.nextElementSibling.dataset.value = name; // for copy IconName to clipboard
   codeEl.nextElementSibling.dataset.value = code; // for copy IconCode to clipboard
   dialog.showModal()
@@ -102,16 +111,16 @@ function copyToClipboard(el) {
 }
 
 function animateCopyIcon(el) {
-  const copiedIcon = ['check-s'];
-  const originalIcon = 'copy-o';
-
+  const copiedIcon = ['check-s', 'gufo-superscript'];
+  const originalIcon = ['copy-o', 'dialog-icons'];
+  
   el.classList.remove(...copiedIcon);
-  el.classList.add(originalIcon);
+  el.classList.add(...originalIcon);
 
-  el.classList.remove(originalIcon);
+  el.classList.remove(...originalIcon);
   el.classList.add(...copiedIcon);
   setTimeout(() => {
     el.classList.remove(...copiedIcon);
-    el.classList.add(originalIcon);
+    el.classList.add(...originalIcon);
   }, 2000);
 }

@@ -43,50 +43,43 @@ hide:
 <div class="icons-empty icons-wrapper" hidden>Not found</div>
 
 {% for group in manifest.icons %}
-## {{group}}
-  <div class="icons-list icons-wrapper" data-component="icons-list">
-  {% for icon in manifest.iter_enabled_icons(group) %}
-  <div class="icon" 
-      data-type="icon"
-      data-icon-name="{{icon.name}}"
-      data-icon-code="{{icon.code}}"
-      data-icon-description="{{icon.description}}"
-      data-icon-version="{{icon.added_in}}"
-      data-icon-labels="{{ ','.join(icon.labels or '') }}"
-      onclick="showIconDialog(this)">
-    <i class="gf {{icon.name}}" data-type="icon-element"></i>
-    <div class="icon-title-label">{{icon.name}}</div>
-  </div>
-  {% endfor %}
-  </div>
+## {{ group }}
+<div class="icons-list icons-wrapper" data-component="icons-list">
+{% for icon in manifest.iter_enabled_icons(group) %}
+<div class="icon" 
+    data-type="icon"
+    data-icon-name="{{ icon.name }}"
+    data-icon-code="{{ icon.code }}"
+    data-icon-description="{{ icon.description or '' }}"
+    data-icon-version="{{ icon.added_in }}"
+    data-icon-labels="{{ ','.join(icon.labels or '') }}"
+    onclick="showIconDialog(this)">
+  <i class="gf {{ icon.name }}" data-type="icon-element"></i>
+  <div class="icon-title-label">{{ icon.name }}</div>
+</div>
 {% endfor %}
-
+</div>
+{% endfor %}
 <dialog id="gufo-icon-dialog" data-theme="light">
     <div class="dialog-header">
-      <span class="dialog-title-text"></span>
-      <i class="gf copy-o dialog-icons" onclick="copyToClipboard(this)"></i>
-      <button class="dialog-close-button">
-        <i class="gf xmark-small-s dialog-icons" onclick="closeDialog()"></i>
-      </button>
-    </div>
-    <div class="dialog-content"  tabindex="0" autofocus>
-        <div class="dialog-content-icon">
-          <i></i>
-        </div>
-    <div class="dialog-content-info">
-      <div class="dialog-content-code-wrapper">
-        <span class="dialog-content-code-label">Code:</span>
-        <span class="dialog-content-code"></span>
+      <div class="dialog-header-text">
+        <span class="dialog-title-text"></span>
         <i class="gf copy-o dialog-icons" onclick="copyToClipboard(this)"></i>
       </div>
-      <div class="dialog-content-description-wrapper">
-        <div class="dialog-content-description-label">Description:</div>
-        <div class="dialog-content-description"></div>
-      </div>
-      <div class="dialog-content-version-wrapper">
-        <div class="dialog-content-version-label">Version:</div>
-        <div class="dialog-content-version"></div>
-      </div>
+      <i class="gf xmark-small-s dialog-icons" onclick="closeDialog()"></i>
     </div>
+    <div class="dialog-content" tabindex="0" autofocus>
+      <div class="dialog-content-icon">
+        <i></i>
+      </div>
+      <div class="dialog-content-info">
+        <div class="dialog-content-code-wrapper">
+          <div class="dialog-content-code-label">Code:</div>
+          <div class="dialog-content-code" style="display: inline-block;"></div>
+          <i class="gf copy-o dialog-icons" onclick="copyToClipboard(this)"></i>
+          <div class="dialog-content-description"></div>
+        </div>
+      </div>
+      <div class="dialog-content-chips"></div>
     </div>
 </dialog>

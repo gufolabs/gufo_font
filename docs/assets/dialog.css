@@ -20,78 +20,61 @@ dialog::backdrop {
 }
 
 .dialog-header {
-  height: 3.25rem;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   font-size: 1.25rem;
   font-weight: 500;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  line-height: 3.25rem;
-}
-
-.dialog-content {
-  padding: 1rem;
   display: flex;
-  gap: 3.5rem;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .dialog-content:focus {
   outline: none;
 }
 
-.dialog-close-button i:hover {
-  cursor: pointer;
+.dialog-header i:hover {
   color: var(--md-primary-fg-color);
 }
 
 .dialog-icons {
-  cursor:pointer;
-  font-size:1em;
-}
-
-.dialog-content-icon {
-  font-size: 5em;
-  margin-right: 1rem;
-  width: 2em;
-  height: 2em;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dialog-content-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.dialog-content-code-label,
-.dialog-content-description-label,
-.dialog-content-version-label {
-  font-weight: 600;
-}
-.dialog-header-text {
-  display: inline-block;
-}
-
-.dialog-close-button {
-  float: right;
-  height: 100%;
-  border: none;
-  background: transparent;
-  padding: 0;
   cursor: pointer;
+  --gf-stencil-size: 16px;
+  transform: translateY(-2px);
 }
 
-.dialog-close-button i {
-  line-height: 3.25rem;
+.dialog-content-code-wrapper {
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.dialog-content-code-label {
+  font-weight: 600;
 }
 
 .gufo-superscript {
-  font-size: 0.75em;
+  --gf-stencil-size: 16px;
+  transform: translate(3px, -5px);
+}
+
+.dialog-content-info,
+.dialog-content-icon {
   display: inline-block;
-  transform: translateY(-0.15em);
-  margin-left: 0.25em;
+  vertical-align: middle;
+  margin-left: 50px;
+}
+
+.dialog-content-chips {
+ text-align: center;
+ margin: 10px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 0 4px 4px 0;
+  border-radius: 999px;
+  color: white;
+  background: #425a7a;
+  font-size: 12px;
 }
