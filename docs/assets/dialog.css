@@ -74,9 +74,9 @@ dialog::backdrop {
   padding: 2px 12px;
   margin: 0 4px 4px 0;
   border-radius: 999px;
-  color: var(--md-default-bg-color); 
   background: var(--md-primary-fg-color);
-  font-size: 12px;
+  color: var(--md-primary-bg-color);
+  font-size: 14px;
 }
 
 .dialog-content-description {
