@@ -15,7 +15,7 @@ import yaml
 MANIFEST = "manifest.yml"
 PJ_NAME = "gufo-font"
 PJ_DESCRIPTION = "Telecom and IT-oriented icon font"
-PJ_LICENSE = "BSD + CC-BY-ND-4.0"
+PJ_LICENSE = "See licensing conditions in README.md"
 
 
 @dataclass
