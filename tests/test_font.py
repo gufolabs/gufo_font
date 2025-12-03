@@ -18,6 +18,9 @@ from gufo.font.manifest import Manifest
 PATH = Path("webfonts", "GufoFont-Regular.woff2")
 GLYF = "glyf"
 COLR = "COLR"
+NAME = "name"
+FONT_FAMILY = "Gufo Font"
+FONT_SUBFAMILY = "Regular"
 
 
 @pytest.fixture(scope="module")
@@ -34,15 +37,48 @@ def test_flavor(font: TTFont) -> None:
     assert font.flavor == "woff2"
 
 
+def _font_name_record(font: TTFont, record_id: int) -> str | None:
+    """Get given record from name table."""
+    for record in font[NAME].names:
+        if record.nameID == record_id:
+            return record.toUnicode()
+    return None
+
+
+def test_font_family(font: TTFont) -> None:
+    family = _font_name_record(font, 1)
+    assert family, "Font family is not set"
+    assert family == FONT_FAMILY
+
+
+def test_font_subfamily(font: TTFont) -> None:
+    family = _font_name_record(font, 2)
+    assert family, "Font subfamily is not set"
+    assert family == FONT_SUBFAMILY
+
+
+def test_font_version(font: TTFont, manifest: Manifest) -> None:
+    def to_semver(s: str) -> str:
+        return ".".join(str(int(x)) for x in s.split("."))
+
+    version_string = _font_name_record(font, 5)
+    assert version_string, "Version is not set"
+    if ";" in version_string:
+        version_string = version_string.split(";", 1)[0].strip()
+    if " " in version_string:
+        version_string = version_string.split()[-1]
+    assert to_semver(version_string) == to_semver(manifest.version)
+
+
 def test_glyf_table(font: TTFont, manifest: Manifest) -> None:
     assert GLYF in font
     table = font[GLYF]
-    font_codepoints = {int(c[3:], 16) for c in table.glyphs if c.startswith("uni")}
+    font_codepoints = {c[3:] for c in table.glyphs if c.startswith("uni")}
     required_codepoints: set(int) = set()
     for icons in manifest.icons.values():
         for icon in icons:
             if icon.added_in:
-                required_codepoints.add(icon.code)
+                required_codepoints.add(f"{icon.code:X}")
     assert font_codepoints == required_codepoints
 
 
