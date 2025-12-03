@@ -44,6 +44,7 @@ test = [
   "pytest-benchmark==5.1.0",
   "pytest-cov==7.0.0",
   "pytest==8.4.2",
+  "fonttools[woff]==4.61.0",
 ]
 
 [project.readme]
