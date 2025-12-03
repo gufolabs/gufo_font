@@ -248,8 +248,23 @@ icons:
     - name: rotate-right-s
       code: 0xE2CF
       added-in: "upcoming"
+    - name: heart
+      code: 0xE2D0
+      added-in: "upcoming"
+    - name: heart-s
+      code: 0xE2D1
+      added-in: "upcoming"
+    - name: heart-o
+      code: 0xE2D2
+      added-in: "upcoming"
     - name: bars-s
       code: 0xE2D5
+      added-in: "upcoming"
+    - name: file-s
+      code: 0xE2D7
+      added-in: "upcoming"
+    - name: file-o
+      code: 0xE2D8
       added-in: "upcoming"
   IT:
     - name: database
@@ -283,6 +298,18 @@ icons:
       added-in: "upcoming"
     - name: biohazard-s
       code: 0xF00A
+      added-in: "upcoming"
+    - name: bolt
+      code: 0xF00B
+      added-in: "upcoming"
+    - name: bolt-s
+      code: 0xF00C
+      added-in: "upcoming"
+    - name: lightning-bolt
+      code: 0xF00D
+      added-in: "upcoming"
+    - name: lightning-bolt-s
+      code: 0xF00E
       added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-router
