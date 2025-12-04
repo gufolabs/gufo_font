@@ -13,9 +13,9 @@ from typing import Any, Iterable
 import yaml
 
 MANIFEST = "manifest.yml"
-PJ_NAME = "gufo-font"
+PJ_NAME = "@gufo-labs/font"
 PJ_DESCRIPTION = "Telecom and IT-oriented icon font"
-PJ_LICENSE = "See licensing conditions in README.md"
+PJ_LICENSE = "SEE LICENCE IN README.md"
 
 
 @dataclass
@@ -141,6 +141,6 @@ class Manifest(object):
             "description": PJ_DESCRIPTION,
             "license": PJ_LICENSE,
             "type": "module",
-            "files": "**/*",
+            "files": ["**/*"],
             "publishConfig": {"access": "public"},
         }
