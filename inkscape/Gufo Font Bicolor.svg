@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="4096"
+   height="4096"
+   viewBox="0 0 4096 4096"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.080830371"
+     inkscape:cx="2424.8311"
+     inkscape:cy="371.14762"
+     inkscape:window-width="1728"
+     inkscape:window-height="950"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="256"
+       spacingy="256"
+       empcolor="#d35400"
+       empopacity="0.30196078"
+       color="#e67e22"
+       opacity="0.14901961"
+       empspacing="4"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#1abc9c;fill-opacity:1;fill-rule:evenodd;stroke-width:0"
+       id="rect1"
+       width="4096"
+       height="4096"
+       x="0"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label=".B" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label=".A" />
+  <inkscape:templateinfo>
+    <inkscape:name>Gufo Font Bicolor</inkscape:name>
+    <inkscape:date>2025-12-04</inkscape:date>
+  </inkscape:templateinfo>
+</svg>
