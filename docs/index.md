@@ -10,7 +10,20 @@ hero:
     source_button: Source Code
 ---
 
-**Telecom and IT-oriented icon font.**
+*Telecom and IT-oriented icon font.*
+
+Gufo Font is a specialized icon font designed for telecom and IT applications. In addition to common UI icons, it includes a wide range of symbols useful for diagrams, network maps, and visualizing complex systems. It also features icons inspired by popular vendor stencil packs.
+Gufo Font is a color font built with COLR/CPAL technology, offering numerous benefits:
+
+* High-quality, scalable graphics
+* Consistent design across all icons
+* Smooth and intuitive user experience
+* Broad browser support
+* Compatibility with desktop and graphic design applications
+* Ultra-fast rendering compared to SVG
+* Easy visualization of node statuses
+* Industry-standard symbols
+* Vendor-specific icon sets
 
 ## License
 

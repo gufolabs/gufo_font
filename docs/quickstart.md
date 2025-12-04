@@ -2,7 +2,19 @@
 hide:
     - navigation
 ---
-## Add CSS
+## Installation
+
+### npm
+
+Add `@gufo-labs/font` package to your project:
+
+``` bash
+npm install @gufo-labs/font
+```
+
+@todo: Add CSS
+@todo: CDN
+#todo: Archive
 
 ## Using Stencils
 

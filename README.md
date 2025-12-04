@@ -1,17 +1,31 @@
 # Gufo Font
 
-**Telecom and IT-oriented icon font.**
+*Telecom and IT-oriented icon font.*
 
 ---
 
-**Documentation**: [https://docs.gufolabs.com/gufo_loader/](https://docs.gufolabs.com/gufo_loader/)
+**Documentation**: [https://docs.gufolabs.com/gufo_font/](https://docs.gufolabs.com/gufo_font/)
 
-**Source Code**: [https://github.com/gufolabs/gufo_loader/](https://github.com/gufolabs/gufo_loader/)
+**Source Code**: [https://github.com/gufolabs/gufo_font/](https://github.com/gufolabs/gufo_font/)
 
 ---
+![NPM Version](https://img.shields.io/npm/v/%40gufo-labs%2Ffont)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC%20BY--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nd/4.0/)
 ![Sponsors](https://img.shields.io/github/sponsors/gufolabs)
+
+Gufo Font is a specialized icon font designed for telecom and IT applications. In addition to common UI icons, it includes a wide range of symbols useful for diagrams, network maps, and visualizing complex systems. It also features icons inspired by popular vendor stencil packs.
+Gufo Font is a color font built with COLR/CPAL technology, offering numerous benefits:
+
+* High-quality, scalable graphics
+* Consistent design across all icons
+* Smooth and intuitive user experience
+* Broad browser support
+* Compatibility with desktop and graphic design applications
+* Ultra-fast rendering compared to SVG
+* Easy visualization of node statuses
+* Industry-standard symbols
+* Vendor-specific icon sets
 
 ## License
 
