@@ -58,7 +58,7 @@ git add "$DST_DIR" || die "git add failed"
 
 # Commit only if changes exist
 git diff --cached --quiet || (
-    git commit -m "Publish $TAG" || die "git commit failed"
+    git commit -m "Publish $TAG" "$DST_DIR" || die "git commit failed"
     #git push origin "$PUBLISH_BRANCH" || die "git push failed"
     echo "Published $TAG"
 )
