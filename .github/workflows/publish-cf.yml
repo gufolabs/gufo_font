@@ -1,0 +1,38 @@
+name: Publish to CloudFlare Pages
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish-cf:
+    runs-on: ubuntu-24.04
+    environment: npm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Up Python 3.14
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Install SASS
+        run: npm install -g sass
+
+      - name: Build
+        run: ./scripts/build --target=package
+
+      - name: Publish
+        run: |
+          VERSION=$(echo $GITHUB_REF_NAME | sed 's/^v//')        
+          ./scripts/publish-cf $VERSION

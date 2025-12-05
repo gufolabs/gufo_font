@@ -6,17 +6,44 @@
 # ---------------------------------------------------------------------
 set -e -x
 
-die() {
-    echo "ERROR: $*" >&2
-    exit 1
-}
-
 # -----------------------------
 # Config
 # -----------------------------
 PUBLISH_BRANCH="cf-pages"
 SRC_DIR="dist/gufo-font"
+LATEST_DIR="latest"
 # -----------------------------
+
+die() {
+    echo "ERROR: $*" >&2
+    exit 1
+}
+
+# Convert version to padded string
+# 0.1 -> 0000-0001
+# 1.2.3 -> 0001-0002-0003
+padded_version() {
+    v="$1"
+    # Split by dot
+    IFS=. read -r major minor patch <<EOF
+$v
+EOF
+    # Default patch to 0 if missing
+    patch=${patch:-0}
+    printf "%04d-%04d-%05d\n" "$major" "$minor" "$patch"
+}
+
+stage_dir() {
+    dir="$1"
+    mkdir -p "$dir" || die "Cannot create directory $dir"
+    echo "Copying artifacts into $dir/"
+    # Clean old content
+    rm -rf "${dir:?}/"* 2>/dev/null || true
+    # Copy artifacts
+    cp -R "$SRC_DIR/"* "$dir"/ || die "Failed to copy artifacts to $dir"
+    # Stage for commit
+    git add "$dir" || die "git add failed"
+}
 
 # Argument check
 [ $# -eq 1 ] || die "Usage: $0 <version-tag>"
@@ -39,26 +66,24 @@ else
     git checkout --orphan "$PUBLISH_BRANCH" || die "Cannot create orphan $PUBLISH_BRANCH"
 fi
 
+# Check if it is latest release
+max_version="0000-0000-0000"
+for d in $(ls -1 | grep -E '^[0-9]+\.[0-9]+(\.[0-9]+)?$'); do
+    [ -d "$d" ] || continue
+    padded=$(padded_version "$d")
+    [ "$padded" \> "$max_version" ] && max_version="$padded_version"
+done
+
+[ $(padded_version "$TAG") \>= "$max_version" ] && UPDATE_LATEST=1
+
 DST_DIR="$TAG"
 
-# Create target directory
-mkdir -p "$DST_DIR" || die "Cannot create directory $DST_DIR"
-
-echo "Copying artifacts into $DST_DIR/"
-
-# Clean old content
-rm -rf "${DST_DIR:?}/"* 2>/dev/null || true
-
-# Copy artifacts
-cp -R "$SRC_DIR/"* "$DST_DIR"/ \
-    || die "Failed to copy artifacts to $DST_DIR"
-
-# Stage
-git add "$DST_DIR" || die "git add failed"
+stage_dir "$DST_DIR"
+[ -n "$UPDATE_LATEST" ] && stage_dir "$LATEST_DIR"
 
 # Commit only if changes exist
 git diff --cached --quiet || (
-    git commit -m "Publish $TAG" "$DST_DIR" || die "git commit failed"
+    git commit -m "Publish $TAG" "$DST_DIR" "$LATEST_DIR" || die "git commit failed"
     #git push origin "$PUBLISH_BRANCH" || die "git push failed"
     echo "Published $TAG"
 )
