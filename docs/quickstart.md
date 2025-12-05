@@ -12,8 +12,10 @@ Add `@gufo-labs/font` package to your project:
 npm install @gufo-labs/font
 ```
 
-@todo: Add CSS
-@todo: CDN
+### CSS
+```html
+<link rel="stylesheet" href="https://gf.cdn.gufolabs.com/latest/gufo-font.css"/>
+```
 #todo: Archive
 
 ## Using Stencils
