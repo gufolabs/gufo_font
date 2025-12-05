@@ -1,4 +1,10 @@
 #!/bin/sh
+# ---------------------------------------------------------------------
+# Gufo Font: Build font distribution
+# ---------------------------------------------------------------------
+# Copyright (C) 2025, Gufo Labs
+# ---------------------------------------------------------------------
+
 set -e
 
 TARGET=test # default
@@ -38,6 +44,9 @@ case "$TARGET" in
         python3 ./scripts/make-package.py
         sass --no-source-map scss/main.scss $DIST/gufo-font.css
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.min.css
+        ;;
+    cdn)
+        sass --style=compressed $MAIN_SCSS $DIST/gufo-font.css
         ;;
     *)
         echo "Unknown target: $TARGET"

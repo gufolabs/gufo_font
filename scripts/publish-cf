@@ -1,0 +1,67 @@
+#!/bin/sh
+# ---------------------------------------------------------------------
+# Gufo Font: Publish to CloudFlare Pages
+# ---------------------------------------------------------------------
+# Copyright (C) 2025, Gufo Labs
+# ---------------------------------------------------------------------
+set -e -x
+
+die() {
+    echo "ERROR: $*" >&2
+    exit 1
+}
+
+# -----------------------------
+# Config
+# -----------------------------
+PUBLISH_BRANCH="cf-pages"
+SRC_DIR="dist/gufo-font"
+# -----------------------------
+
+# Argument check
+[ $# -eq 1 ] || die "Usage: $0 <version-tag>"
+TAG="$1"
+
+# Build artifacts must exist
+[ -d "$SRC_DIR" ] || die "$SRC_DIR not found. Build first."
+
+# Determine current branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) \
+    || die "Cannot determine current branch"
+
+# Ensure publish branch exists locally or create a new orphan branch
+if git show-ref --verify --quiet "refs/heads/$PUBLISH_BRANCH"; then
+    git checkout "$PUBLISH_BRANCH" || die "Cannot switch to $PUBLISH_BRANCH"
+elif git ls-remote --exit-code --heads origin "$PUBLISH_BRANCH" >/dev/null 2>&1; then
+    git fetch origin "$PUBLISH_BRANCH:$PUBLISH_BRANCH" || die "Cannot fetch $PUBLISH_BRANCH"
+    git checkout "$PUBLISH_BRANCH" || die "Cannot switch to $PUBLISH_BRANCH"
+else
+    git checkout --orphan "$PUBLISH_BRANCH" || die "Cannot create orphan $PUBLISH_BRANCH"
+fi
+
+DST_DIR="$TAG"
+
+# Create target directory
+mkdir -p "$DST_DIR" || die "Cannot create directory $DST_DIR"
+
+echo "Copying artifacts into $DST_DIR/"
+
+# Clean old content
+rm -rf "${DST_DIR:?}/"* 2>/dev/null || true
+
+# Copy artifacts
+cp -R "$SRC_DIR/"* "$DST_DIR"/ \
+    || die "Failed to copy artifacts to $DST_DIR"
+
+# Stage
+git add "$DST_DIR" || die "git add failed"
+
+# Commit only if changes exist
+git diff --cached --quiet || (
+    git commit -m "Publish $TAG" || die "git commit failed"
+    #git push origin "$PUBLISH_BRANCH" || die "git push failed"
+    echo "Published $TAG"
+)
+
+# Restore previous branch
+git switch "$CURRENT_BRANCH" || die "Cannot return to $CURRENT_BRANCH"
