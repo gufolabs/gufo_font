@@ -74,9 +74,15 @@ for d in $(ls -1 | grep -E '^[0-9]+\.[0-9]+(\.[0-9]+)?$'); do
     [ "$padded" \> "$max_version" ] && max_version="$padded"
 done
 
-[ $(padded_version "$TAG") \>= "$max_version" ] && UPDATE_LATEST=1
+padded_tag=$(padded_version "$TAG")
+if [ "$padded_tag" = "$max_version" ]; then
+    UPDATE_LATEST=1
+elif [ "$padded_tag" \> "$max_version" ]; then
+    UPDATE_LATEST=1
+fi
 
 echo $max_version
+echo $UPDATE_LATEST
 exit 1
 
 DST_DIR="$TAG"
