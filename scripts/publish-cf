@@ -89,7 +89,7 @@ stage_dir "$DST_DIR"
 # Commit only if changes exist
 git diff --cached --quiet || (
     git commit -m "Publish $TAG" "$DST_DIR" "$LATEST_DIR" || die "git commit failed"
-    #git push origin "$PUBLISH_BRANCH" || die "git push failed"
+    git push origin "$PUBLISH_BRANCH" || die "git push failed"
     echo "Published $TAG"
 )
 
