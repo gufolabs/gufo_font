@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------------
 # Copyright (C) 2025, Gufo Labs
 # ---------------------------------------------------------------------
-set -e -x
+set -e
 
 # -----------------------------
 # Config
@@ -80,10 +80,6 @@ if [ "$padded_tag" = "$max_version" ]; then
 elif [ "$padded_tag" \> "$max_version" ]; then
     UPDATE_LATEST=1
 fi
-
-echo $max_version
-echo $UPDATE_LATEST
-exit 1
 
 DST_DIR="$TAG"
 
