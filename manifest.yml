@@ -257,6 +257,9 @@ icons:
     - name: heart-o
       code: 0xE2D2
       added-in: "upcoming"
+    - name: heart-omagnifying-glass-o
+      code: 0xE2D3
+      added-in: "upcoming"
     - name: bars-s
       code: 0xE2D5
       added-in: "upcoming"
@@ -265,6 +268,39 @@ icons:
       added-in: "upcoming"
     - name: file-o
       code: 0xE2D8
+      added-in: "upcoming"
+    - name: cog
+      code: 0xE2D9
+      added-in: "upcoming"
+    - name: cog-s
+      code: 0xE2DA
+      added-in: "upcoming"
+    - name: cog-o
+      code: 0xE2DB
+      added-in: "upcoming"
+    - name: floppy-disk-s
+      code: 0xE2DD
+      added-in: "upcoming"
+    - name: floppy-disk-o
+      code: 0xE2DE
+      added-in: "upcoming"
+    - name: eye-o
+      code: 0xE2DF
+      added-in: "upcoming"
+    - name: globe
+      code: 0xE2E0
+      added-in: "upcoming"
+    - name: globe-s
+      code: 0xE2E1
+      added-in: "upcoming"
+    - name: globe-o
+      code: 0xE2E2
+      added-in: "upcoming"
+    - name: location-pin-s
+      code: 0xE2E4
+      added-in: "upcoming"
+    - name: location-pin-o
+      code: 0xE2E5
       added-in: "upcoming"
   IT:
     - name: database
@@ -311,7 +347,22 @@ icons:
     - name: lightning-bolt-s
       code: 0xF00E
       added-in: "upcoming"
+    - name: wifi
+      code: 0xF012
+      added-in: "upcoming"
+    - name: wifi-s
+      code: 0xF013
+      added-in: "upcoming"
+    - name: database-postgres
+      code: 0xF016
+      added-in: "upcoming"
   Cisco Stencils:
+    - name: cisco-bridge
+      code: 0xF206
+      added-in: "upcoming"
+    - name: cisco-cable-modem
+      code: 0xF208
+      added-in: "upcoming"
     - name: cisco-router
       code: 0xF22C
       description: Classic Cisco-style router icon.
