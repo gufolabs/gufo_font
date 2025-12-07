@@ -72,14 +72,21 @@ def test_font_version(font: TTFont, manifest: Manifest) -> None:
 
 def test_glyf_table(font: TTFont, manifest: Manifest) -> None:
     assert GLYF in font
+    # Collect codepoints from font
     table = font[GLYF]
-    font_codepoints = {c[3:] for c in table.glyphs if c.startswith("uni")}
-    required_codepoints: set(int) = set()
+    cmap = {v: k for k, v in font.getBestCmap().items()}
+    font_codepoints = set()
+    for c in table.glyphs:
+        cp = cmap.get(c)
+        if cp:
+            font_codepoints.add(f"{cp:X}")
+    # Collect codepoints from manifest
+    manifest_codepoints: set(int) = set()
     for icons in manifest.icons.values():
         for icon in icons:
             if icon.added_in:
-                required_codepoints.add(f"{icon.code:X}")
-    assert font_codepoints == required_codepoints
+                manifest_codepoints.add(f"{icon.code:X}")
+    assert font_codepoints == manifest_codepoints
 
 
 def test_colr_table(font: TTFont, manifest: Manifest) -> None:
@@ -92,6 +99,7 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
                 icon.added_in
                 and not icon.name.endswith("-s")
                 and not icon.name.endswith("-o")
+                and icon.code > 127
             ):
                 try:
                     r = table[f"uni{icon.code:X}"]

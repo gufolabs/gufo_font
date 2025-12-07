@@ -8,7 +8,7 @@
 @use "../build/codepoints" as *;
 
 @mixin glyph($codepont) {
-    content: "#{$codepont}";
+    content: $codepont;
 }
 
 .#{$css-prefix} {

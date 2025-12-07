@@ -257,7 +257,7 @@ icons:
     - name: heart-o
       code: 0xE2D2
       added-in: "upcoming"
-    - name: heart-omagnifying-glass-o
+    - name: magnifying-glass-o
       code: 0xE2D3
       added-in: "upcoming"
     - name: bars-s
@@ -301,6 +301,37 @@ icons:
       added-in: "upcoming"
     - name: location-pin-o
       code: 0xE2E5
+      added-in: "upcoming"
+    - name: filter-s
+      code: 0xE2E7
+      added-in: "upcoming"
+    - name: filter-o
+      code: 0xE2E8
+      added-in: "upcoming"
+    - name: flag
+      code: 0xE2E9
+      added-in: "upcoming"
+    - name: flag-s
+      code: 0xE2EA
+      added-in: "upcoming"
+    - name: download-s
+      code: 0xE2EC
+      added-in: "upcoming"
+    - name: upload-s
+      code: 0xE2ED
+      added-in: "upcoming"
+    - name: pen-to-square-o
+      code: 0xE2EE
+      labels: ["pen", "edit"]
+      added-in: "upcoming"
+    - name: lock
+      code: 0xE2EF
+      added-in: "upcoming"
+    - name: lock-s
+      code: 0xE2F0
+      added-in: "upcoming"
+    - name: lock-o
+      code: 0xE2F1
       added-in: "upcoming"
   IT:
     - name: database
@@ -372,4 +403,11 @@ icons:
       code: 0xF23F
       description: Classic Cisco-style switch icon.
       labels: ["switch", "l2"]
+      added-in: "upcoming"
+  Symbols:
+    - name: exclamation
+      code: 0x0021
+      added-in: "upcoming"
+    - name: question
+      code: 0x003F
       added-in: "upcoming"
