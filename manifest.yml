@@ -333,6 +333,21 @@ icons:
     - name: lock-o
       code: 0xE2F1
       added-in: "upcoming"
+    - name: pencil-s
+      code: 0xE2F2
+      added-in: "upcoming"
+    - name: pencil-o
+      code: 0xE2F3
+      added-in: "upcoming"
+    - name: eraser-s
+      code: 0xE2F4
+      added-in: "upcoming"
+    - name: location-arrow-s
+      code: 0xE2F5
+      added-in: "upcoming"
+    - name: location-arrow-o
+      code: 0xE2F6
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -388,12 +403,21 @@ icons:
       code: 0xF016
       added-in: "upcoming"
   Cisco Stencils:
+    - name: cisco-accesspoint
+      code: 0xF200
+      # added-in: "upcoming"
     - name: cisco-bridge
       code: 0xF206
       added-in: "upcoming"
+    - name: cisco-broadband-router
+      code: 0xF207
+      # added-in: "upcoming"
     - name: cisco-cable-modem
       code: 0xF208
       added-in: "upcoming"
+    - name: cisco-firewall
+      code: 0xF214
+      # added-in: "upcoming"
     - name: cisco-router
       code: 0xF22C
       description: Classic Cisco-style router icon.
@@ -410,4 +434,7 @@ icons:
       added-in: "upcoming"
     - name: question
       code: 0x003F
+      added-in: "upcoming"
+    - name: copyright
+      code: 0x00A9
       added-in: "upcoming"
