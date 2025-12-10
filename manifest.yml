@@ -351,6 +351,18 @@ icons:
     - name: comment-s
       code: 0xE2F9
       added-in: "upcoming"
+    - name: comment-o
+      code: 0xE2FA
+      added-in: "upcoming"
+    - name: dot-s
+      code: 0xE2FB
+      added-in: "upcoming"
+    - name: ellipsis-s
+      code: 0xE2FC
+      added-in: "upcoming"
+    - name: ellipsis-vertical-s
+      code: 0xE2FD
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -409,6 +421,9 @@ icons:
     - name: cisco-accesspoint
       code: 0xF200
       added-in: "upcoming"
+    - name: cisco-ace
+      code: 0xF201
+      added-in: "upcoming"
     - name: cisco-bridge
       code: 0xF206
       added-in: "upcoming"
@@ -438,6 +453,36 @@ icons:
   Symbols:
     - name: exclamation
       code: 0x0021
+      added-in: "upcoming"
+    - name: zero
+      code: 0x0030
+      added-in: "upcoming"
+    - name: one
+      code: 0x0031
+      added-in: "upcoming"
+    - name: two
+      code: 0x0032
+      added-in: "upcoming"
+    - name: three
+      code: 0x0033
+      added-in: "upcoming"
+    - name: four
+      code: 0x0034
+      added-in: "upcoming"
+    - name: five
+      code: 0x0035
+      added-in: "upcoming"
+    - name: six
+      code: 0x0036
+      added-in: "upcoming"
+    - name: seven
+      code: 0x0037
+      added-in: "upcoming"
+    - name: eight
+      code: 0x0038
+      added-in: "upcoming"
+    - name: nine
+      code: 0x0039
       added-in: "upcoming"
     - name: question
       code: 0x003F
