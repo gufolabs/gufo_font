@@ -7,9 +7,8 @@
 # Python modules
 from pathlib import Path
 
-import pytest
-
 # Third-party modules
+import pytest
 from fontTools.ttLib.ttFont import TTFont
 
 # Gufo Font modules
@@ -75,24 +74,33 @@ def test_glyf_table(font: TTFont, manifest: Manifest) -> None:
     # Collect codepoints from font
     table = font[GLYF]
     cmap = {v: k for k, v in font.getBestCmap().items()}
-    font_codepoints = set()
+    font_codepoints: set[str] = set()
     for c in table.glyphs:
         cp = cmap.get(c)
         if cp:
             font_codepoints.add(f"{cp:X}")
     # Collect codepoints from manifest
-    manifest_codepoints: set(int) = set()
+    manifest_codepoints: set[str] = set()
     for icons in manifest.icons.values():
         for icon in icons:
             if icon.added_in:
                 manifest_codepoints.add(f"{icon.code:X}")
-    assert font_codepoints == manifest_codepoints
+    if not_defined := font_codepoints - manifest_codepoints:
+        lst = ", ".join(sorted(not_defined))
+        ln = len(not_defined)
+        pytest.fail(
+            f"{ln} codepoints present in font but not defined in manifest: {lst}"
+        )
+    if missed := manifest_codepoints - font_codepoints:
+        lst = ", ".join(missed)
+        pytest.fail(f"{len(missed)} codepoints are missed in font: {lst}")
 
 
 def test_colr_table(font: TTFont, manifest: Manifest) -> None:
     assert COLR in font
     table = font[COLR]
-    errors: list[str] = []
+    too_few_layers: set[str] = set()
+    missed_glyph: set[str] = set()
     for icons in manifest.icons.values():
         for icon in icons:
             if (
@@ -104,9 +112,14 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
                 try:
                     r = table[f"uni{icon.code:X}"]
                     if len(r) < 2:
-                        errors.append(
-                            f"Color symbol 0x{icon.code:X} must have at least 2 layers"
-                        )
+                        too_few_layers(f"{icon.code:X}")
                 except KeyError:
-                    errors.append(f"Missed color glyph 0x{icon.code:X}")
-    assert not errors
+                    missed_glyph(f"{icon.code:X}")
+    if too_few_layers:
+        lst = ", ".join(sorted(too_few_layers))
+        pytest.fail(
+            f"{len(too_few_layers)} color symbols must have at least 2 layers: {lst}"
+        )
+    if missed_glyph:
+        lst = ", ".join(sorted(missed_glyph))
+        pytest.fail(f"{len(missed_glyph)} missed color glyphs: {lst}")
