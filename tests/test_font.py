@@ -18,8 +18,12 @@ PATH = Path("webfonts", "GufoFont-Regular.woff2")
 GLYF = "glyf"
 COLR = "COLR"
 NAME = "name"
+HEAD = "head"
+HHEA = "hhea"
+OS2 = "OS/2"
 FONT_FAMILY = "Gufo Font"
 FONT_SUBFAMILY = "Regular"
+UPM = 4096
 
 
 @pytest.fixture(scope="module")
@@ -67,6 +71,36 @@ def test_font_version(font: TTFont, manifest: Manifest) -> None:
     if " " in version_string:
         version_string = version_string.split()[-1]
     assert to_semver(version_string) == to_semver(manifest.version)
+
+
+def test_head_metrics(font: TTFont) -> None:
+    upm = font[HEAD].unitsPerEm
+    assert upm == UPM
+
+
+@pytest.mark.parametrize(
+    ("metric", "expected"), [("ascent", UPM), ("descent", 0), ("lineGap", 0)]
+)
+def test_hhea_metrics(font: TTFont, metric: str, expected: int) -> None:
+    v = getattr(font[HHEA], metric)
+    assert v == expected, f"{metric} must be {expected} (currently {v})"
+
+
+@pytest.mark.parametrize(
+    ("metric", "expected"),
+    [
+        ("sTypoAscender", UPM),
+        ("sTypoDescender", 0),
+        ("sTypoLineGap", 0),
+        ("usWinAscent", UPM),
+        ("usWinDescent", 0),
+        ("sCapHeight", UPM),
+        ("sxHeight", UPM),
+    ],
+)
+def test_os2_metrics(font: TTFont, metric: str, expected: int) -> None:
+    v = getattr(font[OS2], metric)
+    assert v == expected, f"{metric} must be {expected} (currently {v})"
 
 
 def test_glyf_table(font: TTFont, manifest: Manifest) -> None:
