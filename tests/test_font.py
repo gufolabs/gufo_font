@@ -16,6 +16,7 @@ from gufo.font.manifest import Manifest
 
 PATH = Path("webfonts", "GufoFont-Regular.woff2")
 GLYF = "glyf"
+CFF = "CFF "
 COLR = "COLR"
 NAME = "name"
 HEAD = "head"
@@ -73,9 +74,18 @@ def test_font_version(font: TTFont, manifest: Manifest) -> None:
     assert to_semver(version_string) == to_semver(manifest.version)
 
 
-def test_head_metrics(font: TTFont) -> None:
-    upm = font[HEAD].unitsPerEm
-    assert upm == UPM
+def test_curve_type(font: TTFont) -> None:
+    assert GLYF not in font
+    assert CFF in font
+
+
+@pytest.mark.parametrize(
+    ("metric", "expected"),
+    [("unitsPerEm", UPM)],  # , ("xMin", 0), ("yMin", 0), ("xMax", UPM), ("yMax", UPM)],
+)
+def test_head_metrics(font: TTFont, metric: str, expected: int) -> None:
+    v = getattr(font[HEAD], metric)
+    assert v == expected, f"{metric} must be {expected} (currently {v})"
 
 
 @pytest.mark.parametrize(
@@ -103,14 +113,16 @@ def test_os2_metrics(font: TTFont, metric: str, expected: int) -> None:
     assert v == expected, f"{metric} must be {expected} (currently {v})"
 
 
-def test_glyf_table(font: TTFont, manifest: Manifest) -> None:
-    assert GLYF in font
+def test_cff_table(font: TTFont, manifest: Manifest) -> None:
+    assert CFF in font
     # Collect codepoints from font
-    table = font[GLYF]
+    table = font[CFF]
+    cff_top = table.cff.topDictIndex[0]
+    glyph_names = set(cff_top.CharStrings.keys())
     cmap = {v: k for k, v in font.getBestCmap().items()}
     font_codepoints: set[str] = set()
-    for c in table.glyphs:
-        cp = cmap.get(c)
+    for gname in glyph_names:
+        cp = cmap.get(gname)
         if cp:
             font_codepoints.add(f"{cp:X}")
     # Collect codepoints from manifest
@@ -133,6 +145,7 @@ def test_glyf_table(font: TTFont, manifest: Manifest) -> None:
 def test_colr_table(font: TTFont, manifest: Manifest) -> None:
     assert COLR in font
     table = font[COLR]
+    cmap = dict(font.getBestCmap().items())
     too_few_layers: set[str] = set()
     missed_glyph: set[str] = set()
     for icons in manifest.icons.values():
@@ -143,12 +156,13 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
                 and not icon.name.endswith("-o")
                 and icon.code > 255
             ):
-                try:
-                    r = table[f"uni{icon.code:X}"]
+                name = cmap.get(icon.code)
+                if name:
+                    r = table[name]
                     if len(r) < 2:
                         too_few_layers(f"{icon.code:X}")
-                except KeyError:
-                    missed_glyph(f"{icon.code:X}")
+                else:
+                    missed_glyph.add(f"{icon.code:X}")
     if too_few_layers:
         lst = ", ".join(sorted(too_few_layers))
         pytest.fail(
