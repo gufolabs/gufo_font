@@ -363,6 +363,15 @@ icons:
     - name: ellipsis-vertical-s
       code: 0xE2FD
       added-in: "upcoming"
+    - name: circle-info-s
+      code: 0xE2FE
+      added-in: "upcoming"
+    - name: house-s
+      code: 0xE300
+      added-in: "upcoming"
+    - name: stairs-o
+      code: 0xE302
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -417,12 +426,21 @@ icons:
     - name: database-postgres
       code: 0xF016
       added-in: "upcoming"
+    - name: atom-o
+      code: 0xF017
+      added-in: "upcoming"
+    - name: bluetooth-o
+      code: 0xF018
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-accesspoint
       code: 0xF200
       added-in: "upcoming"
     - name: cisco-ace
       code: 0xF201
+      added-in: "upcoming"
+    - name: cisco-atm-router
+      code: 0xF204
       added-in: "upcoming"
     - name: cisco-bridge
       code: 0xF206
@@ -449,6 +467,10 @@ icons:
       code: 0xF23F
       description: Classic Cisco-style switch icon.
       labels: ["switch", "l2"]
+      added-in: "upcoming"
+  Juniper:
+    - name: juniper-generic-router
+      code: 0xF400
       added-in: "upcoming"
   Symbols:
     - name: exclamation
@@ -486,6 +508,87 @@ icons:
       added-in: "upcoming"
     - name: question
       code: 0x003F
+      added-in: "upcoming"
+    - name: at
+      code: 0x0040
+      added-in: "upcoming"
+    - name: latin-capital-a
+      code: 0x0041
+      added-in: "upcoming"
+    - name: latin-capital-b
+      code: 0x0042
+      added-in: "upcoming"
+    - name: latin-capital-c
+      code: 0x0043
+      added-in: "upcoming"
+    - name: latin-capital-d
+      code: 0x0044
+      added-in: "upcoming"
+    - name: latin-capital-e
+      code: 0x0045
+      added-in: "upcoming"
+    - name: latin-capital-f
+      code: 0x0046
+      added-in: "upcoming"
+    - name: latin-capital-g
+      code: 0x0047
+      added-in: "upcoming"
+    - name: latin-capital-h
+      code: 0x0048
+      added-in: "upcoming"
+    - name: latin-capital-i
+      code: 0x0049
+      added-in: "upcoming"
+    - name: latin-capital-j
+      code: 0x004A
+      added-in: "upcoming"
+    - name: latin-capital-k
+      code: 0x004B
+      added-in: "upcoming"
+    - name: latin-capital-l
+      code: 0x004C
+      added-in: "upcoming"
+    - name: latin-capital-m
+      code: 0x004D
+      added-in: "upcoming"
+    - name: latin-capital-n
+      code: 0x004E
+      added-in: "upcoming"
+    - name: latin-capital-o
+      code: 0x004F
+      added-in: "upcoming"
+    - name: latin-capital-p
+      code: 0x0050
+      added-in: "upcoming"
+    - name: latin-capital-q
+      code: 0x0051
+      added-in: "upcoming"
+    - name: latin-capital-r
+      code: 0x0052
+      added-in: "upcoming"
+    - name: latin-capital-s
+      code: 0x0053
+      added-in: "upcoming"
+    - name: latin-capital-t
+      code: 0x0054
+      added-in: "upcoming"
+    - name: latin-capital-u
+      code: 0x0055
+      added-in: "upcoming"
+    - name: latin-capital-v
+      code: 0x0056
+      added-in: "upcoming"
+    - name: latin-capital-w
+      code: 0x0057
+      added-in: "upcoming"
+    - name: latin-capital-x
+      code: 0x0058
+      added-in: "upcoming"
+    - name: latin-capital-y
+      code: 0x0059
+      added-in: "upcoming"
+    - name: latin-capital-z
+      code: 0x005A
       added-in: "upcoming"
     - name: copyright
       code: 0x00A9
