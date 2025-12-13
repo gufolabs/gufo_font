@@ -7,14 +7,14 @@
 @use "vars" as *;
 @use "../build/codepoints" as *;
 
-@mixin glyph($codepont) {
-    content: $codepont;
+.#{$css-prefix}::before {
+    content: var(--#{$css-prefix});
 }
 
 .#{$css-prefix} {
     @each $name, $code in $glyph-codepoints {
-        &.#{$name}::before {
-            @include glyph($code);
+        &.#{$name} {
+            --#{$css-prefix}: "#{$code}";
         }
     }
 }

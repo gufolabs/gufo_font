@@ -102,7 +102,7 @@ class Manifest(object):
         for _table, icons in self.icons.items():
             for icon in sorted(icons, key=operator.attrgetter("code")):
                 if icon.is_enabled:
-                    codepoints.append(f'    {icon.name}: "\\{icon.code:x}"')
+                    codepoints.append(f'    {icon.name}: "\\\\{icon.code:x}"')
         r = ["$glyph-codepoints: (", ",\n".join(codepoints), ");"]
         return "\n".join(r)
 

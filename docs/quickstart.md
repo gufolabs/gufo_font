@@ -162,13 +162,25 @@ Rendered result:
 
 <i class="gf gf-3x cisco-router"></i>
 
-### Exact sizes
+### Exact Sizes
 
 You can also set an exact icon size using pixel-based classes:
 
 | `gf-16px`                               | `gf-24px`                               | `gf-32px`                               | `gf-48px`                               | Default                         |
 | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | ------------------------------- |
 | <i class="gf gf-16px cisco-router"></i> | <i class="gf gf-24px cisco-router"></i> | <i class="gf gf-32px cisco-router"></i> | <i class="gf gf-48px cisco-router"></i> | <i class="gf cisco-router"></i> |
+
+### Arbitrary Sizes
+
+You can set an arbitrary size using `--gf-size` variable:
+
+``` html
+<i class="gf gf-3x cisco-router" style="--gf-size:100px"></i>
+```
+
+Renders as:
+
+<i class="gf gf-3x cisco-router" style="--gf-size:100px"></i>
 
 ## Rotation
 
@@ -177,6 +189,16 @@ You can rotate glyph using "rotation classes". Rotation angles are measured cloc
 | Default                         | `gf-r90`                               | `gf-r180`                               | `gf-270`                                |
 | ------------------------------- | -------------------------------------- | --------------------------------------- | --------------------------------------- |
 | <i class="gf cisco-router"></i> | <i class="gf gf-r90 cisco-router"></i> | <i class="gf gf-r180 cisco-router"></i> | <i class="gf gf-r270 cisco-router"></i> |
+
+To rotate an arbitrary angle use `gf-rotate` class along with `--gf-rotate` variable:
+
+``` html
+<i class="gf gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
+```
+
+Rendered as:
+
+<i class="gf gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
 
 ## Flipping
 

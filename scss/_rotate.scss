@@ -5,12 +5,18 @@
 // ---------------------------------------------------------------------
 @use "vars" as *;
 
+// Rotation class
+.#{$css-prefix}.#{$css-prefix}-rotate {
+    transform: rotate(var(--#{$css-prefix}-rotate, 0deg));
+}
+
 // Rotation angles.
 // gf-r90, ..
 $rotation-angles: 90, 180, 270;
 
 @each $angle in $rotation-angles {
     .#{$css-prefix}.#{$css-prefix}-r#{$angle} {
-        transform: rotate(#{$angle}deg);
+        --#{$css-prefix}-rotate: #{$angle}deg;
+        @extend .#{$css-prefix}-rotate;
     }
 }
