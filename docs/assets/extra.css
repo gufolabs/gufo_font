@@ -26,6 +26,11 @@ html {
   align-items: flex-end;
   gap: 0.5rem 1rem;
   margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: var(--gufo-sticky-top);
+  background: var(--md-default-bg-color);
+  z-index: 2;
 }
 
 .gufo-search-row {
@@ -102,4 +107,14 @@ html {
 .gufo-group-badge-wrapper {
   display: inline-flex;
   gap: 15px;
+}
+
+:root {
+  --gufo-sticky-top: 2.4rem;
+}
+
+@media screen and (min-width: 76.25em) {
+  :root {
+    --gufo-sticky-top: calc(2.4rem + 2.4rem); 
+  }
 }
