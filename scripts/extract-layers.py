@@ -245,7 +245,10 @@ def main(paths: list[str]) -> None:
         else:
             tasks.add(path)
     for p in sorted(tasks):
-        extract_layers(Path(p))
+        try:
+            extract_layers(Path(p))
+        except ValueError as e:
+            print(f"{p}: {e}")
 
 
 if __name__ == "__main__":
