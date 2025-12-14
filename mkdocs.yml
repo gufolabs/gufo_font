@@ -16,6 +16,7 @@ nav:
       - Glyph Naming: dev/naming.md
       - Palette: dev/palette.md
       - Codepoings Ranges: dev/codepoints.md
+      - Calibration Chart: dev/calibration-chart.md
   - Changelog: CHANGELOG.md
   - License:
       - Overview: license/index.md
