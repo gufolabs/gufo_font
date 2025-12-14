@@ -372,6 +372,15 @@ icons:
     - name: stairs-o
       code: 0xE302
       added-in: "upcoming"
+    - name: octagon
+      code: 0xE303
+      added-in: "upcoming"
+    - name: octagon-s
+      code: 0xE304
+      added-in: "upcoming"
+    - name: octagon-o
+      code: 0xE305
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -439,6 +448,9 @@ icons:
     - name: cisco-ace
       code: 0xF201
       added-in: "upcoming"
+    - name: cisco-ata
+      code: 0xF203
+      added-in: "upcoming"
     - name: cisco-atm-router
       code: 0xF204
       added-in: "upcoming"
@@ -471,6 +483,18 @@ icons:
   Juniper:
     - name: juniper-generic-router
       code: 0xF400
+      added-in: "upcoming"
+    - name: juniper-l2-l3-switch
+      code: 0xF401
+      added-in: "upcoming"
+    - name: juniper-l2-l3-switch2
+      code: 0xF402
+      added-in: "upcoming"
+    - name: juniper-fcoe
+      code: 0xF403
+      added-in: "upcoming"
+    - name: juniper-switch
+      code: 0xF404
       added-in: "upcoming"
   Symbols:
     - name: exclamation
