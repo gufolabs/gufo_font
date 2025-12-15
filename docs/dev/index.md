@@ -9,3 +9,4 @@ internal structure explanations, and best practices that will help you work effe
 * [Glyph Naming Scheme](naming.md)
 * [Palette](palette.md)
 * [Copdepoings Ranges](codepoints.md)
+* [Calubration Chart](calibration-chart.md)

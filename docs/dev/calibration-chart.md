@@ -6,13 +6,17 @@ This calibration chart is used for debugging and testing purposes.
 
 `X` sign must be surrounded by red box (without gap):
 
-<span style="border: 1px solid red"><i class="gf xmark-s"></i><span>
+<i class="gf xmark-s" style="border: 1px solid red"></i>
+
+<i class="gf gf-2x xmark-s" style="border: 1px solid red"></i>
+
+<i class="gf gf-2x xmark-s" style="border: 1px solid red; --gf-size: 200px"></i>
 
 ## Inline Text
 
-Logo must be aligned with following text:
+Logo must be aligned with following text on baseline:
 
-<i class="gf brand-gufolabs-s"></i> Gufo Labs
+<span style="border: 1px solid red; display: inline-block"><i class="gf brand-gufolabs-s"></i> Gufo Labs</span>
 
 ## Vertical and Horizontal Gap
 

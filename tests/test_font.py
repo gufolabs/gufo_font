@@ -5,6 +5,7 @@
 # ---------------------------------------------------------------------
 
 # Python modules
+from enum import IntEnum
 from pathlib import Path
 
 # Third-party modules
@@ -22,6 +23,7 @@ NAME = "name"
 HEAD = "head"
 HHEA = "hhea"
 OS2 = "OS/2"
+POST = "post"
 FONT_FAMILY = "Gufo Font"
 FONT_SUBFAMILY = "Regular"
 UPM = 4096
@@ -79,9 +81,45 @@ def test_curve_type(font: TTFont) -> None:
     assert CFF in font
 
 
+class HeadFlags(IntEnum):
+    """
+    OpenType head's table flags.
+
+    Attributes:
+        BASELINE_AT_Y0: Baseline for font at y = 0
+        LSB_AT_X0: Left sidebearing point at x = 0
+        INSTRUCTIONS_DEPEND_ON_SIZE: Instructions may depend on point size
+        FORCE_INTEGER_PPEM: Force PPEM to integer values
+        INSTRUCTIONS_ALTER_ADV_W: Instructions may alter advance width
+        LOSSLESS_FONT_DATA: Font data is lossless
+        FONT_CONVERTED: Font converted for compatible metrics
+        CLEARTYPE_OPTIMIZED: Optimized for ClearType
+        LAST_RESORT_FONT: Last Resort font indicator
+    """
+
+    BASELINE_AT_Y0 = 1 << 0  # Baseline for font at y = 0
+    LSB_AT_X0 = 1 << 1  # Left sidebearing point at x = 0
+    INSTRUCTIONS_DEPEND_ON_SIZE = 1 << 2  # Instructions may depend on point size
+    FORCE_INTEGER_PPEM = 1 << 3  # Force PPEM to integer values
+    INSTRUCTIONS_ALTER_ADV_W = 1 << 4  # Instructions may alter advance width
+    LOSSLESS_FONT_DATA = 1 << 11  # Font data is lossless
+    FONT_CONVERTED = 1 << 12  # Font converted for compatible metrics
+    CLEARTYPE_OPTIMIZED = 1 << 13  # Optimized for ClearType
+    LAST_RESORT_FONT = 1 << 14  # Last Resort font indicator
+
+    @classmethod
+    def get_expected_flags(cls) -> int:
+        return (
+            cls.FORCE_INTEGER_PPEM.value
+            | cls.LSB_AT_X0.value
+            | cls.BASELINE_AT_Y0.value
+        )
+
+
 @pytest.mark.parametrize(
     ("metric", "expected"),
-    [("unitsPerEm", UPM)],  # , ("xMin", 0), ("yMin", 0), ("xMax", UPM), ("yMax", UPM)],
+    [("unitsPerEm", UPM), ("flags", HeadFlags.get_expected_flags())],
+    # , ("xMin", 0), ("yMin", 0), ("xMax", UPM), ("yMax", UPM)],
 )
 def test_head_metrics(font: TTFont, metric: str, expected: int) -> None:
     v = getattr(font[HEAD], metric)
@@ -93,6 +131,14 @@ def test_head_metrics(font: TTFont, metric: str, expected: int) -> None:
 )
 def test_hhea_metrics(font: TTFont, metric: str, expected: int) -> None:
     v = getattr(font[HHEA], metric)
+    assert v == expected, f"{metric} must be {expected} (currently {v})"
+
+
+@pytest.mark.parametrize(
+    ("metric", "expected"), [("underlinePosition", 0), ("underlineThickness", 1)]
+)
+def test_post_metrics(font: TTFont, metric: str, expected: int) -> None:
+    v = getattr(font[POST], metric)
     assert v == expected, f"{metric} must be {expected} (currently {v})"
 
 
