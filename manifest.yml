@@ -381,6 +381,24 @@ icons:
     - name: octagon-o
       code: 0xE305
       added-in: "upcoming"
+    - name: spinner-s
+      code: 0xE306
+      added-in: "upcoming"
+    - name: circle-notch-o
+      code: 0xE307
+      added-in: "upcoming"
+    - name: slash-s
+      code: 0xE308
+      added-in: "upcoming"
+    - name: asterisk
+      code: 0xE309
+      added-in: "upcoming"
+    - name: asterisk-s
+      code: 0xE30A
+      added-in: "upcoming"
+    - name: wrench-s
+      code: 0xE30B
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
