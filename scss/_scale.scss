@@ -5,13 +5,17 @@
 // ---------------------------------------------------------------------
 @use "vars" as *;
 
+
 // Zoomed levels
 // gf-2x, gf-3x ...
-$zoom-levels: 2, 3;
+$zoom-levels: 1, 2, 3;
+$default-map-icon-size: 64;
 
 @each $zoom in $zoom-levels {
-    .#{$css-prefix}.#{$css-prefix}-#{$zoom}x {
-        --#{$css-prefix}-size: #{$stencil-size * $zoom}px;
+
+    .#{$css-prefix}.#{$css-prefix}-#{$zoom}x,
+    .#{$css-prefix}-stack.#{$css-prefix}-#{$zoom}x {
+        --#{$css-prefix}-size: #{$zoom * $default-map-icon-size}px;
     }
 }
 
@@ -21,7 +25,9 @@ $zoom-levels: 2, 3;
 $exact-sizes: 16, 24, 32, 48;
 
 @each $px in $exact-sizes {
-    .#{$css-prefix}.#{$css-prefix}-#{$px}px {
+
+    .#{$css-prefix}.#{$css-prefix}-#{$px}px,
+    .#{$css-prefix}-stack.#{$css-prefix}-#{$px}px {
         --#{$css-prefix}-size: #{$px}px;
     }
 }
