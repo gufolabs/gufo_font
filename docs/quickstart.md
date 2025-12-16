@@ -23,17 +23,18 @@ npm install @gufo-labs/font
 To add a network node use `<i>` tag with the required classes:
 
 ``` html
-<i class="gf cisco-router"></i>
+<i class="gf gf-1x cisco-router"></i>
 ```
 
 Where:
 
 * `gf` - Enables Gufo Font.
+* `gf-1x` - Use network-map size (64x64px).
 * `cisco-router` - The icon name (see the [icons list](icons.md) for details).
 
 Rendered result:
 
-<i class="gf cisco-router"></i>
+<i class="gf gf-1x cisco-router"></i>
 
 ## Colour States
 
@@ -46,12 +47,12 @@ Marks the node as being in an unknown state.
 Example:
 
 ``` html
-<i class="gf gf-unknown cisco-router"></i>
+<i class="gf gf-1x gf-unknown cisco-router"></i>
 ```
 
 Rendered result:
 
-<i class="gf gf-unknown cisco-router"></i>
+<i class="gf gf-1x gf-unknown cisco-router"></i>
 
 ### gf-ok
 
@@ -60,12 +61,12 @@ Indicates the node is up and operational.
 Example:
 
 ``` html
-<i class="gf gf-ok cisco-router"></i>
+<i class="gf gf-1x gf-ok cisco-router"></i>
 ```
 
 Rendered result:
 
-<i class="gf gf-ok cisco-router"></i>
+<i class="gf gf-1x gf-ok cisco-router"></i>
 
 ### gf-warn
 
@@ -74,12 +75,12 @@ Indicates the node has active alarms or warnings.
 Example:
 
 ``` html
-<i class="gf gf-warn cisco-router"></i>
+<i class="gf gf-1x gf-warn cisco-router"></i>
 ```
 
 Rendered result:
 
-<i class="gf gf-warn cisco-router"></i>
+<i class="gf gf-1x gf-warn cisco-router"></i>
 
 ### gf-fail
 
@@ -88,12 +89,12 @@ Marks the node as in a critical failure state.
 Example:
 
 ``` html
-<i class="gf gf-fail cisco-router"></i>
+<i class="gf gf-1xgf-fail cisco-router"></i>
 ```
 
 Rendered result:
 
-<i class="gf gf-fail cisco-router"></i>
+<i class="gf gf-1x gf-fail cisco-router"></i>
 
 ## Colors
 
@@ -126,49 +127,29 @@ Gufo Font goes with predefined sets of colors styles:
 
 ## Size
 
-Default network node size is 64x64px. You can adjust it using "scale classes".
+By default, the icon size is determined by the current font size settings. Icons scale automatically with the surrounding text.
 
-### Default
-
-Default size (64x64px). Rendered result:
+Example:
 
 <i class="gf cisco-router"></i>
 
-### gf-2x
+### Network Map Sizes
 
-Doubles icon size.
+Gufo Font defines a dedicated set of size styles intended for use in network maps. These styles provide consistent and visually balanced icon sizing when rendering network topologies, diagrams, and dashboards.
+Use the predefined network map size classes to ensure uniform appearance across different zoom levels and layouts.
 
-Example:
+| `gf-1x`                               | `gf-2x`                               | `gf-3x`                                 |
+| ------------------------------------- | ------------------------------------- | --------------------------------------- |
+| <i class="gf gf-1x cisco-router"></i> | <i class="gf gf-2x cisco-router"></i> | <i class="gf gf-3x cisco-router"></i> \ |
 
-``` html
-<i class="gf gf-2x cisco-router"></i>
-```
-
-Rendered result:
-
-<i class="gf gf-2x cisco-router"></i>
-
-### gf-3x
-
-Triples icon size.
-
-Example:
-
-``` html
-<i class="gf gf-3x cisco-router"></i>
-```
-
-Rendered result:
-
-<i class="gf gf-3x cisco-router"></i>
 
 ### Exact Sizes
 
 You can also set an exact icon size using pixel-based classes:
 
-| `gf-16px`                               | `gf-24px`                               | `gf-32px`                               | `gf-48px`                               | Default                         |
-| --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | ------------------------------- |
-| <i class="gf gf-16px cisco-router"></i> | <i class="gf gf-24px cisco-router"></i> | <i class="gf gf-32px cisco-router"></i> | <i class="gf gf-48px cisco-router"></i> | <i class="gf cisco-router"></i> |
+| Default                         | `gf-16px`                               | `gf-24px`                               | `gf-32px`                               | `gf-48px`                               |
+| ------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
+| <i class="gf cisco-router"></i> | <i class="gf gf-16px cisco-router"></i> | <i class="gf gf-24px cisco-router"></i> | <i class="gf gf-32px cisco-router"></i> | <i class="gf gf-48px cisco-router"></i> |
 
 ### Arbitrary Sizes
 
@@ -186,27 +167,27 @@ Renders as:
 
 You can rotate glyph using "rotation classes". Rotation angles are measured clockwise:
 
-| Default                         | `gf-r90`                               | `gf-r180`                               | `gf-270`                                |
-| ------------------------------- | -------------------------------------- | --------------------------------------- | --------------------------------------- |
-| <i class="gf cisco-router"></i> | <i class="gf gf-r90 cisco-router"></i> | <i class="gf gf-r180 cisco-router"></i> | <i class="gf gf-r270 cisco-router"></i> |
+| Default                               | `gf-r90`                                     | `gf-r180`                                     | `gf-270`                                      |
+| ------------------------------------- | -------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| <i class="gf gf-1x cisco-router"></i> | <i class="gf gf-1x gf-r90 cisco-router"></i> | <i class="gf gf-1x gf-r180 cisco-router"></i> | <i class="gf gf-1x gf-r270 cisco-router"></i> |
 
 To rotate an arbitrary angle use `gf-rotate` class along with `--gf-rotate` variable:
 
 ``` html
-<i class="gf gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
+<i class="gf gf-1x gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
 ```
 
 Rendered as:
 
-<i class="gf gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
+<i class="gf gf-1x gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
 
 ## Flipping
 
 In addition to rotation, you can flip (mirror) a glyph across the vertical axis (gf-flip-v), the horizontal axis (gf-flip-h), or both axes (gf-flip).
 
-| Default                | `gf-flip-v`                      | `gf-flip-h`                      | `gf-flip`                      |
-| ---------------------- | -------------------------------- | -------------------------------- | ------------------------------ |
-| <i class="gf cloud-o"> | <i class="gf gf-flip-v cloud-o"> | <i class="gf gf-flip-h cloud-o"> | <i class="gf gf-flip cloud-o"> |
+| Default                      | `gf-flip-v`                            | `gf-flip-h`                             | `gf-flip`                            |
+| ---------------------------- | -------------------------------------- | --------------------------------------- | ------------------------------------ |
+| <i class="gf gf-1x cloud-o"> | <i class="gf gf-1x gf-flip-v cloud-o"> | <i class="gf gf-1x  gf-flip-h cloud-o"> | <i class="gf gf-1x gf-flip cloud-o"> |
 
 ## Subscript and Superscript
 
@@ -243,15 +224,15 @@ O<i class="gf gf-sup check-s"></i>
 Glyphs can be stacked together using `gf-stack` class:
 
 ``` html
-<span class="gf-stack">
-    <i class="gf rectangle-o"></i>
+<span class="gf-stack gf-2x">
+    <i class="gf circle-o"></i>
     <i class="gf gf-ok star-small-s"></i>
 </span>
 ```
 
 Rendered result:
 
-<span class="gf-stack">
-    <i class="gf rectangle-o"></i>
+<span class="gf-stack gf-2x">
+    <i class="gf circle-o"></i>
     <i class="gf gf-ok star-small-s"></i>
 </span>

@@ -11,8 +11,7 @@
     font-style: normal;
     font-weight: normal;
     display: inline-block;
-    --#{$css-prefix}-size: 64px;
-    font-size: var(--#{$css-prefix}-size);
+    font-size: var(--#{$css-prefix}-size, 1em);
     margin: 0;
     padding: 0;
     transform-origin: center center;
