@@ -225,7 +225,7 @@ Glyphs can be stacked together using `gf-stack` class:
 
 ``` html
 <span class="gf-stack gf-2x">
-    <i class="gf rectangle-o"></i>
+    <i class="gf circle-o"></i>
     <i class="gf gf-ok star-small-s"></i>
 </span>
 ```
@@ -233,6 +233,6 @@ Glyphs can be stacked together using `gf-stack` class:
 Rendered result:
 
 <span class="gf-stack gf-2x">
-    <i class="gf rectangle-o"></i>
+    <i class="gf circle-o"></i>
     <i class="gf gf-ok star-small-s"></i>
 </span>
