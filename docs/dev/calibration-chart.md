@@ -6,7 +6,7 @@ This calibration chart is used for debugging and testing purposes.
 
 `X` sign must be surrounded by red box (without gap):
 
-<i class="gf xmark-s" style="border: 1px solid red"></i>
+<i class="gf gf-1x xmark-s" style="border: 1px solid red"></i>
 
 <i class="gf gf-2x xmark-s" style="border: 1px solid red"></i>
 
