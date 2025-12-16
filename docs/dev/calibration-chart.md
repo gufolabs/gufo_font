@@ -39,23 +39,30 @@ Four `X` signs must touch each other.
 <script>
     const canvas = document.getElementById("c1");
     const ctx = canvas.getContext("2d");
-    // Background
-    ctx.fillStyle = "#1abc9c";
-    ctx.fillRect(0, 0, 256, 256);
-    // Cross lines
-    ctx.strokeStyle = "red";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(128, 0);
-    ctx.lineTo(128, 256);
-    ctx.moveTo(0, 128);
-    ctx.lineTo(256, 128);
-    ctx.stroke();
-    // Glyph
-    //ctx.fillStyle = "black";
-    ctx.font = "64px GufoFont";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    // Replace with actual glyph codepoint if needed
-    ctx.fillText("\uF22C", 128, 128); // cisco-router glyph
+    const H = 256;
+    const W = H;
+    const ICON = 64;
+
+    async function draw() {
+        await document.fonts.load("64px Gufo");
+        await document.fonts.ready;
+        // Background
+        ctx.fillStyle = "#1abc9c";
+        ctx.fillRect(0, 0, W, H);
+        // Cross lines
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(W / 2, 0);
+        ctx.lineTo(W / 2, H);
+        ctx.moveTo(0, H / 2);
+        ctx.lineTo(W, H / 2);
+        ctx.stroke();
+        // Glyph
+        ctx.fillStyle = "black";
+        ctx.font = "64px GufoFont";
+        // Replace with actual glyph codepoint if needed
+        ctx.fillText("\uF22C", W / 2 - ICON / 2, H / 2 + ICON / 2); // cisco-router glyph
+    };
+    draw();
 </script>
