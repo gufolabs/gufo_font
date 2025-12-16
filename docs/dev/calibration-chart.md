@@ -28,27 +28,21 @@ Four `X` signs must touch each other.
 
 ## Canvas
 
-<style>
-    #c1 {
-        border: 1px solid white;
-    }
-</style>
-
-
-<canvas id="c1" width="256" height="256"></canvas>
 <script>
-    const canvas = document.getElementById("c1");
-    const ctx = canvas.getContext("2d");
-    const H = 256;
-    const W = H;
-    const ICON = 64;
-
-    async function draw() {
+    async function draw(selector, icon) {
+        const canvas = document.getElementById(selector);
+        const ctx = canvas.getContext("2d");
+        const H = 256;
+        const W = H;
+        const ICON = 64;
         await document.fonts.load("64px Gufo");
         await document.fonts.ready;
         // Background
         ctx.fillStyle = "#1abc9c";
         ctx.fillRect(0, 0, W, H);
+        // Central area
+        ctx.fillStyle = "#7f8c8d";
+        ctx.fillRect(W/2-ICON/2, H/2-ICON/2, ICON, ICON);
         // Cross lines
         ctx.strokeStyle = "red";
         ctx.lineWidth = 1;
@@ -62,7 +56,38 @@ Four `X` signs must touch each other.
         ctx.fillStyle = "black";
         ctx.font = "64px GufoFont";
         // Replace with actual glyph codepoint if needed
-        ctx.fillText("\uF22C", W / 2 - ICON / 2, H / 2 + ICON / 2); // cisco-router glyph
+        ctx.fillText(icon, W / 2 - ICON / 2, H / 2 + ICON / 2); // cisco-router glyph
     };
-    draw();
+</script>
+
+### Square Icon
+
+You must see turquose square with centered gray square, red cross and the router
+perfectly aligned on center. It must fill full width and height of the gray square.
+
+<canvas id="c1" width="256" height="256"></canvas>
+<script>
+    draw("c1", "\uF400");
+</script>
+
+### Horizontal Icon
+
+You must see turquose square with centered gray square, red cross and the router
+perfectly aligned on center. It must fill full width of the gray square and to be
+vertically centered.
+
+<canvas id="c2" width="256" height="256"></canvas>
+<script>
+    draw("c2", "\uF22C");
+</script>
+
+### Vertical Icon
+
+You must see turquose square with centered gray square, red cross and the router
+perfectly aligned on center. It must fill full height of the gray square and to be
+horizontally centered.
+
+<canvas id="c3" width="256" height="256"></canvas>
+<script>
+    draw("c3", "2");
 </script>
