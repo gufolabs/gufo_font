@@ -41,7 +41,7 @@ Four `X` signs must touch each other.
         ctx.fillStyle = "#1abc9c";
         ctx.fillRect(0, 0, W, H);
         // Central area
-        ctx.fillStyle = "#7f8c8d";
+        ctx.fillStyle = "#16a085";
         ctx.fillRect(W/2-ICON/2, H/2-ICON/2, ICON, ICON);
         // Cross lines
         ctx.strokeStyle = "red";
@@ -62,7 +62,7 @@ Four `X` signs must touch each other.
 
 ### Square Icon
 
-You must see turquose square with centered gray square, red cross and the router
+You must see turquose square with centered darker square, red cross and the router
 perfectly aligned on center. It must fill full width and height of the gray square.
 
 <canvas id="c1" width="256" height="256"></canvas>
@@ -72,7 +72,7 @@ perfectly aligned on center. It must fill full width and height of the gray squa
 
 ### Horizontal Icon
 
-You must see turquose square with centered gray square, red cross and the router
+You must see turquose square with centered darker square, red cross and the router
 perfectly aligned on center. It must fill full width of the gray square and to be
 vertically centered.
 
@@ -83,7 +83,7 @@ vertically centered.
 
 ### Vertical Icon
 
-You must see turquose square with centered gray square, red cross and the router
+You must see turquose square with centered darker square, red cross and the router
 perfectly aligned on center. It must fill full height of the gray square and to be
 horizontally centered.
 
