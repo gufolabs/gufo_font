@@ -11,10 +11,16 @@
     font-style: normal;
     font-weight: normal;
     display: inline-block;
-    font-size: var(--#{$css-prefix}-size, 1em);
+    font-size: var(--#{$cfg-size}, 1em);
     margin: 0;
     padding: 0;
     transform-origin: center center;
     width: 1em;
     line-height: normal;
+    --#{$cfg-effective-offset-y}: var(--#{$cfg-offset-y}, var(--#{$cfg-default-offset-y}, #{$baseline-shift}));
+    transform: translateY(var(--#{$cfg-effective-offset-y}, 0)); // may be overriden by gf-transform
+}
+
+.#{$css-prefix}-map {
+    --#{$cfg-default-offset-y}: 0;
 }

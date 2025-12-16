@@ -1,0 +1,42 @@
+// ---------------------------------------------------------------------
+// Gufo Font: Transformation classes
+// ---------------------------------------------------------------------
+// Copyright (C) 2025, Gufo Labs
+// ---------------------------------------------------------------------
+@use "vars" as *;
+
+$cls-transform: #{$css-prefix}-transform;
+
+.#{$css-prefix}.#{$cls-transform} {
+    transform: translate(var(--#{$cfg-offset-x}, 0), var(--#{$cfg-effective-offset-y}, 0)) rotate(var(--#{$cfg-rotate}, 0)) scale(var(--#{$cfg-scale-x, 1}), var(--#{$cfg-scale-y, 1}));
+}
+
+// Rotation angles.
+// gf-r90, ..
+$rotation-angles: 90, 180, 270;
+
+@each $angle in $rotation-angles {
+    .#{$css-prefix}.#{$css-prefix}-r#{$angle} {
+        --#{$cfg-rotate}: #{$angle}deg;
+        @extend .#{$cls-transform};
+    }
+}
+
+// Flip vertically
+.#{$css-prefix}-flip-v {
+    --#{$cfg-scale-y}: -1;
+    @extend .#{$cls-transform};
+}
+
+// Flip horizontally
+.#{$css-prefix}-flip-h {
+    --#{$cfg-scale-x}: -1;
+    @extend .#{$cls-transform};
+}
+
+// Flip both direction
+.#{$css-prefix}-flip {
+    --#{$cfg-scale-x}: -1;
+    --#{$cfg-scale-y}: -1;
+    @extend .#{$cls-transform};
+}

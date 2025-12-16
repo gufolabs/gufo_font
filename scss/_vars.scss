@@ -14,8 +14,24 @@ $url-woff2: "GufoFont-Regular.XXXXXXXX.woff2" !default;
 // Stencil sizes
 $stencil-size: 64;
 
+// Baseline shifting alignment
+$baseline-shift: 0.125em;
+
 // Color Scheme
 $state-unknown: #7f8c8d !default;
 $state-ok: #16a085 !default;
 $state-warn: #f1c40f !default;
 $state-fail: #c0392b !default;
+
+// Configurable css variables
+$cfg-code: #{$css-prefix};
+$cfg-size: #{$css-prefix}-size;
+$cfg-offset-x: #{$css-prefix}-offset-x;
+$cfg-offset-y: #{$css-prefix}-offset-y;
+$cfg-scale-x: #{$css-prefix}-scale-x;
+$cfg-scale-y: #{$css-prefix}-scale-y;
+$cfg-rotate: #{$css-prefix}-rotate;
+
+// Internal variables
+$cfg-default-offset-y: #{$css-prefix}-default-offset-y;
+$cfg-effective-offset-y: #{$css-prefix}-effective-offset-y;

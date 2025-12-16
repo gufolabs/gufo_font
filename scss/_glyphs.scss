@@ -8,13 +8,13 @@
 @use "../build/codepoints" as *;
 
 .#{$css-prefix}::before {
-    content: var(--#{$css-prefix});
+    content: var(--#{$cfg-code});
 }
 
 .#{$css-prefix} {
     @each $name, $code in $glyph-codepoints {
         &.#{$name} {
-            --#{$css-prefix}: "#{$code}";
+            --#{$cfg-code}: "#{$code}";
         }
     }
 }
