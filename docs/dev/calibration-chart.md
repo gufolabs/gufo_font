@@ -18,13 +18,15 @@ Logo must be aligned with following text on baseline:
 
 <span style="border: 1px solid red; display: inline-block"><i class="gf brand-gufolabs-s"></i> Gufo Labs</span>
 
-## Vertical and Horizontal Gap
+Larger text:
+
+<span style="border: 1px solid red; display: inline-block; font-size: 128px"><i class="gf brand-gufolabs-s"></i> Gufo Labs</span>
+
+##  Horizontal Gap
 
 Four `X` signs must touch each other.
 
-<i class="gf xmark-s"></i><i class="gf xmark-s"></i>
-
-<i class="gf xmark-s"></i><i class="gf xmark-s"></i>
+<i class="gf xmark-s"></i><i class="gf xmark-s"></i><i class="gf xmark-s"></i><i class="gf xmark-s"></i>
 
 ## Canvas
 

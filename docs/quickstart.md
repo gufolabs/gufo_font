@@ -171,15 +171,15 @@ You can rotate glyph using "rotation classes". Rotation angles are measured cloc
 | ------------------------------------- | -------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | <i class="gf gf-1x cisco-router"></i> | <i class="gf gf-1x gf-r90 cisco-router"></i> | <i class="gf gf-1x gf-r180 cisco-router"></i> | <i class="gf gf-1x gf-r270 cisco-router"></i> |
 
-To rotate an arbitrary angle use `gf-rotate` class along with `--gf-rotate` variable:
+To rotate an arbitrary angle use `gf-transform` class along with `--gf-rotate` variable:
 
 ``` html
-<i class="gf gf-1x gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
+<i class="gf gf-1x gf-transform cisco-router" style="--gf-rotate:33deg"></i>
 ```
 
 Rendered as:
 
-<i class="gf gf-1x gf-rotate cisco-router" style="--gf-rotate:33deg"></i>
+<i class="gf gf-1x gf-transform cisco-router" style="--gf-rotate:33deg"></i>
 
 ## Flipping
 

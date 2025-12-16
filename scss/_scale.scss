@@ -15,7 +15,7 @@ $default-map-icon-size: 64;
 
     .#{$css-prefix}.#{$css-prefix}-#{$zoom}x,
     .#{$css-prefix}-stack.#{$css-prefix}-#{$zoom}x {
-        --#{$css-prefix}-size: #{$zoom * $default-map-icon-size}px;
+        --#{$cfg-size}: #{$zoom * $default-map-icon-size}px;
     }
 }
 
@@ -28,6 +28,6 @@ $exact-sizes: 16, 24, 32, 48;
 
     .#{$css-prefix}.#{$css-prefix}-#{$px}px,
     .#{$css-prefix}-stack.#{$css-prefix}-#{$px}px {
-        --#{$css-prefix}-size: #{$px}px;
+        --#{$cfg-size}: #{$px}px;
     }
 }

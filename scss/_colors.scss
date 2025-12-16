@@ -34,13 +34,15 @@ $colors: (
 // Color 0 - state-dependent filling
 // Color 1 - white outline
 @each $name, $color in $colors {
-    @font-palette-values --#{$css-prefix}-#{"" + $name} {
+    $font-palette-name: #{$css-prefix}-#{$name};
+
+    @font-palette-values --#{$font-palette-name} {
         font-family: $family;
         override-colors:
             0 $color;
     }
 
-    .#{$css-prefix}.#{$css-prefix}-#{"" + $name} {
+    .#{$css-prefix}.#{$font-palette-name} {
         font-palette: --#{$css-prefix}-#{$name};
         color: $color;
     }
