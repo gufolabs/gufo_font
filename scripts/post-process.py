@@ -10,6 +10,7 @@ Perform post-processing.
 """
 
 # Python modules
+import argparse
 import re
 import shutil
 from hashlib import sha3_512
@@ -20,17 +21,18 @@ DIST = Path("dist", "gufo-font")
 WOFF2 = DIST / f"{FONT_NAME}.woff2"
 CSS = DIST / "gufo-font.css"
 CSS_MIN = DIST / "gufo-font.min.css"
-HASH_LEN = 8
-FILE_MASK = rf"{FONT_NAME}\.{'X' * HASH_LEN}\.woff2"
-rx_url = re.compile(rf"url\(\"({FILE_MASK})\"\)", re.DOTALL | re.MULTILINE)
+DEFAULT_HASH_LEN = 8
 
 
-def hash_font() -> None:
+def hash_font(hash_placeholder: str) -> None:
     """Add hash into font's file name and update css."""
     if not WOFF2.exists():
         return  # Already post-processed
+    # Generate mask
+    FILE_MASK = rf"{FONT_NAME}\.{hash_placeholder}\.woff2"
+    rx_url = re.compile(rf"url\(\"({FILE_MASK})\"\)", re.DOTALL | re.MULTILINE)
     # Calculate hash
-    hash_value = sha3_512(WOFF2.read_bytes()).hexdigest()[:HASH_LEN]
+    hash_value = sha3_512(WOFF2.read_bytes()).hexdigest()[: len(hash_placeholder)]
     hashed_name = f"{FONT_NAME}.{hash_value}.woff2"
     # Rename file
     shutil.move(WOFF2, DIST / hashed_name)
@@ -51,7 +53,14 @@ def hash_font() -> None:
 
 def main() -> None:
     """Perform post-processing."""
-    hash_font()
+    parser = argparse.ArgumentParser(
+        description="Example script with hash placeholder."
+    )
+    parser.add_argument(
+        "--hash-placeholder", default="X" * DEFAULT_HASH_LEN, help="Hash placeholder"
+    )
+    args = parser.parse_args()
+    hash_font(args.hash_placeholder)
 
 
 if __name__ == "__main__":

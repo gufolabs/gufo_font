@@ -4,12 +4,20 @@
 // Copyright (C) 2025, Gufo Labs
 // ---------------------------------------------------------------------
 
+@use "../build/config" as *;
+@use "sass:meta";
+
 $css-prefix: gf;
 
 // Font settings
 $family: "GufoFont" !default;
-// .XXXXXXXX. will be replaced with file hash by post-process.
-$url-woff2: "GufoFont-Regular.XXXXXXXX.woff2" !default;
+
+// Font URL
+// Declare variable upfront
+$url-woff2: if(meta.variable_exists("font-hash-placeholder"),
+        "GufoFont-Regular.#{$font-hash-placeholder}.woff2",
+        "GufoFont-Regular.woff2"
+    ) !default;
 
 // Stencil sizes
 $stencil-size: 64;

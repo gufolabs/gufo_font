@@ -27,17 +27,26 @@ echo "Post-processing target '$TARGET'"
 echo "Preparing build directory"
 mkdir -p build/ $DIST
 rm -rf build/* $DIST/*
+# Copy Font File
+echo "Copy Font"
+cp webfonts/GufoFont-Regular.woff2 $DIST/
+# Clearing config
+echo -n > build/_config.scss
+# Generate codepoints
 echo "Generating codepoints"
 python3 ./scripts/make-codepoints.py
 # Build css
 echo "Build CSS"
 MAIN_SCSS=scss/main.scss
+HASH_PLACEHOLDER="XXXXXXXX"
 case "$TARGET" in
     test)
         sass --no-source-map $MAIN_SCSS $DIST/gufo-font.css
         ;;
     docs)
+        python ./scripts/configure-scss.py --font-hash-placeholder=${HASH_PLACEHOLDER}
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.css
+        python ./scripts/post-process.py --hash-placeholder=${HASH_PLACEHOLDER}
         ;;
     package)
         cp README.md $DIST
@@ -46,16 +55,12 @@ case "$TARGET" in
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.min.css
         ;;
     cdn)
+        python ./scripts/configure-scss.py --font-hash-placeholder=${HASH_PLACEHOLDER}
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.css
+        python ./scripts/post-process.py --hash-placeholder=${HASH_PLACEHOLDER}
         ;;
     *)
         echo "Unknown target: $TARGET"
         exit 1
         ;;
 esac
-# Copy font
-echo "Copy Font"
-cp webfonts/GufoFont-Regular.woff2 $DIST/
-# Insert hashes
-echo "Post Processing"
-python ./scripts/post-process.py
