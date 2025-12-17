@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------
 # Copyright (C) 2025, Gufo Labs
 # ---------------------------------------------------------------------
-"""Generate build/_codepoints.scss file."""
+"""Generate package.json file."""
 
 # Python modules
 import json
