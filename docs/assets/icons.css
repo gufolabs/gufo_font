@@ -31,4 +31,5 @@ h2:not(:has(+ .icons-list .icon:not(.icon--hidden))) {
 .icon-title-label {
     height: 56px;
     text-align: center;
+    margin-top: 8px;
 }
