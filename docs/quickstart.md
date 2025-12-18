@@ -151,6 +151,29 @@ You can also set an exact icon size using pixel-based classes:
 | ------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- | --------------------------------------- |
 | <i class="gf cisco-router"></i> | <i class="gf gf-16px cisco-router"></i> | <i class="gf gf-24px cisco-router"></i> | <i class="gf gf-32px cisco-router"></i> | <i class="gf gf-48px cisco-router"></i> |
 
+### Relative Adjustments
+
+You can make glyph sligtly larger using `gf-larger` style:
+
+```
+<i class="gf rectangle-o"></i> <i class="gf gf-larger rectangle-o"></i>
+```
+
+Rendered as:
+
+<i class="gf rectangle-o"></i> <i class="gf gf-larger rectangle-o"></i>
+
+`gf-smaller` style, in its turn, makes glyph slightly smaller:
+
+```
+<i class="gf rectangle-o"></i> <i class="gf gf-smaller rectangle-o"></i>
+```
+
+Rendered as:
+
+<i class="gf rectangle-o"></i> <i class="gf gf-smaller rectangle-o"></i>
+
+
 ### Arbitrary Sizes
 
 You can set an arbitrary size using `--gf-size` variable:

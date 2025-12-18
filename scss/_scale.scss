@@ -31,3 +31,13 @@ $exact-sizes: 16, 24, 32, 48;
         --#{$cfg-size}: #{$px}px;
     }
 }
+
+// Slightly smaller
+.#{$css-prefix}.#{$css-prefix}-smaller {
+    --#{$cfg-size}: 0.8em;
+}
+
+// Slightly larger
+.#{$css-prefix}.#{$css-prefix}-larger {
+    --#{$cfg-size}: 1.2em;
+}
