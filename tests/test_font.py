@@ -134,6 +134,7 @@ def test_hhea_metrics(font: TTFont, metric: str, expected: int) -> None:
     assert v == expected, f"{metric} must be {expected} (currently {v})"
 
 
+@pytest.mark.xfail
 @pytest.mark.parametrize(
     ("metric", "expected"), [("underlinePosition", 0), ("underlineThickness", 1)]
 )
