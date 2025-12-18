@@ -399,6 +399,70 @@ icons:
     - name: wrench-s
       code: 0xE30B
       added-in: "upcoming"
+    - name: building-s
+      code: 0xE30C
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: warehouse-s
+      code: 0xE30D
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: building-columns-s
+      code: 0xE30E
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: house-medical-s
+      code: 0xE30F
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: dungeon-s
+      code: 0xE310
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: governmental-building-s
+      code: 0xE311
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: industry-s
+      code: 0xE312
+      added-in: "upcoming"
+      labels: ["house", "building"]
+    - name: tv-s
+      code: 0xE314
+      added-in: "upcoming"
+    - name: tv-o
+      code: 0xE315
+      added-in: "upcoming"
+    - name: tower-broadcast-s
+      code: 0xE316
+      added-in: "upcoming"
+    - name: bookmark-s
+      code: 0xE318
+      added-in: "upcoming"
+    - name: bookmark-o
+      code: 0xE319
+      added-in: "upcoming"
+    - name: book-s
+      code: 0xE31B
+      added-in: "upcoming"
+    - name: book-o
+      code: 0xE31C
+      added-in: "upcoming"
+    - name: book-bible-s
+      code: 0xE31E
+      added-in: "upcoming"
+    - name: book-bible-o
+      code: 0xE31F
+      added-in: "upcoming"
+    - name: book-medical-s
+      code: 0xE321
+      added-in: "upcoming"
+    - name: book-medical-o
+      code: 0xE322
+      added-in: "upcoming"
+    - name: people-group-s
+      code: 0xE325
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -487,6 +551,12 @@ icons:
       added-in: "upcoming"
     - name: cisco-firewall
       code: 0xF214
+      added-in: "upcoming"
+    - name: cisco-optical-amplifier
+      code: 0xF223
+      added-in: "upcoming"
+    - name: cisco-relational-database
+      code: 0xF22B
       added-in: "upcoming"
     - name: cisco-router
       code: 0xF22C
