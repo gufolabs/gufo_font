@@ -15,7 +15,6 @@
     margin: 0;
     padding: 0;
     transform-origin: center center;
-    width: 1em;
     line-height: normal;
     --#{$cfg-effective-offset-y}: var(--#{$cfg-offset-y}, var(--#{$cfg-default-offset-y}, #{$baseline-shift}));
     transform: translateY(var(--#{$cfg-effective-offset-y}, 0)); // may be overriden by gf-transform

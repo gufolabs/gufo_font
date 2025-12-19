@@ -93,3 +93,13 @@ horizontally centered.
 <script>
     draw("c3", "2");
 </script>
+
+## Alphabet
+
+You must see classic "Fox" sentence.
+
+> <span class="gf">THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG</span>
+
+And the numbers
+
+> <span class="gf">0123456789</span>
