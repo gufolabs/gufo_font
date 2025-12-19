@@ -22,6 +22,7 @@ COLR = "COLR"
 NAME = "name"
 HEAD = "head"
 HHEA = "hhea"
+HMTX = "hmtx"
 OS2 = "OS/2"
 POST = "post"
 FONT_FAMILY = "Gufo Font"
@@ -218,3 +219,24 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
     if missed_glyph:
         lst = ", ".join(sorted(missed_glyph))
         pytest.fail(f"{len(missed_glyph)} missed color glyphs: {lst}")
+
+
+def test_hmtx_table(font: Font) -> None:
+    assert HMTX in font
+    table = font[HMTX]
+    cmap = {v: k for k, v in font.getBestCmap().items()}
+    r = []
+    for name in font.getGlyphOrder():
+        if name not in table.metrics:
+            continue
+        cp = cmap.get(name)
+        if not cp:
+            continue
+        aw, _lsb = table.metrics[name]
+        if aw != UPM:
+            r.append(f"{cp:X}: AW is {aw} (must be {UPM})")
+        # if lsb < 0:
+        #     r.append(f"{cp:X}: LSB is negative ({lsb})")
+    if r:
+        msg = f"{len(r)} errors found:\n{'\n'.join(r)}"
+        pytest.fail(msg)
