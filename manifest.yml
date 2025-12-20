@@ -170,6 +170,9 @@ icons:
     - name: check-s
       code: 0xE2B4
       added-in: "upcoming"
+    - name: compress-o
+      code: 0xE2B5
+      added-in: "upcoming"
     - name: power-off-s
       code: 0xE2B6
       added-in: "upcoming"
@@ -259,6 +262,9 @@ icons:
       added-in: "upcoming"
     - name: magnifying-glass-o
       code: 0xE2D3
+      added-in: "upcoming"
+    - name: crosshairs-o
+      code: 0xE2D4
       added-in: "upcoming"
     - name: bars-s
       code: 0xE2D5
@@ -460,8 +466,35 @@ icons:
     - name: book-medical-o
       code: 0xE322
       added-in: "upcoming"
+    - name: newspaper-s
+      code: 0xE323
+      added-in: "upcoming"
+    - name: newspaper-o
+      code: 0xE324
+      added-in: "upcoming"
     - name: people-group-s
       code: 0xE325
+      added-in: "upcoming"
+    - name: book-open-s
+      code: 0xE326
+      added-in: "upcoming"
+    - name: book-open-o
+      code: 0xE327
+      added-in: "upcoming"
+    - name: trash-s
+      code: 0xE328
+      added-in: "upcoming"
+    - name: trash-o
+      code: 0xE329
+      added-in: "upcoming"
+    - name: recycle-o
+      code: 0xE32D
+      added-in: "upcoming"
+    - name: comment-dots-s
+      code: 0xE32F
+      added-in: "upcoming"
+    - name: comment-dots-o
+      code: 0xE330
       added-in: "upcoming"
   IT:
     - name: database
@@ -588,6 +621,12 @@ icons:
     - name: exclamation
       code: 0x0021
       added-in: "upcoming"
+    - name: comma
+      code: 0x002C
+      added-in: "upcoming"
+    - name: full-stop
+      code: 0x002E
+      added-in: "upcoming"
     - name: zero
       code: 0x0030
       added-in: "upcoming"
@@ -704,4 +743,100 @@ icons:
       added-in: "upcoming"
     - name: copyright
       code: 0x00A9
+      added-in: "upcoming"
+    - name: cyrillic-capital-a
+      code: 0x0410
+      added-in: "upcoming"
+    - name: cyrillic-capital-be
+      code: 0x0411
+      added-in: "upcoming"
+    - name: cyrillic-capital-ve
+      code: 0x0412
+      added-in: "upcoming"
+    - name: cyrillic-capital-ghe
+      code: 0x0413
+      added-in: "upcoming"
+    - name: cyrillic-capital-de
+      code: 0x0414
+      added-in: "upcoming"
+    - name: cyrillic-capital-ie
+      code: 0x0415
+      added-in: "upcoming"
+    - name: cyrillic-capital-zhe
+      code: 0x0416
+      added-in: "upcoming"
+    - name: cyrillic-capital-ze
+      code: 0x0417
+      added-in: "upcoming"
+    - name: cyrillic-capital-ai
+      code: 0x0418
+      added-in: "upcoming"
+    - name: cyrillic-capital-short-i
+      code: 0x0419
+      added-in: "upcoming"
+    - name: cyrillic-capital-ka
+      code: 0x041A
+      added-in: "upcoming"
+    - name: cyrillic-capital-el
+      code: 0x041B
+      added-in: "upcoming"
+    - name: cyrillic-capital-em
+      code: 0x041C
+      added-in: "upcoming"
+    - name: cyrillic-capital-en
+      code: 0x041D
+      added-in: "upcoming"
+    - name: cyrillic-capital-o
+      code: 0x041E
+      added-in: "upcoming"
+    - name: cyrillic-capital-pe
+      code: 0x041F
+      added-in: "upcoming"
+    - name: cyrillic-capital-er
+      code: 0x0420
+      added-in: "upcoming"
+    - name: cyrillic-capital-es
+      code: 0x0421
+      added-in: "upcoming"
+    - name: cyrillic-capital-te
+      code: 0x0422
+      added-in: "upcoming"
+    - name: cyrillic-capital-u
+      code: 0x0423
+      added-in: "upcoming"
+    - name: cyrillic-capital-ef
+      code: 0x0424
+      added-in: "upcoming"
+    - name: cyrillic-capital-ha
+      code: 0x0425
+      added-in: "upcoming"
+    - name: cyrillic-capital-tse
+      code: 0x0426
+      added-in: "upcoming"
+    - name: cyrillic-capital-che
+      code: 0x0427
+      added-in: "upcoming"
+    - name: cyrillic-capital-sha
+      code: 0x0428
+      added-in: "upcoming"
+    - name: cyrillic-capital-shcha
+      code: 0x0429
+      added-in: "upcoming"
+    - name: cyrillic-capital-hard-sign
+      code: 0x042A
+      added-in: "upcoming"
+    - name: cyrillic-capital-yeru
+      code: 0x042B
+      added-in: "upcoming"
+    - name: cyrillic-capital-soft-sign
+      code: 0x042C
+      added-in: "upcoming"
+    - name: cyrillic-capital-e
+      code: 0x042D
+      added-in: "upcoming"
+    - name: cyrillic-capital-yu
+      code: 0x042E
+      added-in: "upcoming"
+    - name: cyrillic-capital-ya
+      code: 0x042F
       added-in: "upcoming"

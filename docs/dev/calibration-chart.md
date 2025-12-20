@@ -96,10 +96,15 @@ horizontally centered.
 
 ## Alphabet
 
-You must see classic "Fox" sentence.
+### Numbers
+
+> <span class="gf">0123456789</span>
+
+### Latin
 
 > <span class="gf">THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG</span>
 
-And the numbers
+### Russian
 
-> <span class="gf">0123456789</span>
+> <span class="gf">СЪЕШЬ ЖЕ ЕЩЕ ЭТИХ МЯГКИХ ФРАНЦУЗСКИХ БУЛОК, ДА ВЫПЕЙ ЧАЮ</span>
+

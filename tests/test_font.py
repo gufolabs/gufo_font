@@ -202,7 +202,7 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
                 icon.added_in
                 and not icon.name.endswith("-s")
                 and not icon.name.endswith("-o")
-                and icon.code > 255
+                and icon.code >= 0xE000
             ):
                 name = cmap.get(icon.code)
                 if name:
