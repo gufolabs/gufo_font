@@ -9,12 +9,14 @@ import operator
 from pathlib import Path
 
 # Third party modules
+from fontTools.pens.recordingPen import RecordingPen
 from fontTools.ttLib import TTFont
 
 # Gufo Font modules
 from gufo.font.manifest import Manifest
 
 FONT_PATH = Path("webfonts", "GufoFont-Regular.woff2")
+CFF = "CFF "
 
 
 def glyph_points() -> dict[str, int]:
@@ -27,31 +29,38 @@ def glyph_points() -> dict[str, int]:
         for icon in icons:
             code_to_name[icon.code] = icon.name
     # Get points
-    glyf_table = font["glyf"]
-    points_count = {}
-    for glyph_name in glyf_table.keys():
+    cff = font[CFF].cff
+    top_dict = cff.topDictIndex[0]
+    char_strings = top_dict.CharStrings
+
+    points_count: dict[str, int] = {}
+
+    for glyph_name in char_strings.keys():
         code = cmap.get(glyph_name)
-        if not code:
+        if code is None:
             continue
+
         manifest_name = code_to_name.get(code)
         if not manifest_name:
             continue
-        glyph = glyf_table[glyph_name]
-        if glyph.isComposite():
-            # Composite glyph: sum points of components
-            num_points = sum(
-                glyf_table[comp.glyphName].numberOfContours
-                for comp in glyph.components
-                if hasattr(glyf_table[comp.glyphName], "numberOfContours")
-            )
-            # Note: numberOfContours may be negative for empty glyphs
-        elif glyph.numberOfContours > 0:
-            num_points = sum(
-                len(contour) for contour in glyph.getCoordinates(font["glyf"])[0]
-            )
-        else:
-            num_points = 0
+
+        pen = RecordingPen()
+
+        # Draw glyph to pen (executes charstring)
+        char_strings[glyph_name].draw(pen)
+
+        # Count points from recorded operations
+        num_points = 0
+        for op, args in pen.value:
+            if op == "moveTo" or op == "lineTo":
+                num_points += 1
+            elif op == "curveTo":
+                # cubic Bezier: 3 control points
+                num_points += 3
+            # closePath adds no points
+
         points_count[manifest_name] = num_points
+
     return points_count
 
 
