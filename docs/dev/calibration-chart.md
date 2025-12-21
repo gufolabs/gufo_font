@@ -94,6 +94,62 @@ horizontally centered.
     draw("c3", "2");
 </script>
 
+## SVG
+
+### Square Icon
+
+You must see turquose square with centered darker square, red cross and the router
+perfectly aligned on center. It must fill full width and height of the gray square.
+
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="256" height="256" fill="#1abc9c" />
+    <!-- Central area -->
+    <rect x="96" y="96" width="64" height="64" fill="#16a085" />
+    <!-- Cross lines -->
+    <line x1="128" y1="0" x2="128" y2="256" stroke="red" stroke-width="1"/>
+    <line x1="0" y1="128" x2="256" y2="128" stroke="red" stroke-width="1"/>
+    <!-- Glyph (cisco-router) -->
+    <text x="96" y="160" font-family="GufoFont" font-size="64" fill="black">&#xF400;</text>
+</svg>
+
+### Horizontal Icon
+
+You must see turquose square with centered darker square, red cross and the router
+perfectly aligned on center. It must fill full width of the gray square and to be
+vertically centered.
+
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="256" height="256" fill="#1abc9c" />
+    <!-- Central area -->
+    <rect x="96" y="96" width="64" height="64" fill="#16a085" />
+    <!-- Cross lines -->
+    <line x1="128" y1="0" x2="128" y2="256" stroke="red" stroke-width="1"/>
+    <line x1="0" y1="128" x2="256" y2="128" stroke="red" stroke-width="1"/>
+    <!-- Glyph (cisco-router) -->
+    <text x="96" y="160" font-family="GufoFont" font-size="64" fill="black">&#xF22C;</text>
+</svg>
+
+### Vertical Icon
+
+You must see turquose square with centered darker square, red cross and the router
+perfectly aligned on center. It must fill full height of the gray square and to be
+horizontally centered.
+
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="256" height="256" fill="#1abc9c" />
+    <!-- Central area -->
+    <rect x="96" y="96" width="64" height="64" fill="#16a085" />
+    <!-- Cross lines -->
+    <line x1="128" y1="0" x2="128" y2="256" stroke="red" stroke-width="1"/>
+    <line x1="0" y1="128" x2="256" y2="128" stroke="red" stroke-width="1"/>
+    <!-- Glyph (cisco-router) -->
+    <text x="96" y="160" font-family="GufoFont" font-size="64" fill="black">2</text>
+</svg>
+
+
 ## Alphabet
 
 ### Numbers
