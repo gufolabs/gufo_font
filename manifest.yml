@@ -487,6 +487,9 @@ icons:
     - name: trash-o
       code: 0xE329
       added-in: "upcoming"
+    - name: burst-s
+      code: 0xE32B
+      added-in: "upcoming"
     - name: recycle-o
       code: 0xE32D
       added-in: "upcoming"
@@ -495,6 +498,33 @@ icons:
       added-in: "upcoming"
     - name: comment-dots-o
       code: 0xE330
+      added-in: "upcoming"
+    - name: bullseye-o
+      code: 0xE331
+      added-in: "upcoming"
+    - name: certificate-s
+      code: 0xE332
+      added-in: "upcoming"
+    - name: cross-s
+      code: 0xE333
+      added-in: "upcoming"
+    - name: car-s
+      code: 0xE334
+      added-in: "upcoming"
+    - name: car-side-s
+      code: 0xE335
+      added-in: "upcoming"
+    - name: city-s
+      code: 0xE336
+      added-in: "upcoming"
+    - name: fence-s
+      code: 0xE337
+      added-in: "upcoming"
+    - name: map-s
+      code: 0xE339
+      added-in: "upcoming"
+    - name: map-o
+      code: 0xE33A
       added-in: "upcoming"
   IT:
     - name: database
@@ -556,6 +586,87 @@ icons:
     - name: bluetooth-o
       code: 0xF018
       added-in: "upcoming"
+    - name: cloud-ip
+      code: 0xF019
+      added-in: "upcoming"
+    - name: cloud-ip-s
+      code: 0xF01A
+      added-in: "upcoming"
+    - name: cloud-ip-o
+      code: 0xF01B
+      added-in: "upcoming"
+    - name: cloud-mpls
+      code: 0xF01C
+      added-in: "upcoming"
+    - name: cloud-mpls-s
+      code: 0xF01D
+      added-in: "upcoming"
+    - name: cloud-mpls-o
+      code: 0xF01E
+      added-in: "upcoming"
+    - name: cloud-vpn
+      code: 0xF01F
+      added-in: "upcoming"
+    - name: cloud-vpn-s
+      code: 0xF020
+      added-in: "upcoming"
+    - name: cloud-vpn-o
+      code: 0xF021
+      added-in: "upcoming"
+    - name: cloud-wan
+      code: 0xF022
+      added-in: "upcoming"
+    - name: cloud-wan-s
+      code: 0xF023
+      added-in: "upcoming"
+    - name: cloud-wan-o
+      code: 0xF024
+      added-in: "upcoming"
+    - name: cloud-lan
+      code: 0xF028
+      added-in: "upcoming"
+    - name: cloud-lan-s
+      code: 0xF029
+      added-in: "upcoming"
+    - name: cloud-lan-o
+      code: 0xF02A
+      added-in: "upcoming"
+    - name: cloud-pstn
+      code: 0xF02B
+      added-in: "upcoming"
+    - name: cloud-pstn-s
+      code: 0xF02C
+      added-in: "upcoming"
+    - name: cloud-pstn-o
+      code: 0xF02D
+      added-in: "upcoming"
+    - name: cloud-plmn
+      code: 0xF02E
+      added-in: "upcoming"
+    - name: cloud-plmn-s
+      code: 0xF02F
+      added-in: "upcoming"
+    - name: cloud-plmn-o
+      code: 0xF030
+      added-in: "upcoming"
+    - name: cloud-ims
+      code: 0xF031
+      added-in: "upcoming"
+    - name: cloud-ims-s
+      code: 0xF032
+      added-in: "upcoming"
+    - name: cloud-ims-o
+      code: 0xF033
+      added-in: "upcoming"
+    - name: cloud-sdh
+      code: 0xF034
+      added-in: "upcoming"
+    - name: cloud-sdh-s
+      code: 0xF035
+      added-in: "upcoming"
+    - name: cloud-sdh-o
+      code: 0xF036
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-accesspoint
       code: 0xF200
@@ -601,7 +712,7 @@ icons:
       description: Classic Cisco-style switch icon.
       labels: ["switch", "l2"]
       added-in: "upcoming"
-  Juniper:
+  Juniper Stencils:
     - name: juniper-generic-router
       code: 0xF400
       added-in: "upcoming"
@@ -617,7 +728,11 @@ icons:
     - name: juniper-switch
       code: 0xF404
       added-in: "upcoming"
-  Symbols:
+  Huawei Stencils:
+    - name: huawei-msan
+      code: 0xF440
+      added-in: "upcoming"
+  Unicode Symbols:
     - name: exclamation
       code: 0x0021
       added-in: "upcoming"
@@ -839,4 +954,7 @@ icons:
       added-in: "upcoming"
     - name: cyrillic-capital-ya
       code: 0x042F
+      added-in: "upcoming"
+    - name: ohm-sign
+      code: 0x2126
       added-in: "upcoming"
