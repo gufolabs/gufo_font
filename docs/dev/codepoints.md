@@ -12,6 +12,7 @@ The allocated ranges for different sections are as follows:
 | IT      |                | U+F000 | U+F1FF | 512  | IT Stencils                                        |
 | CISCO   | `cisco`        | U+F200 | U+F3FF | 512  | Cisco-style network stencils                       |
 | JUNIPER | `juniper`      | U+F400 | U+F43F | 64   | Juniper-style network stencils                     |
+| HUAWEI  | `huawei`       | U+F440 | U+F540 | 256  | Huawei-style network stencils                      |
 
 !!! note
 
