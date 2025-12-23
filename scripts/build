@@ -31,7 +31,7 @@ rm -rf build/* $DIST/*
 echo "Copy Font"
 cp webfonts/GufoFont-Regular.woff2 $DIST/
 # Clearing config
-echo -n > build/_config.scss
+python ./scripts/configure-scss.py
 # Generate codepoints
 echo "Generating codepoints"
 python3 ./scripts/make-codepoints.py
