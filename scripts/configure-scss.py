@@ -19,8 +19,8 @@ def main() -> None:
     args = parser.parse_args()
     # Generate
     r: list[str] = []
-    if args.font_hash_placeholder:
-        r.append(f'$font-hash-placeholder: "{args.font_hash_placeholder}";')
+    hash_suffix = f".{args.font_hash_placeholder}" if args.font_hash_placeholder else ""
+    r.append(f'$font-hash-placeholder-suffix: "{hash_suffix}";')
     # Write
     with open(CONFIG, "w") as fp:
         fp.write("\n".join(r))

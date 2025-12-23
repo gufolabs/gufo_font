@@ -5,7 +5,6 @@
 // ---------------------------------------------------------------------
 
 @use "../build/config" as *;
-@use "sass:meta";
 
 $css-prefix: gf;
 
@@ -14,10 +13,7 @@ $family: "GufoFont" !default;
 
 // Font URL
 // Declare variable upfront
-$url-woff2: if(meta.variable_exists("font-hash-placeholder"),
-        "GufoFont-Regular.#{$font-hash-placeholder}.woff2",
-        "GufoFont-Regular.woff2"
-    ) !default;
+$url-woff2: "GufoFont-Regular#{$font-hash-placeholder-suffix}.woff2" !default;
 
 // Stencil sizes
 $stencil-size: 64;
