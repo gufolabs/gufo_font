@@ -526,6 +526,21 @@ icons:
     - name: map-o
       code: 0xE33A
       added-in: "upcoming"
+    - name: barcode-s
+      code: 0xE33B
+      added-in: "upcoming"
+    - name: layer-group-s
+      code: 0xE33C
+      added-in: "upcoming"
+    - name: sitemap-s
+      code: 0xE33D
+      added-in: "upcoming"
+    - name: folder-s
+      code: 0xE33F
+      added-in: "upcoming"
+    - name: folder-o
+      code: 0xE340
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
