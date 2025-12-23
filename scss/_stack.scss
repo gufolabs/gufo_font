@@ -8,3 +8,9 @@
 .#{$css-prefix}-stack>.#{$css-prefix} {
     position: absolute;
 }
+.#{$css-prefix}-stack {
+  display: inline-block;
+  position: relative;
+  width: var(--gf-size);
+  height: var(--gf-size);
+}
