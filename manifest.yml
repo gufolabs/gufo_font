@@ -747,6 +747,18 @@ icons:
     - name: huawei-msan
       code: 0xF440
       added-in: "upcoming"
+    - name: huawei-dslam
+      code: 0xF441
+      added-in: "upcoming"
+    - name: huawei-optical-splitter
+      code: 0xF443
+      added-in: "upcoming"
+    - name: huawei-bras
+      code: 0xF44B
+      added-in: "upcoming"
+    - name: huawei-access-node
+      code: 0xF44C
+      added-in: "upcoming"
   Unicode Symbols:
     - name: exclamation
       code: 0x0021
