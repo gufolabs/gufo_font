@@ -46,7 +46,7 @@ def main() -> None:
         items.extend(Glyph.from_icon(icon) for icon in icons if icon.added_in)
     r = {
         "$type": "bundle",
-        "$collection": "sa.actioncommands",
+        "$collection": "main.glyphs",
         "items": [item.to_dict() for item in sorted(items, key=attrgetter("code"))],
     }
     print(json.dumps(r, indent=2))
