@@ -36,6 +36,15 @@ $cfg-scale-x: #{$css-prefix}-scale-x;
 $cfg-scale-y: #{$css-prefix}-scale-y;
 $cfg-rotate: #{$css-prefix}-rotate;
 
+// Animation variables
+$cfg-animation-delay: #{$css-prefix}-animation-delay;
+$cfg-animation-direction: #{$css-prefix}-animation-direction;
+$cfg-animation-duration: #{$css-prefix}-animation-duration;
+$cfg-animation-iteration-count: #{$css-prefix}-animation-iteration-count;
+$cfg-animation-timing: #{$css-prefix}-animation-timing;
+
+$cfg-beat-scale: #{$css-prefix}-beat-scale;
+
 // Internal variables
 $cfg-default-offset-y: #{$css-prefix}-default-offset-y;
 $cfg-effective-offset-y: #{$css-prefix}-effective-offset-y;
