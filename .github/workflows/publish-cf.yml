@@ -30,7 +30,7 @@ jobs:
         run: npm install -g sass
 
       - name: Build
-        run: ./scripts/build --target=package
+        run: ./scripts/build --target=cdn
 
       - name: Publish
         run: |
