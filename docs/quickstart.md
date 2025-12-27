@@ -259,3 +259,47 @@ Rendered result:
     <i class="gf circle-o"></i>
     <i class="gf gf-ok star-small-s"></i>
 </span>
+
+## Animation
+
+Gufo Font goes with predefined set of animations which can be applied via classes.
+
+### Beat
+
+Use `gf-beat` to rythmically scale an icon up and down.
+
+``` html
+<i class="gf gf-1x gf-beat heart-s"></i>
+<i class="gf gf-1x gf-beat heart-s" style="--gf-animation-duration: 2s"></i>
+<i class="gf gf-1x gf-beat heart-s" style="--gf-animation-duration: 0.5s"></i>
+```
+
+Rendered result:
+
+<i class="gf gf-1x gf-beat heart-s"></i>
+<i class="gf gf-1x gf-beat heart-s" style="--gf-animation-duration: 2s"></i>
+<i class="gf gf-1x gf-beat heart-s" style="--gf-animation-duration: 0.5s"></i>
+
+### Shake
+
+Use `gf-shake` to visually grab attention.
+
+``` html
+<i class="gf gf-1x gf-shake exclamation"></i>
+```
+
+Rendered result:
+
+<i class="gf gf-1x gf-shake exclamation"></i>
+
+### Spin
+
+Use `gf-spin` to make an icon to rotate.
+
+``` html
+<i class="gf gf-1x gf-spin cog-s"></i>
+<i class="gf gf-1x gf-spin circle-notch-o"></i>
+```
+
+<i class="gf gf-1x gf-spin cog-s"></i>
+<i class="gf gf-1x gf-spin circle-notch-o"></i>
