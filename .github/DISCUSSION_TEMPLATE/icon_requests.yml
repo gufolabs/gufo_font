@@ -1,0 +1,61 @@
+title: "🖼️ [Icon name] icon request"
+labels:
+  - new icon
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🙌 Thanks for suggesting a new icon!
+        Your ideas help us decide what to design next.  
+        A clear and detailed request makes it easier for the community to vote and for our team to evaluate.
+
+  - type: textarea
+    id: icon-description
+    attributes:
+      label: 📝 What icon are you requesting?
+      description: Describe the icon and the concept or object it should represent.
+      placeholder: Example: “An abstract icon representing a sandbox or isolated environment”
+
+  - type: textarea
+    id: icon-usage
+    attributes:
+      label: 🧩 Where will this icon be used?
+      description: Describe the scenario, UI, product, or workflow where this icon appears.
+      placeholder: Example: “Network topology diagram, monitoring dashboard, or settings menu”
+
+  - type: textarea
+    id: visual-references
+    attributes:
+      label: 🎨 Visual references (optional)
+      description: Paste images, sketches, screenshots, or links that help explain your idea.
+      placeholder: Links to similar icons, photos, or rough sketches
+
+  - type: dropdown
+    id: sections
+    attributes:
+      label: 🗂️ Preferred section
+      description: Where do you think this icon fits best?
+      options:
+        - NOC Brands
+        - UI
+        - IT Stencils
+        - Cisco Stencils
+        - Juniper Stencils
+        - Huawei Stencils
+        - Unicode Symbols
+        - Other/New Section
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Request checklist
+      options:
+        - label: 🔍 I have searched the Icons page and existing discussions to avoid duplicates
+          required: true
+        - label: ©️ This is not a brand or copyrighted logo
+          required: true
+        - label: 🎯 This request is for a single, clear concept (or a related pair like on/off)
+          required: true
