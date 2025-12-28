@@ -1,7 +1,6 @@
-title: "🖼️ [Icon name] icon request"
+title: "[Icon Request] ..."
 labels:
-  - new icon
-
+  - "new icon"
 body:
   - type: markdown
     attributes:
@@ -15,19 +14,22 @@ body:
     attributes:
       label: 📝 What icon are you requesting?
       description: Describe the icon and the concept or object it should represent.
+    validations:
+      required: true
 
   - type: textarea
     id: icon-usage
     attributes:
       label: 🧩 Where will this icon be used?
       description: Describe the scenario, UI, product, or workflow where this icon appears.
+    validations:
+      required: true
 
   - type: textarea
     id: visual-references
     attributes:
       label: 🎨 Visual references (optional)
       description: Paste images, sketches, screenshots, or links that help explain your idea.
-      placeholder: Links to similar icons, photos, or rough sketches
 
   - type: dropdown
     id: sections
