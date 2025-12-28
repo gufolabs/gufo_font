@@ -15,14 +15,12 @@ body:
     attributes:
       label: 📝 What icon are you requesting?
       description: Describe the icon and the concept or object it should represent.
-      placeholder: Example: “An abstract icon representing a sandbox or isolated environment”
 
   - type: textarea
     id: icon-usage
     attributes:
       label: 🧩 Where will this icon be used?
       description: Describe the scenario, UI, product, or workflow where this icon appears.
-      placeholder: Example: “Network topology diagram, monitoring dashboard, or settings menu”
 
   - type: textarea
     id: visual-references
