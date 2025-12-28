@@ -541,6 +541,126 @@ icons:
     - name: folder-o
       code: 0xE340
       added-in: "upcoming"
+    - name: python-s
+      code: 0xE341
+      added-in: "upcoming"
+    - name: arrow-u-turn-down-left-o
+      code: 0xE342
+      added-in: "upcoming"
+    - name: arrow-u-turn-down-right-o
+      code: 0xE343
+      added-in: "upcoming"
+    - name: arrow-u-turn-up-left-o
+      code: 0xE344
+      added-in: "upcoming"
+    - name: arrow-u-turn-up-right-o
+      code: 0xE345
+      added-in: "upcoming"
+    - name: arrow-u-turn-left-up-o
+      code: 0xE346
+      added-in: "upcoming"
+    - name: arrow-u-turn-left-down-o
+      code: 0xE347
+      added-in: "upcoming"
+    - name: arrow-u-turn-right-up-o
+      code: 0xE348
+      added-in: "upcoming"
+    - name: arrow-u-turn-right-down-o
+      code: 0xE349
+      added-in: "upcoming"
+    - name: arrow-left-to-line-o
+      code: 0xE34A
+      added-in: "upcoming"
+    - name: arrow-up-to-line-o
+      code: 0xE34B
+      added-in: "upcoming"
+    - name: arrow-right-to-line-o
+      code: 0xE34C
+      added-in: "upcoming"
+    - name: arrow-down-to-line-o
+      code: 0xE34D
+      added-in: "upcoming"
+    - name: arrow-left-to-arc-o
+      code: 0xE34E
+      added-in: "upcoming"
+    - name: arrow-up-to-arc-o
+      code: 0xE34F
+      added-in: "upcoming"
+    - name: arrow-right-to-arc-o
+      code: 0xE350
+      added-in: "upcoming"
+    - name: arrow-down-to-arc-o
+      code: 0xE351
+      added-in: "upcoming"
+    - name: arrow-left-to-bracket-o
+      code: 0xE352
+      added-in: "upcoming"
+    - name: arrow-up-to-bracket-o
+      code: 0xE353
+      added-in: "upcoming"
+    - name: arrow-right-to-bracket-o
+      code: 0xE354
+      added-in: "upcoming"
+    - name: arrow-down-to-bracket-o
+      code: 0xE355
+      added-in: "upcoming"
+    - name: arrow-left-to-square-o
+      code: 0xE356
+      added-in: "upcoming"
+    - name: arrow-up-to-square-o
+      code: 0xE357
+      added-in: "upcoming"
+    - name: arrow-right-to-square-o
+      code: 0xE358
+      added-in: "upcoming"
+    - name: arrow-down-to-square-o
+      code: 0xE359
+      added-in: "upcoming"
+    - name: print-s
+      code: 0xE35A
+      added-in: "upcoming"
+    - name: print-o
+      code: 0xE35B
+      added-in: "upcoming"
+    - name: shredder-s
+      code: 0xE35C
+      added-in: "upcoming"
+    - name: shredder-o
+      code: 0xE35D
+      added-in: "upcoming"
+    - name: file-code-o
+      code: 0xE360
+      added-in: "upcoming"
+    - name: file-image-o
+      code: 0xE361
+      added-in: "upcoming"
+    - name: file-csv-o
+      code: 0xE362
+      added-in: "upcoming"
+    - name: file-pdf-o
+      code: 0xE363
+      added-in: "upcoming"
+    - name: file-xslx-o
+      code: 0xE364
+      added-in: "upcoming"
+    - name: file-docx-o
+      code: 0xE365
+      added-in: "upcoming"
+    - name: file-json-o
+      code: 0xE366
+      added-in: "upcoming"
+    - name: file-yaml-o
+      code: 0xE367
+      added-in: "upcoming"
+    - name: fan-s
+      code: 0xE368
+      added-in: "upcoming"
+    - name: alien-s
+      code: 0xE369
+      added-in: "upcoming"
+    - name: alien-o
+      code: 0xE36A
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -695,6 +815,9 @@ icons:
     - name: cisco-atm-router
       code: 0xF204
       added-in: "upcoming"
+    - name: cisco-atm-switch
+      code: 0xF205
+      added-in: "upcoming"
     - name: cisco-bridge
       code: 0xF206
       added-in: "upcoming"
@@ -705,11 +828,32 @@ icons:
     - name: cisco-cable-modem
       code: 0xF208
       added-in: "upcoming"
+    - name: cisco-asa-5500
+      code: 0xF20A
+      added-in: "upcoming"
+    - name: cisco-class-4-5-switch
+      code: 0xF20B
+      added-in: "upcoming"
     - name: cisco-concentrator
       code: 0xF20E
       added-in: "upcoming"
     - name: cisco-firewall
       code: 0xF214
+      added-in: "upcoming"
+    - name: cisco-generic-softswitch
+      code: 0xF215
+      added-in: "upcoming"
+    - name: cisco-host
+      code: 0xF217
+      added-in: "upcoming"
+    - name: cisco-iptv-broadcast-server
+      code: 0xF21A
+      added-in: "upcoming"
+    - name: cisco-layer-3-switch
+      code: 0xF21C
+      added-in: "upcoming"
+    - name: cisco-network-management
+      code: 0xF221
       added-in: "upcoming"
     - name: cisco-optical-amplifier
       code: 0xF223
@@ -753,15 +897,45 @@ icons:
     - name: huawei-optical-splitter
       code: 0xF443
       added-in: "upcoming"
+    - name: huawei-fiber-connector
+      code: 0xF447
+      added-in: "upcoming"
     - name: huawei-bras
       code: 0xF44B
       added-in: "upcoming"
     - name: huawei-access-node
       code: 0xF44C
       added-in: "upcoming"
+    - name: huawei-bits
+      code: 0xF458
+      added-in: "upcoming"
+    - name: huawei-sps
+      code: 0xF459
+      added-in: "upcoming"
+    - name: huawei-location-server
+      code: 0xF45B
+      added-in: "upcoming"
+    - name: huawei-iserver
+      code: 0xF45D
+      added-in: "upcoming"
+    - name: huawei-bcs
+      code: 0xF467
+      added-in: "upcoming"
+    - name: huawei-rnc
+      code: 0xF468
+      added-in: "upcoming"
   Unicode Symbols:
     - name: exclamation
       code: 0x0021
+      added-in: "upcoming"
+    - name: hashtag
+      code: 0x0023
+      added-in: "upcoming"
+    - name: bracket-round
+      code: 0x0028
+      added-in: "upcoming"
+    - name: bracket-round-right
+      code: 0x0029
       added-in: "upcoming"
     - name: comma
       code: 0x002C
@@ -883,6 +1057,18 @@ icons:
     - name: latin-capital-z
       code: 0x005A
       added-in: "upcoming"
+    - name: bracket-square
+      code: 0x005B
+      added-in: "upcoming"
+    - name: bracket-square-right
+      code: 0x005D
+      added-in: "upcoming"
+    - name: bracket-curly
+      code: 0x007B
+      added-in: "upcoming"
+    - name: bracket-curly-right
+      code: 0x007D
+      added-in: "upcoming"
     - name: copyright
       code: 0x00A9
       added-in: "upcoming"
@@ -984,4 +1170,7 @@ icons:
       added-in: "upcoming"
     - name: ohm-sign
       code: 0x2126
+      added-in: "upcoming"
+    - name: ankh
+      code: 0x2625
       added-in: "upcoming"
