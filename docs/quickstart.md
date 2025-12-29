@@ -103,7 +103,7 @@ Gufo Font goes with predefined sets of colors styles:
 | Style              | Color                                                                                                                                                                   |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `gf-black`         | <i class="gf gf-32px gf-black rectangle"></i> <i class="gf gf-32px gf-black rectangle-s"></i>  <i class="gf gf-32px gf-black rectangle-o"></i>                          |
-| `gf-write`         | <i class="gf gf-32px gf-write rectangle"></i>  <i class="gf gf-32px gf-write rectangle-s"></i>  <i class="gf gf-32px gf-write rectangle-o"></i>                         |
+| `gf-white`         | <i class="gf gf-32px gf-white rectangle"></i>  <i class="gf gf-32px gf-white rectangle-s"></i>  <i class="gf gf-32px gf-white rectangle-o"></i>                         |
 | `gf-turquoise`     | <i class="gf gf-32px gf-turquoise rectangle"></i>  <i class="gf gf-32px gf-turquoise rectangle-s"></i>  <i class="gf gf-32px gf-turquoise rectangle-o"></i>             |
 | `gf-emerald`       | <i class="gf gf-32px gf-emerald rectangle"></i>  <i class="gf gf-32px gf-emerald rectangle-s"></i>  <i class="gf gf-32px gf-emerald rectangle-o"></i>                   |
 | `gf-green-sea`     | <i class="gf gf-32px gf-green-sea rectangle"></i>  <i class="gf gf-32px gf-green-sea rectangle-s"></i>  <i class="gf gf-32px gf-green-sea rectangle-o"></i>             |
