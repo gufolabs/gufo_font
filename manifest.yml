@@ -628,6 +628,9 @@ icons:
     - name: shredder-o
       code: 0xE35D
       added-in: "upcoming"
+    - name: fingerprint-o
+      code: 0xE35E
+      added-in: "upcoming"
     - name: file-code-o
       code: 0xE360
       added-in: "upcoming"

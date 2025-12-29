@@ -19,6 +19,7 @@ PATH = Path("webfonts", "GufoFont-Regular.woff2")
 GLYF = "glyf"
 CFF = "CFF "
 COLR = "COLR"
+CPAL = "CPAL"
 NAME = "name"
 HEAD = "head"
 HHEA = "hhea"
@@ -28,6 +29,33 @@ POST = "post"
 FONT_FAMILY = "Gufo Font"
 FONT_SUBFAMILY = "Regular"
 UPM = 4096
+
+# RGBA
+PALETTE1 = [
+    "#000000ff",  # 0
+    "#ffffffff",  # 1
+    "#000000ff",  # 2
+    "#1abc9cff",  # 3
+    "#2ecc71ff",  # 4
+    "#16a085ff",  # 5
+    "#27ae60ff",  # 6
+    "#f1c40fff",  # 7
+    "#f39c12ff",  # 8
+    "#e67e22ff",  # 9
+    "#d35400ff",  # 10
+    "#3498dbff",  # 11
+    "#2980b9ff",  # 12
+    "#9b59b6ff",  # 13
+    "#8e44adff",  # 14
+    "#e74c3cff",  # 15
+    "#c0392bff",  # 16
+    "#ecf0f1ff",  # 17
+    "#bdc3c7ff",  # 18
+    "#34495eff",  # 19
+    "#2c3e50ff",  # 20
+    "#95a5a6ff",  # 21
+    "#7f8c8dff",  # 22
+]
 
 
 @pytest.fixture(scope="module")
@@ -159,6 +187,24 @@ def test_post_metrics(font: TTFont, metric: str, expected: int) -> None:
 def test_os2_metrics(font: TTFont, metric: str, expected: int) -> None:
     v = getattr(font[OS2], metric)
     assert v == expected, f"{metric} must be {expected} (currently {v})"
+
+
+def test_cpal_table(font: TTFont) -> None:
+    def rgba(r: int, g: int, b: int, a: int) -> str:
+        return f"#{r:02x}{g:02x}{b:02x}{a:02x}"
+
+    assert CPAL in font
+    table = font[CPAL]
+    assert len(table.palettes) == 1, "Font must have exactly one palette"
+    palette = table.palettes[0]
+    assert len(palette) == len(PALETTE1), (
+        f"Palette size mismatch: expected {len(PALETTE1)}, got {len(palette)}"
+    )
+    for n, (expected, item) in enumerate(zip(PALETTE1, palette, strict=False)):
+        item_rgba = rgba(item.red, item.green, item.blue, item.alpha)
+        assert item_rgba == expected, (
+            f"Item #{n} mismatch: Expected {expected} got {item_rgba}"
+        )
 
 
 def test_cff_table(font: TTFont, manifest: Manifest) -> None:
