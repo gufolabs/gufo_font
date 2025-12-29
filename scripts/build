@@ -51,10 +51,12 @@ case "$TARGET" in
     package)
         cp README.md $DIST
         python3 ./scripts/make-package.py
+        python3 ./scripts/compile-manifest.py
         sass --no-source-map scss/main.scss $DIST/gufo-font.css
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.min.css
         ;;
     cdn)
+        python3 ./scripts/compile-manifest.py
         python ./scripts/configure-scss.py --font-hash-placeholder=${HASH_PLACEHOLDER}
         sass --style=compressed $MAIN_SCSS $DIST/gufo-font.css
         python ./scripts/post-process.py --hash-placeholder=${HASH_PLACEHOLDER}

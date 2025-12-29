@@ -5,3 +5,4 @@ This directory contains utility scripts for Gufo Fonts.
 * `configure-scss.py` - Create scss configuration.
 * `post-process.py` - Post-processing, hash font's url if necessary.
 * `extract-layers.py` - Extract layers from prepared SVG file.
+* `make-package.py` - Generate package.json file.
