@@ -118,6 +118,19 @@ class Manifest(object):
             data = yaml.load(fp.read(), Loader=yaml.SafeLoader)
             return Manifest.from_dict(data)
 
+    def iter_icons(self, group: str) -> Iterable[Icon]:
+        """
+        Iterate all icons in group, including reserved.
+
+        Args:
+            group: Icons group name.
+
+        Returns:
+            Yields active icons
+        """
+        for icon in sorted(self.icons.get(group, []), key=operator.attrgetter("code")):
+            yield icon
+
     def iter_enabled_icons(self, group: str) -> Iterable[Icon]:
         """
         Iterate all enabled icons in group.

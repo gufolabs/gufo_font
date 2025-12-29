@@ -809,6 +809,8 @@ icons:
     - name: cisco-ace
       code: 0xF201
       added-in: "upcoming"
+    - name: cisco-antenna
+      code: 0xF202
     - name: cisco-ata
       code: 0xF203
       added-in: "upcoming"
@@ -828,6 +830,8 @@ icons:
     - name: cisco-cable-modem
       code: 0xF208
       added-in: "upcoming"
+    - name: cisco-carrier-routing-system
+      code: 0xF209
     - name: cisco-asa-5500
       code: 0xF20A
       added-in: "upcoming"
@@ -837,27 +841,67 @@ icons:
     - name: cisco-concentrator
       code: 0xF20E
       added-in: "upcoming"
+    - name: cisco-content-engine
+      code: 0xF20F
+    - name: cisco-cuc
+      code: 0xF210
+    - name: cisco-dslam
+      code: 0xF211
+    - name: cisco-dwdm-filter
+      code: 0xF212
+    - name: cisco-fax
+      code: 0xF213
     - name: cisco-firewall
       code: 0xF214
       added-in: "upcoming"
     - name: cisco-generic-softswitch
       code: 0xF215
       added-in: "upcoming"
+    - name: cisco-gigabit-switch-router
+      code: 0xF216
     - name: cisco-host
       code: 0xF217
       added-in: "upcoming"
+    - name: cisco-ip-phone
+      code: 0xF218
+    - name: cisco-ip-telephony-router
+      code: 0xF219
     - name: cisco-iptv-broadcast-server
       code: 0xF21A
       added-in: "upcoming"
+    - name: cisco-laptop
+      code: 0xF21B
     - name: cisco-layer-3-switch
       code: 0xF21C
       added-in: "upcoming"
+    - name: cisco-mau
+      code: 0xF21E
+    - name: cisco-mesh-ap
+      code: 0xF21F
+    - name: cisco-microphone
+      code: 0xF220
     - name: cisco-network-management
       code: 0xF221
       added-in: "upcoming"
+    - name: cisco-octel
+      code: 0xF222
     - name: cisco-optical-amplifier
       code: 0xF223
       added-in: "upcoming"
+    - name: cisco-optical-services-router
+      code: 0xF224
+    - name: cisco-optical-transport
+      code: 0xF225
+    - name: cisco-pbx
+      code: 0xF226
+    - name: cisco-phone
+      code: 0xF227
+    - name: cisco-pix
+      code: 0xF228
+    - name: cisco-printer
+      code: 0xF229
+    - name: cisco-radio-tower
+      code: 0xF22A
     - name: cisco-relational-database
       code: 0xF22B
       added-in: "upcoming"
@@ -866,11 +910,49 @@ icons:
       description: Classic Cisco-style router icon.
       labels: ["router"]
       added-in: "upcoming"
+    - name: cisco-satellite-dish
+      code: 0xF22D
+    - name: cisco-satellite
+      code: 0xF22E
+    - name: cisco-set-top-box
+      code: 0xF22F
+    - name: cisco-sip-proxy-server
+      code: 0xF230
+    - name: cisco-softphone
+      code: 0xF231
+    - name: cisco-speaker
+      code: 0xF232
+    - name: cisco-stb
+      code: 0xF233
+    - name: cisco-streamer
+      code: 0xF234
+    - name: cisco-supercomputer
+      code: 0xF235
+    - name: cisco-terminal
+      code: 0xF236
+    - name: cisco-tv
+      code: 0xF237
+    - name: cisco-umg-series
+      code: 0xF238
+    - name: cisco-ups
+      code: 0xF239
+    - name: cisco-video-camera
+      code: 0xF23A
+    - name: cisco-voice-router
+      code: 0xF23B
+    - name: cisco-wavelength-router
+      code: 0xF23C
+    - name: cisco-wireless-bridge
+      code: 0xF23D
+    - name: cisco-wireless-router
+      code: 0xF23E
     - name: cisco-workgroup-switch
       code: 0xF23F
       description: Classic Cisco-style switch icon.
       labels: ["switch", "l2"]
       added-in: "upcoming"
+    - name: cisco-rps
+      code: 0xF240
   Juniper Stencils:
     - name: juniper-generic-router
       code: 0xF400
@@ -894,36 +976,185 @@ icons:
     - name: huawei-dslam
       code: 0xF441
       added-in: "upcoming"
+    - name: huawei-md5500b
+      code: 0xF442
     - name: huawei-optical-splitter
       code: 0xF443
       added-in: "upcoming"
+    - name: huawei-fdt
+      code: 0xF444
+    - name: huawei-fat
+      code: 0xF445
+    - name: huawei-joint-box
+      code: 0xF446
     - name: huawei-fiber-connector
       code: 0xF447
       added-in: "upcoming"
+    - name: huawei-optical-attenuator
+      code: 0xF448
+    - name: huawei-atb
+      code: 0xF449
+    - name: huawei-ternination-module
+      code: 0xF44A
     - name: huawei-bras
       code: 0xF44B
       added-in: "upcoming"
     - name: huawei-access-node
       code: 0xF44C
       added-in: "upcoming"
+    - name: huawei-pbx-switch
+      code: 0xF44D
+    - name: huawei-tv
+      code: 0xF44E
+    - name: huawei-residential-area
+      code: 0xF44F
+    - name: huawei-laptop
+      code: 0xF450
+    - name: huawei-fax-machine
+      code: 0xF451
+    - name: huawei-isp
+      code: 0xF452
+    - name: huawei-cbd
+      code: 0xF453
+    - name: huawei-radius-server
+      code: 0xF454
+    - name: huawei-splicing-module
+      code: 0xF455
+    - name: huawei-conversion-adapter
+      code: 0xF456
+    - name: huawei-odf
+      code: 0xF457
     - name: huawei-bits
       code: 0xF458
       added-in: "upcoming"
     - name: huawei-sps
       code: 0xF459
       added-in: "upcoming"
+    - name: huawei-dvc
+      code: 0xF45A
     - name: huawei-location-server
       code: 0xF45B
       added-in: "upcoming"
+    - name: huawei-sbc
+      code: 0xF45C
     - name: huawei-iserver
       code: 0xF45D
       added-in: "upcoming"
+    - name: huawei-ioss
+      code: 0xF45E
+    - name: huawei-adsl-modem
+      code: 0xF45F
+    - name: huawei-general-router
+      code: 0xF460
+    - name: huawei-low-end-and-mid-range-router
+      code: 0xF461
+    - name: huawei-high-end-router
+      code: 0xF462
+    - name: huawei-core-router
+      code: 0xF463
+    - name: huawei-residential-area1
+      code: 0xF464
+    - name: huawei-office-building
+      code: 0xF465
+    - name: huawei-hotel
+      code: 0xF466
     - name: huawei-bcs
       code: 0xF467
       added-in: "upcoming"
     - name: huawei-rnc
       code: 0xF468
       added-in: "upcoming"
+    - name: huawei-general-ptn
+      code: 0xF469
+    - name: huawei-enterprise
+      code: 0xF46A
+    - name: huawei-test-client
+      code: 0xF46B
+    - name: huawei-database
+      code: 0xF46C
+    - name: huawei-mcu
+      code: 0xF46D
+    - name: huawei-iadms
+      code: 0xF46E
+    - name: huawei-hgw
+      code: 0xF46F
+    - name: huawei-n2000-client
+      code: 0xF470
+    - name: huawei-upper-layer-nms
+      code: 0xF471
+    - name: huawei-nms
+      code: 0xF472
+    - name: huawei-rm9000
+      code: 0xF473
+    - name: huawei-imanager-i2000
+      code: 0xF474
+    - name: huawei-phone-set
+      code: 0xF475
+    - name: huawei-shlr
+      code: 0xF476
+    - name: huawei-ethernet-switch
+      code: 0xF477
+    - name: huawei-stb
+      code: 0xF478
+    - name: huawei-hss9820
+      code: 0xF479
+    - name: huawei-hub
+      code: 0xF47A
+    - name: huawei-bts
+      code: 0xF47B
+    - name: huawei-pstn
+      code: 0xF47C
+    - name: huawei-softx3000
+      code: 0xF47D
+    - name: huawei-csc3300
+      code: 0xF47E
+    - name: huawei-mrp6600
+      code: 0xF47F
+    - name: huawei-combiner
+      code: 0xF480
+    - name: huawei-multiplexer
+      code: 0xF481
+    - name: huawei-olt
+      code: 0xF482
+    - name: huawei-mdu
+      code: 0xF483
+    - name: huawei-ont
+      code: 0xF484
+    - name: huawei-multicast-server
+      code: 0xF485
+    - name: huawei-layer-3-switch
+      code: 0xF486
+    - name: huawei-line-emulator
+      code: 0xF487
+
+    - name: huawei-call-maker
+      code: 0xF488
+    - name: huawei-upstream-optical-receiver
+      code: 0xF489
+    - name: huawei-upstream-optical-transmitter
+      code: 0xF48A
+    - name: huawei-downstream-optical-receiver
+      code: 0xF48B
+    - name: huawei-downstream-optical-transmitter
+      code: 0xF48C
+    - name: huawei-common-transceiver
+      code: 0xF48D
+    - name: huawei-oa
+      code: 0xF48E
+    - name: huawei-one-way-amplifier
+      code: 0xF48F
+    - name: huawei-two-way-amplifier
+      code: 0xF490
+    - name: huawei-tap
+      code: 0xF491
+    - name: huawei-distributor
+      code: 0xF492
+    - name: huawei-frequency-mixer
+      code: 0xF493
+    - name: huawei-eqam
+      code: 0xF494
+    - name: huawei-d-cmts
+      code: 0xF495
   Unicode Symbols:
     - name: exclamation
       code: 0x0021

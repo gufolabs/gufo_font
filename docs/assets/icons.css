@@ -33,3 +33,13 @@ h2:not(:has(+ .icons-list .icon:not(.icon--hidden))) {
     text-align: center;
     margin-top: 8px;
 }
+
+.icon>.reserved {
+    width: 64px;
+    height: 64px;
+    font-family: GufoFont;
+    transform: rotate(-45deg);
+    font-size: 14px;
+    color: #7f8c8d;
+    display: block;
+}
