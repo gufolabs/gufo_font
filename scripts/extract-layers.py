@@ -9,6 +9,7 @@ import io
 import xml.etree.ElementTree as ET
 from enum import Enum, IntEnum
 from pathlib import Path
+from typing import Iterable
 
 SVG_NS = "http://www.w3.org/2000/svg"
 INKSCAPE_NS = "http://www.inkscape.org/namespaces/inkscape"
@@ -33,6 +34,7 @@ class LayerName(Enum):
     OUTLINE = ".A"
     STATUS = ".B"
     SOLID = ".S"
+    COLOR = ".C"
 
 
 class LayerLayout(IntEnum):
@@ -41,11 +43,11 @@ class LayerLayout(IntEnum):
 
     Attributes:
         SOLID: Single `.S` layer.
-        BICOLOR: `.A` and `.B` layers.
+        COLOR: `.A` and `.B` layers.
     """
 
     SOLID = 0
-    BICOLOR = 1
+    COLOR = 1
 
 
 # Register namespaces so ET doesn't generate ns0 prefixes
@@ -61,7 +63,7 @@ def get_layer_layout(tree: ET.ElementTree) -> LayerLayout:
 
     Returns:
         LayerLayout.SOLID: Document defines `.S` layer.
-        LayerLayout.BICOLOR: Document defines `.A` and `.B` layers.
+        LayerLayout.COLOR: Document defines `.A` and `.B` layers.
 
     Raises:
         ValueError: if layout cannot be detected.
@@ -81,9 +83,29 @@ def get_layer_layout(tree: ET.ElementTree) -> LayerLayout:
     if has_layer(LayerName.SOLID):
         return LayerLayout.SOLID
     if has_layer(LayerName.OUTLINE) and has_layer(LayerName.STATUS):
-        return LayerLayout.BICOLOR
+        return LayerLayout.COLOR
     msg = "SVG does not contain required .S or (.A and .B) inkcape layers"
     raise ValueError(msg)
+
+
+def iter_color_layers(tree: ET.ElementTree) -> Iterable[str]:
+    """
+    Iterate all .C<index> layers in document.
+
+    Args:
+        tree: Document to analyze.
+
+    Returns:
+        Yield color layers.
+    """
+    xpath = f".//{{{SVG_NS}}}g[@{{{INKSCAPE_NS}}}groupmode='layer']"
+    root = tree.getroot()
+    for g in root.findall(xpath):
+        label = g.get(f"{{{INKSCAPE_NS}}}label")
+        if not label:
+            continue
+        if label.startswith(LayerName.COLOR.value):
+            yield label
 
 
 def clean_element(element: ET.Element) -> None:
@@ -109,18 +131,24 @@ def clean_element(element: ET.Element) -> None:
         clean_element(child)
 
 
-def extract_layer(tree: ET.ElementTree, layer: LayerName) -> list[ET.Element]:
+def extract_layer(
+    tree: ET.ElementTree, layer: LayerName, color: int | None = None
+) -> list[ET.Element]:
     """
     Extract children of layer.
 
     Args:
         tree: Document's tree.
         layer: Layer to extract.
+        color: Solor pallete index.
 
     Returns:
         List of children.
     """
-    label = layer.value
+    if layer == LayerName.COLOR and color:
+        label = f"{layer.value}{color}"
+    else:
+        label = layer.value
     root = tree.getroot()
     for g in root.findall(f".//{{{SVG_NS}}}g"):
         gm = g.attrib.get(f"{{{INKSCAPE_NS}}}groupmode")
@@ -219,7 +247,7 @@ def extract_layers(path: Path) -> None:
                 extract_layer(tree, LayerName.SOLID),
                 (out_dir / base).with_suffix(".svg"),
             )
-        case LayerLayout.BICOLOR:
+        case LayerLayout.COLOR:
             write_layer(
                 tree,
                 extract_layer(tree, LayerName.OUTLINE),
@@ -230,6 +258,13 @@ def extract_layers(path: Path) -> None:
                 extract_layer(tree, LayerName.STATUS),
                 (out_dir / f"{base}-b").with_suffix(".svg"),
             )
+            for cl in iter_color_layers(tree):
+                index = int(cl[2:])
+                write_layer(
+                    tree,
+                    extract_layer(tree, LayerName.COLOR, index),
+                    (out_dir / f"{base}-c{index}").with_suffix(".svg"),
+                )
         case _:
             msg = f"{path}: Unknown layout"
             raise ValueError(msg)
