@@ -41,4 +41,5 @@ h2:not(:has(+ .icons-list .icon:not(.icon--hidden))) {
     transform: rotate(-45deg);
     font-size: 14px;
     color: #7f8c8d;
+    display: block;
 }

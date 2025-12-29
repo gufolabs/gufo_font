@@ -64,13 +64,15 @@ function showIconDialog(el) {
   const dialog = document.getElementById('gufo-icon-dialog');
   const titleEl = dialog.querySelector('.dialog-header .dialog-title-text');
   const codeEl = dialog.querySelector('.dialog-content-code');
-  const iconEl = dialog.querySelector('.dialog-content-icon i');
+  const iconContentEl = dialog.querySelector('.dialog-content-icon');
+  const iconEl = iconContentEl.children[0];
   const descriptionEl = dialog.querySelector('.dialog-content-description');
   const chipsContainerEl = dialog.querySelector('.dialog-content-chips');
-  let name, code;
+  let name, code, isReserved;
   if (el) {
     const url = new URL(window.location.href);
     name = el.dataset.iconName;
+    isReserved = el.dataset.iconVersion === 'reserved';
     code = parseInt(el.dataset.iconCode).toString(16).toUpperCase();
     url.hash = name;
     window.location.href = url.toString();
@@ -79,10 +81,22 @@ function showIconDialog(el) {
     const iconEl = document.querySelector(`[data-icon-name="${hash}"]`);
     if (!iconEl) return;
     name = iconEl.dataset.iconName;
+    isReserved = iconEl.dataset.iconVersion === 'reserved';
     code = parseInt(iconEl.dataset.iconCode).toString(16).toUpperCase();
     el = iconEl;
   }
-  iconEl.className = `gf gf-3x ${name}`;
+  if (isReserved) {
+    console.log('reserved icon', name);
+    const reservedSpanEl = document.createElement('span');
+    reservedSpanEl.className = 'reserved';
+    reservedSpanEl.style.paddingTop = '1em';
+    reservedSpanEl.textContent = 'RESERVED';
+    iconContentEl.replaceChild(reservedSpanEl, iconEl);
+  } else {
+    const newIconEl = document.createElement(iconEl.tagName);
+    newIconEl.className = `gf gf-3x ${name}`;
+    iconContentEl.replaceChild(newIconEl, iconEl);
+  }
   titleEl.textContent = `${name}`;
   codeEl.textContent = code;
   descriptionEl.textContent = el.dataset.iconDescription;
