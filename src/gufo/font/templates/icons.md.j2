@@ -45,19 +45,19 @@ hide:
 {% for group in manifest.icons %}
 ##{{ group }}<span class="gufo-group-badge" data-group={{ group | lower }}>{{ manifest.iter_enabled_icons(group) | list | length }}</span>
 <div class="icons-list icons-wrapper" data-component="icons-list" data-group={{ group | lower }}>
-{% for icon in manifest.iter_enabled_icons(group) %}
+{% for icon in manifest.iter_icons(group) %}
 <div class="icon" 
     data-type="icon"
     data-icon-name="{{ icon.name }}"
     data-icon-code="{{ icon.code }}"
     data-icon-description="{{ icon.description or '' }}"
-    data-icon-version="{{ icon.added_in }}"
+    data-icon-version="{{ icon.added_in or 'reserved' }}"
     data-icon-labels="{{ ','.join(icon.labels or '') }}"
     onclick="showIconDialog(this)">
-  {% if icon.is_reserved %}
-  <span class="reserved">RESERVED</span>
-  {% else %}
+  {% if icon.is_enabled %}
   <i class="gf gf-1x {{ icon.name }}" data-type="icon-element"></i>
+  {% else %}
+  <span class="reserved">RESERVED</span>
   {% endif %}
   <div class="icon-title-label">{{ icon.name }}</div>
 </div>

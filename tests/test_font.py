@@ -177,7 +177,7 @@ def test_cff_table(font: TTFont, manifest: Manifest) -> None:
     manifest_codepoints: set[str] = set()
     for icons in manifest.icons.values():
         for icon in icons:
-            if icon.added_in:
+            if icon.is_enabled:
                 manifest_codepoints.add(f"{icon.code:X}")
     if not_defined := font_codepoints - manifest_codepoints:
         lst = ", ".join(sorted(not_defined))
@@ -198,6 +198,8 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
     missed_glyph: set[str] = set()
     for icons in manifest.icons.values():
         for icon in icons:
+            if not icon.is_enabled:
+                continue
             if (
                 icon.added_in
                 and not icon.name.endswith("-s")

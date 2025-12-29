@@ -16,7 +16,6 @@ MANIFEST = "manifest.yml"
 PJ_NAME = "@gufo-labs/font"
 PJ_DESCRIPTION = "Telecom and IT-oriented icon font"
 PJ_LICENSE = "SEE LICENCE IN README.md"
-RESERVED = "reserved"
 
 
 @dataclass
@@ -63,11 +62,6 @@ class Icon(object):
     def is_enabled(self) -> bool:
         """Check if icon is enabled."""
         return bool(self.added_in)
-
-    @property
-    def is_reserved(self) -> bool:
-        """Check if icon codepoint is reserved."""
-        return self.added_in == RESERVED
 
 
 @dataclass
@@ -123,6 +117,19 @@ class Manifest(object):
         with open(MANIFEST) as fp:
             data = yaml.load(fp.read(), Loader=yaml.SafeLoader)
             return Manifest.from_dict(data)
+
+    def iter_icons(self, group: str) -> Iterable[Icon]:
+        """
+        Iterate all icons in group, including reserved.
+
+        Args:
+            group: Icons group name.
+
+        Returns:
+            Yields active icons
+        """
+        for icon in sorted(self.icons.get(group, []), key=operator.attrgetter("code")):
+            yield icon
 
     def iter_enabled_icons(self, group: str) -> Iterable[Icon]:
         """
