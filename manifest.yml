@@ -943,9 +943,9 @@ icons:
     - name: cisco-wavelength-router
       code: 0xF23C
     - name: cisco-wireless-bridge
-      code: 0xF23A
+      code: 0xF23D
     - name: cisco-wireless-router
-      code: 0xF23A
+      code: 0xF23E
     - name: cisco-workgroup-switch
       code: 0xF23F
       description: Classic Cisco-style switch icon.
@@ -1096,7 +1096,6 @@ icons:
       code: 0xF477
     - name: huawei-stb
       code: 0xF478
-
     - name: huawei-hss9820
       code: 0xF479
     - name: huawei-hub
