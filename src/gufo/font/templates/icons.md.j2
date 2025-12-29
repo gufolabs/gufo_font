@@ -54,7 +54,11 @@ hide:
     data-icon-version="{{ icon.added_in }}"
     data-icon-labels="{{ ','.join(icon.labels or '') }}"
     onclick="showIconDialog(this)">
+  {% if icon.is_reserved %}
+  <span class="reserved">RESERVED</span>
+  {% else %}
   <i class="gf gf-1x {{ icon.name }}" data-type="icon-element"></i>
+  {% endif %}
   <div class="icon-title-label">{{ icon.name }}</div>
 </div>
 {% endfor %}

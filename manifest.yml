@@ -871,6 +871,9 @@ icons:
       description: Classic Cisco-style switch icon.
       labels: ["switch", "l2"]
       added-in: "upcoming"
+    - name: cisco-rps
+      code: 0xF240
+      added-in: "reserved"
   Juniper Stencils:
     - name: juniper-generic-router
       code: 0xF400
