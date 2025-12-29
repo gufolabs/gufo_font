@@ -1129,7 +1129,6 @@ icons:
       code: 0xF486
     - name: huawei-line-emulator
       code: 0xF487
-
     - name: huawei-call-maker
       code: 0xF488
     - name: huawei-upstream-optical-receiver
@@ -1158,6 +1157,589 @@ icons:
       code: 0xF494
     - name: huawei-d-cmts
       code: 0xF495
+  National Flags:
+    - name: flag-ad
+      code: 0xF540
+      description: Flag of Andorra
+    - name: flag-ae
+      code: 0xF541
+      description: Flag of United Arab Emirates
+    - name: flag-af
+      code: 0xF542
+      description: Flag of Afghanistan
+    - name: flag-ag
+      code: 0xF543
+      description: Flag of Antigua and Barbuda
+    - name: flag-ai
+      code: 0xF544
+      description: Flag of Anguilla
+    - name: flag-al
+      code: 0xF545
+      description: Flag of Albania
+    - name: flag-am
+      code: 0xF546
+      description: Flag of Armenia
+    - name: flag-ao
+      code: 0xF547
+      description: Flag of Angola
+    - name: flag-ar
+      code: 0xF548
+      description: Flag of Argentina
+    - name: flag-at
+      code: 0xF549
+      description: Flag of Austria
+    - name: flag-au
+      code: 0xF54A
+      description: Flag of Australia
+    - name: flag-az
+      code: 0xF54B
+      description: Flag of Azerbaijan
+    - name: flag-ba
+      code: 0xF54C
+      description: Flag of Bosnia and Herzegovina
+    - name: flag-bb
+      code: 0xF54D
+      description: Flag of Barbados
+    - name: flag-bd
+      code: 0xF54E
+      description: Flag of Bangladesh
+    - name: flag-be
+      code: 0xF54F
+      description: Flag of Belgium
+    - name: flag-bf
+      code: 0xF550
+      description: Flag of Burkina Faso
+    - name: flag-bg
+      code: 0xF551
+      description: Flag of Bulgaria
+    - name: flag-bh
+      code: 0xF552
+      description: Flag of Bahrain
+    - name: flag-bi
+      code: 0xF553
+      description: Flag of Burundi
+    - name: flag-bj
+      code: 0xF554
+      description: Flag of Benin
+    - name: flag-bn
+      code: 0xF555
+      description: Flag of Brunei
+    - name: flag-bo
+      code: 0xF556
+      description: Flag of Bolivia
+    - name: flag-br
+      code: 0xF557
+      description: Flag of Brazil
+    - name: flag-bs
+      code: 0xF558
+      description: Flag of Bahamas
+    - name: flag-bt
+      code: 0xF559
+      description: Flag of Bhutan
+    - name: flag-bw
+      code: 0xF55A
+      description: Flag of Botswana
+    - name: flag-by
+      code: 0xF55B
+      description: Flag of Belarus
+    - name: flag-bz
+      code: 0xF55C
+      description: Flag of Belize
+    - name: flag-ca
+      code: 0xF55D
+      description: Flag of Canada
+    - name: flag-cd
+      code: 0xF55E
+      description: Flag of Democratic Republic of the Congo
+    - name: flag-cf
+      code: 0xF55F
+      description: Flag of Central African Republic
+    - name: flag-cg
+      code: 0xF560
+      description: Flag of Republic of the Congo
+    - name: flag-ch
+      code: 0xF561
+      description: Flag of Switzerland
+    - name: flag-ci
+      code: 0xF562
+      description: Flag of Ivory Coast
+    - name: flag-cl
+      code: 0xF563
+      description: Flag of Chile
+    - name: flag-cm
+      code: 0xF564
+      description: Flag of Cameroon
+    - name: flag-cn
+      code: 0xF565
+      description: Flag of China
+    - name: flag-co
+      code: 0xF566
+      description: Flag of Colombia
+    - name: flag-cr
+      code: 0xF567
+      description: Flag of Costa Rica
+    - name: flag-cu
+      code: 0xF568
+      description: Flag of Cuba
+    - name: flag-cv
+      code: 0xF569
+      description: Flag of Cape Verde
+    - name: flag-cy
+      code: 0xF56A
+      description: Flag of Cyprus
+    - name: flag-cz
+      code: 0xF56B
+      description: Flag of Czech Republic
+    - name: flag-de
+      code: 0xF56C
+      description: Flag of Germany
+    - name: flag-dj
+      code: 0xF56D
+      description: Flag of Djibouti
+    - name: flag-dk
+      code: 0xF56E
+      description: Flag of Denmark
+    - name: flag-dm
+      code: 0xF56F
+      description: Flag of Dominica
+    - name: flag-do
+      code: 0xF570
+      description: Flag of Dominican Republic
+    - name: flag-dz
+      code: 0xF571
+      description: Flag of Algeria
+    - name: flag-ec
+      code: 0xF572
+      description: Flag of Ecuador
+    - name: flag-ee
+      code: 0xF573
+      description: Flag of Estonia
+    - name: flag-eg
+      code: 0xF574
+      description: Flag of Egypt
+    - name: flag-er
+      code: 0xF575
+      description: Flag of Eritrea
+    - name: flag-es
+      code: 0xF576
+      description: Flag of Spain
+    - name: flag-et
+      code: 0xF577
+      description: Flag of Ethiopia
+    - name: flag-fi
+      code: 0xF578
+      description: Flag of Finland
+    - name: flag-fj
+      code: 0xF579
+      description: Flag of Fiji
+    - name: flag-fm
+      code: 0xF57A
+      description: Flag of Micronesia
+    - name: flag-fr
+      code: 0xF57B
+      description: Flag of France
+    - name: flag-ga
+      code: 0xF57C
+      description: Flag of Gabon
+    - name: flag-gb
+      code: 0xF57D
+      description: Flag of United Kingdom
+    - name: flag-gd
+      code: 0xF57E
+      description: Flag of Grenada
+    - name: flag-ge
+      code: 0xF57F
+      description: Flag of Georgia
+    - name: flag-gh
+      code: 0xF580
+      description: Flag of Ghana
+    - name: flag-gm
+      code: 0xF581
+      description: Flag of Gambia
+    - name: flag-gn
+      code: 0xF582
+      description: Flag of Guinea
+    - name: flag-gq
+      code: 0xF583
+      description: Flag of Equatorial Guinea
+    - name: flag-gr
+      code: 0xF584
+      description: Flag of Greece
+    - name: flag-gt
+      code: 0xF585
+      description: Flag of Guatemala
+    - name: flag-gw
+      code: 0xF586
+      description: Flag of Guinea-Bissau
+    - name: flag-gy
+      code: 0xF587
+      description: Flag of Guyana
+    - name: flag-hn
+      code: 0xF588
+      description: Flag of Honduras
+    - name: flag-hr
+      code: 0xF589
+      description: Flag of Croatia
+    - name: flag-ht
+      code: 0xF58A
+      description: Flag of Haiti
+    - name: flag-hu
+      code: 0xF58B
+      description: Flag of Hungary
+    - name: flag-id
+      code: 0xF58C
+      description: Flag of Indonesia
+    - name: flag-ie
+      code: 0xF58D
+      description: Flag of Ireland
+    - name: flag-il
+      code: 0xF58E
+      description: Flag of Israel
+    - name: flag-in
+      code: 0xF58F
+      description: Flag of India
+    - name: flag-iq
+      code: 0xF590
+      description: Flag of Iraq
+    - name: flag-ir
+      code: 0xF591
+      description: Flag of Iran
+    - name: flag-is
+      code: 0xF592
+      description: Flag of Iceland
+    - name: flag-it
+      code: 0xF593
+      description: Flag of Italy
+    - name: flag-jm
+      code: 0xF594
+      description: Flag of Jamaica
+    - name: flag-jo
+      code: 0xF595
+      description: Flag of Jordan
+    - name: flag-jp
+      code: 0xF596
+      description: Flag of Japan
+    - name: flag-ke
+      code: 0xF597
+      description: Flag of Kenya
+    - name: flag-kg
+      code: 0xF598
+      description: Flag of Kyrgyzstan
+    - name: flag-kh
+      code: 0xF599
+      description: Flag of Cambodia
+    - name: flag-ki
+      code: 0xF59A
+      description: Flag of Kiribati
+    - name: flag-km
+      code: 0xF59B
+      description: Flag of Comoros
+    - name: flag-kn
+      code: 0xF59C
+      description: Flag of Saint Kitts and Nevis
+    - name: flag-kp
+      code: 0xF59D
+      description: Flag of North Korea
+    - name: flag-kr
+      code: 0xF59E
+      description: Flag of South Korea
+    - name: flag-kw
+      code: 0xF59F
+      description: Flag of Kuwait
+    - name: flag-kz
+      code: 0xF5A0
+      description: Flag of Kazakhstan
+    - name: flag-la
+      code: 0xF5A1
+      description: Flag of Laos
+    - name: flag-lb
+      code: 0xF5A2
+      description: Flag of Lebanon
+    - name: flag-lc
+      code: 0xF5A3
+      description: Flag of Saint Lucia
+    - name: flag-li
+      code: 0xF5A4
+      description: Flag of Liechtenstein
+    - name: flag-lk
+      code: 0xF5A5
+      description: Flag of Sri Lanka
+    - name: flag-lr
+      code: 0xF5A6
+      description: Flag of Liberia
+    - name: flag-ls
+      code: 0xF5A7
+      description: Flag of Lesotho
+    - name: flag-lt
+      code: 0xF5A8
+      description: Flag of Lithuania
+    - name: flag-lu
+      code: 0xF5A9
+      description: Flag of Luxembourg
+    - name: flag-lv
+      code: 0xF5AA
+      description: Flag of Latvia
+    - name: flag-ly
+      code: 0xF5AB
+      description: Flag of Libya
+    - name: flag-ma
+      code: 0xF5AC
+      description: Flag of Morocco
+    - name: flag-mc
+      code: 0xF5AD
+      description: Flag of Monaco
+    - name: flag-md
+      code: 0xF5AE
+      description: Flag of Moldova
+    - name: flag-me
+      code: 0xF5AF
+      description: Flag of Montenegro
+    - name: flag-mg
+      code: 0xF5B0
+      description: Flag of Madagascar
+    - name: flag-mh
+      code: 0xF5B1
+      description: Flag of Marshall Islands
+    - name: flag-mk
+      code: 0xF5B2
+      description: Flag of North Macedonia
+    - name: flag-ml
+      code: 0xF5B3
+      description: Flag of Mali
+    - name: flag-mm
+      code: 0xF5B4
+      description: Flag of Myanmar
+    - name: flag-mn
+      code: 0xF5B5
+      description: Flag of Mongolia
+    - name: flag-mr
+      code: 0xF5B6
+      description: Flag of Mauritania
+    - name: flag-mt
+      code: 0xF5B7
+      description: Flag of Malta
+    - name: flag-mu
+      code: 0xF5B8
+      description: Flag of Mauritius
+    - name: flag-mv
+      code: 0xF5B9
+      description: Flag of Maldives
+    - name: flag-mw
+      code: 0xF5BA
+      description: Flag of Malawi
+    - name: flag-mx
+      code: 0xF5BB
+      description: Flag of Mexico
+    - name: flag-my
+      code: 0xF5BC
+      description: Flag of Malaysia
+    - name: flag-mz
+      code: 0xF5BD
+      description: Flag of Mozambique
+    - name: flag-na
+      code: 0xF5BE
+      description: Flag of Namibia
+    - name: flag-ne
+      code: 0xF5BF
+      description: Flag of Niger
+    - name: flag-ng
+      code: 0xF5C0
+      description: Flag of Nigeria
+    - name: flag-ni
+      code: 0xF5C1
+      description: Flag of Nicaragua
+    - name: flag-nl
+      code: 0xF5C2
+      description: Flag of Netherlands
+    - name: flag-no
+      code: 0xF5C3
+      description: Flag of Norway
+    - name: flag-np
+      code: 0xF5C4
+      description: Flag of Nepal
+    - name: flag-nr
+      code: 0xF5C5
+      description: Flag of Nauru
+    - name: flag-nz
+      code: 0xF5C6
+      description: Flag of New Zealand
+    - name: flag-om
+      code: 0xF5C7
+      description: Flag of Oman
+    - name: flag-pa
+      code: 0xF5C8
+      description: Flag of Panama
+    - name: flag-pe
+      code: 0xF5C9
+      description: Flag of Peru
+    - name: flag-pg
+      code: 0xF5CA
+      description: Flag of Papua New Guinea
+    - name: flag-ph
+      code: 0xF5CB
+      description: Flag of Philippines
+    - name: flag-pk
+      code: 0xF5CC
+      description: Flag of Pakistan
+    - name: flag-pl
+      code: 0xF5CD
+      description: Flag of Poland
+    - name: flag-pt
+      code: 0xF5CE
+      description: Flag of Portugal
+    - name: flag-pw
+      code: 0xF5CF
+      description: Flag of Palau
+    - name: flag-py
+      code: 0xF5D0
+      description: Flag of Paraguay
+    - name: flag-qa
+      code: 0xF5D1
+      description: Flag of Qatar
+    - name: flag-ro
+      code: 0xF5D2
+      description: Flag of Romania
+    - name: flag-rs
+      code: 0xF5D3
+      description: Flag of Serbia
+    - name: flag-ru
+      code: 0xF5D4
+      description: Flag of Russia
+    - name: flag-rw
+      code: 0xF5D5
+      description: Flag of Rwanda
+    - name: flag-sa
+      code: 0xF5D6
+      description: Flag of Saudi Arabia
+    - name: flag-sb
+      code: 0xF5D7
+      description: Flag of Solomon Islands
+    - name: flag-sc
+      code: 0xF5D8
+      description: Flag of Seychelles
+    - name: flag-sd
+      code: 0xF5D9
+      description: Flag of Sudan
+    - name: flag-se
+      code: 0xF5DA
+      description: Flag of Sweden
+    - name: flag-sg
+      code: 0xF5DB
+      description: Flag of Singapore
+    - name: flag-si
+      code: 0xF5DC
+      description: Flag of Slovenia
+    - name: flag-sk
+      code: 0xF5DD
+      description: Flag of Slovakia
+    - name: flag-sl
+      code: 0xF5DE
+      description: Flag of Sierra Leone
+    - name: flag-sm
+      code: 0xF5DF
+      description: Flag of San Marino
+    - name: flag-sn
+      code: 0xF5E0
+      description: Flag of Senegal
+    - name: flag-so
+      code: 0xF5E1
+      description: Flag of Somalia
+    - name: flag-sr
+      code: 0xF5E2
+      description: Flag of Suriname
+    - name: flag-ss
+      code: 0xF5E3
+      description: Flag of South Sudan
+    - name: flag-st
+      code: 0xF5E4
+      description: Flag of Sao Tome and Principe
+    - name: flag-sv
+      code: 0xF5E5
+      description: Flag of El Salvador
+    - name: flag-sy
+      code: 0xF5E6
+      description: Flag of Syria
+    - name: flag-sz
+      code: 0xF5E7
+      description: Flag of Eswatini
+    - name: flag-td
+      code: 0xF5E8
+      description: Flag of Chad
+    - name: flag-tg
+      code: 0xF5E9
+      description: Flag of Togo
+    - name: flag-th
+      code: 0xF5EA
+      description: Flag of Thailand
+    - name: flag-tj
+      code: 0xF5EB
+      description: Flag of Tajikistan
+    - name: flag-tl
+      code: 0xF5EC
+      description: Flag of Timor-Leste
+    - name: flag-tm
+      code: 0xF5ED
+      description: Flag of Turkmenistan
+    - name: flag-tn
+      code: 0xF5EE
+      description: Flag of Tunisia
+    - name: flag-to
+      code: 0xF5EF
+      description: Flag of Tonga
+    - name: flag-tr
+      code: 0xF5F0
+      description: Flag of Turkey
+    - name: flag-tt
+      code: 0xF5F1
+      description: Flag of Trinidad and Tobago
+    - name: flag-tv
+      code: 0xF5F2
+      description: Flag of Tuvalu
+    - name: flag-tz
+      code: 0xF5F3
+      description: Flag of Tanzania
+    - name: flag-ua
+      code: 0xF5F4
+      description: Flag of Ukraine
+    - name: flag-ug
+      code: 0xF5F5
+      description: Flag of Uganda
+    - name: flag-us
+      code: 0xF5F6
+      description: Flag of United States
+    - name: flag-uy
+      code: 0xF5F7
+      description: Flag of Uruguay
+    - name: flag-uz
+      code: 0xF5F8
+      description: Flag of Uzbekistan
+    - name: flag-vc
+      code: 0xF5F9
+      description: Flag of Saint Vincent and the Grenadines
+    - name: flag-ve
+      code: 0xF5FA
+      description: Flag of Venezuela
+    - name: flag-vn
+      code: 0xF5FB
+      description: Flag of Vietnam
+    - name: flag-vu
+      code: 0xF5FC
+      description: Flag of Vanuatu
+    - name: flag-ws
+      code: 0xF5FD
+      description: Flag of Samoa
+    - name: flag-ye
+      code: 0xF5FE
+      description: Flag of Yemen
+    - name: flag-za
+      code: 0xF5FF
+      description: Flag of South Africa
+    - name: flag-zm
+      code: 0xF600
+      description: Flag of Zambia
+    - name: flag-zw
+      code: 0xF601
+      description: Flag of Zimbabwe
   Unicode Symbols:
     - name: exclamation
       code: 0x0021
