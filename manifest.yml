@@ -1,6 +1,6 @@
 version: "0.1"
 icons:
-  Brands:
+  NOC Brands:
     - name: brand-noc-s
       code: 0xE001
       added-in: "upcoming"
@@ -664,6 +664,27 @@ icons:
     - name: alien-o
       code: 0xE36A
       added-in: "upcoming"
+    - name: hammer-s
+      code: 0xE36B
+      added-in: "upcoming"
+    - name: indent-o
+      code: 0xE36C
+      added-in: "upcoming"
+    - name: outdent-o
+      code: 0xE36D
+      added-in: "upcoming"
+    - name: chart-line-o
+      code: 0xE36E
+      added-in: "upcoming"
+    - name: chart-line-down-o
+      code: 0xE36F
+      added-in: "upcoming"
+    - name: chart-bar-o
+      code: 0xE370
+      added-in: "upcoming"
+    - name: append-o
+      code: 0xE371
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -981,6 +1002,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-md5500b
       code: 0xF442
+      added-in: "upcoming"
     - name: huawei-optical-splitter
       code: 0xF443
       added-in: "upcoming"
@@ -995,6 +1017,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-optical-attenuator
       code: 0xF448
+      added-in: "upcoming"
     - name: huawei-atb
       code: 0xF449
     - name: huawei-ternination-module
@@ -1007,6 +1030,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-pbx-switch
       code: 0xF44D
+      added-in: "upcoming"
     - name: huawei-tv
       code: 0xF44E
     - name: huawei-residential-area
@@ -1021,10 +1045,12 @@ icons:
       code: 0xF453
     - name: huawei-radius-server
       code: 0xF454
+      added-in: "upcoming"
     - name: huawei-splicing-module
       code: 0xF455
     - name: huawei-conversion-adapter
       code: 0xF456
+      added-in: "upcoming"
     - name: huawei-odf
       code: 0xF457
     - name: huawei-bits
@@ -1035,11 +1061,13 @@ icons:
       added-in: "upcoming"
     - name: huawei-dvc
       code: 0xF45A
+      added-in: "upcoming"
     - name: huawei-location-server
       code: 0xF45B
       added-in: "upcoming"
     - name: huawei-sbc
       code: 0xF45C
+      added-in: "upcoming"
     - name: huawei-iserver
       code: 0xF45D
       added-in: "upcoming"
@@ -1051,10 +1079,13 @@ icons:
       code: 0xF460
     - name: huawei-low-end-and-mid-range-router
       code: 0xF461
+      added-in: "upcoming"
     - name: huawei-high-end-router
       code: 0xF462
+      added-in: "upcoming"
     - name: huawei-core-router
       code: 0xF463
+      added-in: "upcoming"
     - name: huawei-residential-area1
       code: 0xF464
     - name: huawei-office-building
@@ -1073,6 +1104,7 @@ icons:
       code: 0xF46A
     - name: huawei-test-client
       code: 0xF46B
+      added-in: "upcoming"
     - name: huawei-database
       code: 0xF46C
     - name: huawei-mcu
@@ -1081,6 +1113,7 @@ icons:
       code: 0xF46E
     - name: huawei-hgw
       code: 0xF46F
+      added-in: "upcoming"
     - name: huawei-n2000-client
       code: 0xF470
     - name: huawei-upper-layer-nms
@@ -1109,18 +1142,23 @@ icons:
       code: 0xF47C
     - name: huawei-softx3000
       code: 0xF47D
+      added-in: "upcoming"
     - name: huawei-csc3300
       code: 0xF47E
     - name: huawei-mrp6600
       code: 0xF47F
+      added-in: "upcoming"
     - name: huawei-combiner
       code: 0xF480
+      added-in: "upcoming"
     - name: huawei-multiplexer
       code: 0xF481
     - name: huawei-olt
       code: 0xF482
+      added-in: "upcoming"
     - name: huawei-mdu
       code: 0xF483
+      added-in: "upcoming"
     - name: huawei-ont
       code: 0xF484
     - name: huawei-multicast-server
@@ -1133,30 +1171,41 @@ icons:
       code: 0xF488
     - name: huawei-upstream-optical-receiver
       code: 0xF489
+      added-in: "upcoming"
     - name: huawei-upstream-optical-transmitter
       code: 0xF48A
+      added-in: "upcoming"
     - name: huawei-downstream-optical-receiver
       code: 0xF48B
+      added-in: "upcoming"
     - name: huawei-downstream-optical-transmitter
       code: 0xF48C
+      added-in: "upcoming"
     - name: huawei-common-transceiver
       code: 0xF48D
+      added-in: "upcoming"
     - name: huawei-oa
       code: 0xF48E
+      added-in: "upcoming"
     - name: huawei-one-way-amplifier
       code: 0xF48F
+      added-in: "upcoming"
     - name: huawei-two-way-amplifier
       code: 0xF490
+      added-in: "upcoming"
     - name: huawei-tap
       code: 0xF491
     - name: huawei-distributor
       code: 0xF492
+      added-in: "upcoming"
     - name: huawei-frequency-mixer
       code: 0xF493
+      added-in: "upcoming"
     - name: huawei-eqam
       code: 0xF494
     - name: huawei-d-cmts
       code: 0xF495
+      added-in: "upcoming"
   National Flags:
     - name: flag-ad
       code: 0xF540
@@ -1263,6 +1312,7 @@ icons:
     - name: flag-ci
       code: 0xF562
       description: Flag of Ivory Coast
+      added-in: "upcoming"
     - name: flag-cl
       code: 0xF563
       description: Flag of Chile
@@ -1338,6 +1388,7 @@ icons:
     - name: flag-fr
       code: 0xF57B
       description: Flag of France
+      added-in: "upcoming"
     - name: flag-ga
       code: 0xF57C
       description: Flag of Gabon
@@ -1359,6 +1410,7 @@ icons:
     - name: flag-gn
       code: 0xF582
       description: Flag of Guinea
+      added-in: "upcoming"
     - name: flag-gq
       code: 0xF583
       description: Flag of Equatorial Guinea
@@ -1410,6 +1462,7 @@ icons:
     - name: flag-it
       code: 0xF593
       description: Flag of Italy
+      added-in: "upcoming"
     - name: flag-jm
       code: 0xF594
       description: Flag of Jamaica
@@ -1506,6 +1559,7 @@ icons:
     - name: flag-ml
       code: 0xF5B3
       description: Flag of Mali
+      added-in: "upcoming"
     - name: flag-mm
       code: 0xF5B4
       description: Flag of Myanmar
@@ -1599,6 +1653,7 @@ icons:
     - name: flag-ro
       code: 0xF5D2
       description: Flag of Romania
+      added-in: "upcoming"
     - name: flag-rs
       code: 0xF5D3
       description: Flag of Serbia
@@ -1665,6 +1720,7 @@ icons:
     - name: flag-td
       code: 0xF5E8
       description: Flag of Chad
+      added-in: "upcoming"
     - name: flag-tg
       code: 0xF5E9
       description: Flag of Togo
@@ -1987,6 +2043,90 @@ icons:
     - name: ohm-sign
       code: 0x2126
       added-in: "upcoming"
+    - name: upwards-white-arrow
+      code: 0x21e7
+      labels: ["shift"]
+      added-in: "upcoming"
+    - name: up-arrowhead
+      code: 0x2303
+      labels: ["ctrl", "control"]
+      added-in: "upcoming"
+    - name: place-of-interest-sign
+      code: 0x2318
+      labels: ["command", "cmd"]
+      added-in: "upcoming"
+    - name: option-key
+      code: 0x2325
+      added-in: "upcoming"
+    - name: broken-circle-with-nw-arrow
+      code: 0x238b
+      labels: ["esc", "escape"]
+      added-in: "upcoming"
+    - name: return-symbol
+      code: 0x23CE
+      added-in: "upcoming"
     - name: ankh
       code: 0x2625
+      added-in: "upcoming"
+    - name: female-sign
+      code: 0x2640
+      added-in: "upcoming"
+    - name: male-sign
+      code: 0x2642
+      labels: ["mars"]
+      added-in: "upcoming"
+    - name: aries
+      code: 0x2648
+      labels: ["mars"]
+      added-in: "upcoming"
+    - name: taurus
+      code: 0x2649
+      added-in: "upcoming"
+    - name: gemini
+      code: 0x264A
+      added-in: "upcoming"
+    - name: cancer
+      code: 0x264B
+      added-in: "upcoming"
+    - name: leo
+      code: 0x264C
+      added-in: "upcoming"
+    - name: virgo
+      code: 0x264D
+      added-in: "upcoming"
+    - name: libra
+      code: 0x264E
+      added-in: "upcoming"
+    - name: scorpius
+      code: 0x264F
+      added-in: "upcoming"
+    - name: sagittarius
+      code: 0x2650
+      added-in: "upcoming"
+    - name: capricorn
+      code: 0x2651
+      added-in: "upcoming"
+    - name: aquarius
+      code: 0x2652
+      added-in: "upcoming"
+    - name: pisces
+      code: 0x2653
+      added-in: "upcoming"
+    - name: die-face-1
+      code: 0x2680
+      added-in: "upcoming"
+    - name: die-face-2
+      code: 0x2681
+      added-in: "upcoming"
+    - name: die-face-3
+      code: 0x2682
+      added-in: "upcoming"
+    - name: die-face-4
+      code: 0x2683
+      added-in: "upcoming"
+    - name: die-face-5
+      code: 0x2684
+      added-in: "upcoming"
+    - name: die-face-6
+      code: 0x2685
       added-in: "upcoming"

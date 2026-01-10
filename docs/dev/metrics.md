@@ -51,6 +51,7 @@ To maintain visual consistency across all Gufo Font glyphs, the following elemen
 
 * Outline: 64 units
 * Border / Stroke: 256 units
+* Letter stroke: 256 units
 
 These values align with the 16×16 design grid and provide a balanced,
 uniform appearance when icons are rendered at various sizes.
