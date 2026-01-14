@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------
 # Gufo Font: Font tests
 # ---------------------------------------------------------------------
-# Copyright (C) 2025, Gufo Labs
+# Copyright (C) 2025-26, Gufo Labs
 # ---------------------------------------------------------------------
 
 # Python modules
@@ -254,19 +254,25 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
             ):
                 name = cmap.get(icon.code)
                 if name:
-                    r = table[name]
-                    if len(r) < 2:
-                        too_few_layers(f"{icon.code:X}")
+                    try:
+                        if len(table[name]) < 2:
+                            missed_glyph.add(f"{icon.code:X}")
+                    except KeyError:
+                        too_few_layers.add(f"{icon.code:X}")
                 else:
                     missed_glyph.add(f"{icon.code:X}")
+    fail = []
     if too_few_layers:
         lst = ", ".join(sorted(too_few_layers))
-        pytest.fail(
+        fail.append(
             f"{len(too_few_layers)} color symbols must have at least 2 layers: {lst}"
         )
     if missed_glyph:
         lst = ", ".join(sorted(missed_glyph))
-        pytest.fail(f"{len(missed_glyph)} missed color glyphs: {lst}")
+        fail.append(f"{len(missed_glyph)} missed color glyphs: {lst}")
+    if fail:
+        msg = "; ".join(fail)
+        pytest.fail(msg)
 
 
 def test_hmtx_table(font: Font) -> None:
