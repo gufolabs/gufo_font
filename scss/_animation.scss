@@ -14,6 +14,15 @@
     animation-timing-function: var(--#{$cfg-animation-timing}, ease-in-out);
 }
 
+.#{$css-prefix}-flip {
+    animation-name: #{$css-prefix}-flip;
+    animation-delay: var(--#{$cfg-animation-delay}, 0s);
+    animation-direction: var(--#{$cfg-animation-direction}, normal);
+    animation-duration: var(--#{$cfg-animation-duration}, 1s);
+    animation-iteration-count: var(--#{$cfg-animation-iteration-count}, infinite);
+    animation-timing-function: var(--#{$cfg-animation-timing}, ease-in-out);
+}
+
 .#{$css-prefix}-shake {
     animation-name: #{$css-prefix}-shake;
     animation-delay: var(--#{$cfg-animation-delay}, 0s);
@@ -42,6 +51,12 @@
 
     45% {
         transform: scale(var(--#{$cfg-beat-scale}, 1.25));
+    }
+}
+
+@keyframes #{$css-prefix}-flip {
+    50% {
+        transform: rotate3d(var(--#{$cfg-flip-x}, 0), var(--#{$cfg-flip-y}, 1), var(--#{$cfg-flip-z}, 0), var(--#{$cfg-flip-angle}, -180deg));
     }
 }
 

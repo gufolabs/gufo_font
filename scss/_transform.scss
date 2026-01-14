@@ -33,10 +33,3 @@ $rotation-angles: 90, 180, 270;
     --#{$cfg-scale-x}: -1;
     @extend .#{$cls-transform};
 }
-
-// Flip both direction
-.#{$css-prefix}-flip {
-    --#{$cfg-scale-x}: -1;
-    --#{$cfg-scale-y}: -1;
-    @extend .#{$cls-transform};
-}
