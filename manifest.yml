@@ -685,6 +685,56 @@ icons:
     - name: append-o
       code: 0xE371
       added-in: "upcoming"
+    - name: circle-arc-s
+      code: 0xE372
+      added-in: "upcoming"
+    - name: inbox-s
+      code: 0xE374
+      added-in: "upcoming"
+    - name: inbox-o
+      code: 0xE375
+      added-in: "upcoming"
+    - name: grip-lines-o
+      code: 0xE376
+      added-in: "upcoming"
+    - name: grip-lines-vertical-o
+      code: 0xE377
+      added-in: "upcoming"
+    - name: camera-o
+      code: 0xE378
+      added-in: "upcoming"
+    - name: mug-hot-o
+      code: 0xE379
+      added-in: "upcoming"
+    - name: envelope-s
+      code: 0xE37A
+      added-in: "upcoming"
+    - name: envelope-o
+      code: 0xE37B
+    - name: bus-s
+      code: 0xE37C
+      added-in: "upcoming"
+    - name: binoculars-s
+      code: 0xE37D
+      added-in: "upcoming"
+    - name: terminal-o
+      code: 0xE37E
+      added-in: "upcoming"
+    - name: gauge-s
+      code: 0xE389
+      added-in: "upcoming"
+    - name: thumbs-up-s
+      code: 0xE38A
+      added-in: "upcoming"
+    - name: thumbs-up-o
+      code: 0xE38B
+      added-in: "upcoming"
+    - name: thumbs-down-s
+      code: 0xE38C
+      added-in: "upcoming"
+    - name: thumbs-down-o
+      code: 0xE38D
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -825,6 +875,24 @@ icons:
       added-in: "upcoming"
     - name: cloud-sdh-o
       code: 0xF036
+      added-in: "upcoming"
+    - name: ethernet-s
+      code: 0xF037
+      added-in: "upcoming"
+    - name: lc-simplex-o
+      code: 0xF038
+      added-in: "upcoming"
+    - name: lc-duplex-o
+      code: 0xF039
+      added-in: "upcoming"
+    - name: sc-simplex-o
+      code: 0xF03A
+      added-in: "upcoming"
+    - name: sc-duplex-o
+      code: 0xF03B
+      added-in: "upcoming"
+    - name: st-o
+      code: 0xF03C
       added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-accesspoint
@@ -1008,6 +1076,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-fdt
       code: 0xF444
+      added-in: "upcoming"
     - name: huawei-fat
       code: 0xF445
     - name: huawei-joint-box
@@ -1020,8 +1089,9 @@ icons:
       added-in: "upcoming"
     - name: huawei-atb
       code: 0xF449
-    - name: huawei-ternination-module
+    - name: huawei-termination-module
       code: 0xF44A
+      added-in: "upcoming"
     - name: huawei-bras
       code: 0xF44B
       added-in: "upcoming"
@@ -1048,6 +1118,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-splicing-module
       code: 0xF455
+      added-in: "upcoming"
     - name: huawei-conversion-adapter
       code: 0xF456
       added-in: "upcoming"
@@ -1165,6 +1236,7 @@ icons:
       code: 0xF485
     - name: huawei-layer-3-switch
       code: 0xF486
+      added-in: "upcoming"
     - name: huawei-line-emulator
       code: 0xF487
     - name: huawei-call-maker
@@ -1203,6 +1275,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-eqam
       code: 0xF494
+      added-in: "upcoming"
     - name: huawei-d-cmts
       code: 0xF495
       added-in: "upcoming"
@@ -2044,8 +2117,11 @@ icons:
       code: 0x2126
       added-in: "upcoming"
     - name: upwards-white-arrow
-      code: 0x21e7
+      code: 0x21E7
       labels: ["shift"]
+      added-in: "upcoming"
+    - name: infinity
+      code: 0x221E
       added-in: "upcoming"
     - name: up-arrowhead
       code: 0x2303
