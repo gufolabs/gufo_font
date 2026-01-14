@@ -43,7 +43,12 @@ $cfg-animation-duration: #{$css-prefix}-animation-duration;
 $cfg-animation-iteration-count: #{$css-prefix}-animation-iteration-count;
 $cfg-animation-timing: #{$css-prefix}-animation-timing;
 
+// Animation-specific variables
 $cfg-beat-scale: #{$css-prefix}-beat-scale;
+$cfg-flip-x: #{$css-prefix}-flip-x;
+$cfg-flip-y: #{$css-prefix}-flip-y;
+$cfg-flip-z: #{$css-prefix}-flip-z;
+$cfg-flip-angle: #{$css-prefix}-flip-angle;
 
 // Internal variables
 $cfg-default-offset-y: #{$css-prefix}-default-offset-y;

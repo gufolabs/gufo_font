@@ -206,11 +206,11 @@ Rendered as:
 
 ## Flipping
 
-In addition to rotation, you can flip (mirror) a glyph across the vertical axis (gf-flip-v), the horizontal axis (gf-flip-h), or both axes (gf-flip).
+In addition to rotation, you can flip (mirror) a glyph across the vertical axis (gf-flip-v), the horizontal axis (gf-flip-h), or combine to flip both axis.
 
-| Default                      | `gf-flip-v`                            | `gf-flip-h`                             | `gf-flip`                            |
-| ---------------------------- | -------------------------------------- | --------------------------------------- | ------------------------------------ |
-| <i class="gf gf-1x cloud-o"> | <i class="gf gf-1x gf-flip-v cloud-o"> | <i class="gf gf-1x  gf-flip-h cloud-o"> | <i class="gf gf-1x gf-flip cloud-o"> |
+| Default                      | `gf-flip-v`                            | `gf-flip-h`                             | `gf-flip-h gf-flip-v`                            |
+| ---------------------------- | -------------------------------------- | --------------------------------------- | ------------------------------------------------ |
+| <i class="gf gf-1x cloud-o"> | <i class="gf gf-1x gf-flip-v cloud-o"> | <i class="gf gf-1x  gf-flip-h cloud-o"> | <i class="gf gf-1x gf-flip-h gf-flip-v cloud-o"> |
 
 ## Subscript and Superscript
 
@@ -280,6 +280,18 @@ Rendered result:
 <i class="gf gf-1x gf-beat heart-s" style="--gf-animation-duration: 2s"></i>
 <i class="gf gf-1x gf-beat heart-s" style="--gf-animation-duration: 0.5s"></i>
 
+### Flip
+
+Use `gf-flip` to flip icon horizontally or vertically.
+
+``` html
+<i class="gf gf-1x gf-flip camera-o"></i>
+<i class="gf gf-1x gf-flip play-s" style="--gf-flip-x:1;--gf-flip-y:0"></i>
+```
+
+<i class="gf gf-1x gf-flip camera-o"></i>
+<i class="gf gf-1x gf-flip play-s" style="--gf-flip-x:1;--gf-flip-y:0"></i>
+
 ### Shake
 
 Use `gf-shake` to visually grab attention.
@@ -299,7 +311,9 @@ Use `gf-spin` to make an icon to rotate.
 ``` html
 <i class="gf gf-1x gf-spin cog-s"></i>
 <i class="gf gf-1x gf-spin circle-notch-o"></i>
+<i class="gf gf-1x gf-spin circle-arc-s"></i>
 ```
 
 <i class="gf gf-1x gf-spin cog-s"></i>
 <i class="gf gf-1x gf-spin circle-notch-o"></i>
+<i class="gf gf-1x gf-spin circle-arc-s"></i>
