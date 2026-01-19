@@ -735,6 +735,48 @@ icons:
     - name: thumbs-down-o
       code: 0xE38D
       added-in: "upcoming"
+    - name: radar-o
+      code: 0xE38E
+      added-in: "upcoming"
+    - name: magnet-s
+      code: 0xE38F
+      added-in: "upcoming"
+    - name: circle-dot-s
+      code: 0xE390
+      added-in: "upcoming"
+    - name: circle-dot-o
+      code: 0xE391
+      added-in: "upcoming"
+    - name: arrows-maximize-o
+      code: 0xE392
+      added-in: "upcoming"
+    - name: arrows-minimize-o
+      code: 0xE393
+      added-in: "upcoming"
+    - name: shuffle-o
+      code: 0xE394
+      added-in: "upcoming"
+    - name: up-down-o
+      code: 0xE395
+      added-in: "upcoming"
+    - name: left-right-o
+      code: 0xE396
+      added-in: "upcoming"
+    - name: arrows-up-down-left-right-o
+      code: 0xE397
+      added-in: "upcoming"
+    - name: code-o
+      code: 0xE398
+      added-in: "upcoming"
+    - name: arrows-to-dot-o
+      code: 0xE399
+      added-in: "upcoming"
+    - name: shop-s
+      code: 0xE39A
+      added-in: "upcoming"
+    - name: shield-s
+      code: 0xE39B
+      added-in: "upcoming"
   IT:
     - name: database
       code: 0xF000
@@ -893,6 +935,24 @@ icons:
       added-in: "upcoming"
     - name: st-o
       code: 0xF03C
+      added-in: "upcoming"
+    - name: linecard-s
+      code: 0xF03D
+      added-in: "upcoming"
+    - name: linecard-o
+      code: 0xF03E
+      added-in: "upcoming"
+    - name: rack-s
+      code: 0xF03F
+      added-in: "upcoming"
+    - name: rack-o
+      code: 0xF040
+      added-in: "upcoming"
+    - name: chassis-modular-s
+      code: 0xF041
+      added-in: "upcoming"
+    - name: chassis-s
+      code: 0xF043
       added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-accesspoint
@@ -1917,6 +1977,15 @@ icons:
       added-in: "upcoming"
     - name: nine
       code: 0x0039
+      added-in: "upcoming"
+    - name: less-than
+      code: 0x003C
+      added-in: "upcoming"
+    - name: equals
+      code: 0x003D
+      added-in: "upcoming"
+    - name: greater-than
+      code: 0x003E
       added-in: "upcoming"
     - name: question
       code: 0x003F
