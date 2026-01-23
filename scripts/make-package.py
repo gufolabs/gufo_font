@@ -51,7 +51,11 @@ def make_package_json(manifest: Manifest) -> None:
     data = manifest.package_json
     data["main"] = "./index.js"
     data["types"] = "./index.d.ts"
-    data["exports"] = {".": {"types": "./index.d.ts", "default": "./index.js"}}
+    data["exports"] = {
+        ".": {"types": "./index.d.ts", "default": "./index.js"},
+        "./gufo-font.css": "./gufo-font.css",
+        "./gufo-font.min.css": "./gufo-font.min.css",
+    }
     if FUNDING.exists():
         data["funding"] = get_funding()
     PACKAGE_JSON.write_text(json.dumps(data, indent=2))
