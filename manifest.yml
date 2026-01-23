@@ -631,6 +631,9 @@ icons:
     - name: fingerprint-o
       code: 0xE35E
       added-in: "upcoming"
+    - name: user-o
+      code: 0xE35F
+      added-in: "upcoming"
     - name: file-code-o
       code: 0xE360
       added-in: "upcoming"
@@ -776,6 +779,15 @@ icons:
       added-in: "upcoming"
     - name: shield-s
       code: 0xE39B
+      added-in: "upcoming"
+    - name: bell-s
+      code: 0xE39C
+      added-in: "upcoming"
+    - name: glasses-o
+      code: 0xE39D
+      added-in: "upcoming"
+    - name: wine-bottle-s
+      code: 0xE39E
       added-in: "upcoming"
   IT:
     - name: database
