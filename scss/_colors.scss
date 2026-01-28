@@ -7,7 +7,7 @@
 
 $colors: (
     black: #000000,
-    write: #ffffff,
+    white: #ffffff,
     turquoise: #1abc9c,
     emerald: #2ecc71,
     green-sea: #16a085,
@@ -45,5 +45,9 @@ $colors: (
     .#{$css-prefix}.#{$font-palette-name} {
         font-palette: --#{$css-prefix}-#{$name};
         color: $color;
+    }
+
+    svg text.#{$css-prefix}.#{$font-palette-name} {
+        fill: $color;
     }
 }

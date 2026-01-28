@@ -26,4 +26,8 @@ $states: (
         font-palette: --#{$css-prefix}-#{$state};
         color: $color;
     }
+
+    svg text.#{$css-prefix}.#{$css-prefix}-#{$state} {
+        fill: $color;
+    }
 }
