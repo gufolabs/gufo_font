@@ -39,6 +39,15 @@ Four `X` signs must touch each other.
         const ICON = 64;
         await document.fonts.load("64px Gufo");
         await document.fonts.ready;
+        // HiDPI/Retina detection
+        const dpr = window.devicePixelRatio || 1;
+        if(dpr !== 1) {
+            canvas.style.width = W + "px";
+            canvas.style.height = H + "px";
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            ctx.scale(dpr, dpr);
+        }
         // Background
         ctx.fillStyle = "#1abc9c";
         ctx.fillRect(0, 0, W, H);
