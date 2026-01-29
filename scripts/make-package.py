@@ -55,6 +55,7 @@ def make_package_json(manifest: Manifest) -> None:
         ".": {"types": "./index.d.ts", "default": "./index.js"},
         "./gufo-font.css": "./gufo-font.css",
         "./gufo-font.min.css": "./gufo-font.min.css",
+        "./manifest.json": "./manifest.json",
     }
     if FUNDING.exists():
         data["funding"] = get_funding()
