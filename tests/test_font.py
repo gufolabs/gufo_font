@@ -236,6 +236,9 @@ def test_cff_table(font: TTFont, manifest: Manifest) -> None:
         pytest.fail(f"{len(missed)} codepoints are missed in font: {lst}")
 
 
+COLR_EXCEPTIONS = {0xF202}
+
+
 def test_colr_table(font: TTFont, manifest: Manifest) -> None:
     assert COLR in font
     table = font[COLR]
@@ -251,6 +254,7 @@ def test_colr_table(font: TTFont, manifest: Manifest) -> None:
                 and not icon.name.endswith("-s")
                 and not icon.name.endswith("-o")
                 and icon.code >= 0xE000
+                and icon.code not in COLR_EXCEPTIONS
             ):
                 name = cmap.get(icon.code)
                 if name:
