@@ -966,6 +966,12 @@ icons:
     - name: chassis-s
       code: 0xF043
       added-in: "upcoming"
+    - name: drone-s
+      code: 0xF046
+      added-in: "upcoming"
+    - name: helicopter-symbol-s
+      code: 0xF04B
+      added-in: "upcoming"
   Cisco Stencils:
     - name: cisco-accesspoint
       code: 0xF200
@@ -975,6 +981,7 @@ icons:
       added-in: "upcoming"
     - name: cisco-antenna
       code: 0xF202
+      added-in: "upcoming"
     - name: cisco-ata
       code: 0xF203
       added-in: "upcoming"
@@ -1011,6 +1018,7 @@ icons:
       code: 0xF210
     - name: cisco-dslam
       code: 0xF211
+      added-in: "upcoming"
     - name: cisco-dwdm-filter
       code: 0xF212
     - name: cisco-fax
@@ -1028,6 +1036,7 @@ icons:
       added-in: "upcoming"
     - name: cisco-ip-phone
       code: 0xF218
+      added-in: "upcoming"
     - name: cisco-ip-telephony-router
       code: 0xF219
     - name: cisco-iptv-broadcast-server
@@ -1054,6 +1063,7 @@ icons:
       added-in: "upcoming"
     - name: cisco-optical-services-router
       code: 0xF224
+      added-in: "upcoming"
     - name: cisco-optical-transport
       code: 0xF225
     - name: cisco-pbx
@@ -1062,6 +1072,7 @@ icons:
       code: 0xF227
     - name: cisco-pix
       code: 0xF228
+      added-in: "upcoming"
     - name: cisco-printer
       code: 0xF229
     - name: cisco-radio-tower
@@ -1100,6 +1111,7 @@ icons:
       code: 0xF238
     - name: cisco-ups
       code: 0xF239
+      added-in: "upcoming"
     - name: cisco-video-camera
       code: 0xF23A
     - name: cisco-voice-router
@@ -1108,8 +1120,10 @@ icons:
       code: 0xF23C
     - name: cisco-wireless-bridge
       code: 0xF23D
+      added-in: "upcoming"
     - name: cisco-wireless-router
       code: 0xF23E
+      added-in: "upcoming"
     - name: cisco-workgroup-switch
       code: 0xF23F
       description: Classic Cisco-style switch icon.
@@ -1288,6 +1302,7 @@ icons:
       added-in: "upcoming"
     - name: huawei-csc3300
       code: 0xF47E
+      added-in: "upcoming"
     - name: huawei-mrp6600
       code: 0xF47F
       added-in: "upcoming"
